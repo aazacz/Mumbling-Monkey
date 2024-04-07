@@ -104,10 +104,86 @@ function App() {
             <img src={logo} width={90} alt="" />
 
             <div className='flex items-center gap-3' >
-              <h1 className='text-gray-500 font-extrabold text-xl'>MENU</h1>
-              <img src={burger} width={50} alt="" onClick={()=>setShow(!show)} />
+              <h1 className='text-gray-500 font-extrabold text-xl absolute right-48'>MENU</h1>
+              <img src={burger} width={50} alt="" className={`absolute right-32 z-20 ${show?"translate-y-12":""} transition-all duration-500`}  onClick={()=>setShow(!show)} />
             </div>
           </div>
+
+<AnimatePresence>
+
+{show && 
+
+<motion.div className='absolute w-full h-screen flex items-center overflow-hidden'>
+  
+
+
+<motion.div 
+initial={{ opacity: 0 }}
+animate={{ opacity: 1,rotate:"45deg" }}
+exit={{ opacity: 0,rotate:"0deg" }}
+transition={{ duration: 0.9 }}
+className='w-1/4 bg-slate-600  h-[1500px] bg-opacity-40'> </motion.div>
+<motion.div 
+initial={{ opacity: 0 }}
+animate={{ opacity: 1,rotate:"45deg" }}
+exit={{ opacity: 0,rotate:"0deg" }}
+transition={{ duration: 0.9 }}
+className='w-1/4 bg-slate-600  h-[1500px] bg-opacity-40'> </motion.div>
+<motion.div 
+initial={{ opacity: 0 }}
+animate={{ opacity: 1,rotate:"45deg" }}
+exit={{ opacity: 0,rotate:"0deg" }}
+transition={{ duration: 0.9 }}
+className='w-1/4 bg-slate-600  h-[1500px] bg-opacity-40'> </motion.div>
+<motion.div 
+initial={{ opacity: 0 }}
+animate={{ opacity: 1,rotate:"45deg" }}
+exit={{ opacity: 0,rotate:"0deg" }}
+transition={{ duration: 0.9 }}
+className='w-1/4 bg-slate-600  h-[1500px] bg-opacity-40'> </motion.div>
+
+</motion.div>
+
+}
+
+</AnimatePresence>
+
+
+
+<AnimatePresence>
+
+
+
+
+
+{show && <motion.div
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+transition={{ duration: 1.1 }}
+exit={{ opacity: 0 }}
+className={`absolute py-36 w-full h-screen px-64 bg-slate-600 flex flex-col  items-center  transition-all duration-500 `} >
+
+<img src={logo} width={90} alt="" />
+  
+<ul className=' mt-10 flex justify-around text-2xl font-bold list-disc gap-20 '> 
+<li >ABOUT US</li>
+<li>SERVICES</li>
+<li>OUR EXPERTISE</li>
+<li>OUR TEAM</li>
+<li>CONTACT US</li>
+</ul>
+
+
+</motion.div>}
+
+
+</AnimatePresence>
+
+
+
+
+
+
 
           <motion.div className='absolute items-start  invert opacity-20 left-6 ' variants={marqueeVariants} animate="animate"   >
             <img className='' src={sideimg} alt="" />
