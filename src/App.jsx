@@ -16,13 +16,13 @@ function App() {
   const easing = cubicBezier(.39, -0.23, .4, 1.4)
   const marqueeVariants = {
     animate: {
-      x: [-2000, 0,-2000],
+      y: [-2000,0,-2000],
       transition: {
-        x: {
+        y: {
           repeat: Infinity,
           repeatType: "loop",
-          ease: "linear",
-          duration:20
+          ease: [.39, -0.23, .4, 1.4],
+          duration: 20
         },
       },
     },
@@ -50,24 +50,36 @@ function App() {
   ]
 
   const data2 = [
-    { heading: "Influencer Marketing", description: `Enable local payment methods for your customers 
+    {
+      heading: "Influencer Marketing", description: `Enable local payment methods for your customers 
                                                 overseas and slash processing fees by 5-10x.Enable local payment 
-                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-yellow-200",textcol:"text-yellow-200",dur:0 },
-    {heading: "Public Relations", description: `Enable local payment methods for your customers 
+                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-yellow-200", textcol: "text-yellow-200", dur: 0
+    },
+    {
+      heading: "Public Relations", description: `Enable local payment methods for your customers 
                                                 overseas and slash processing fees by 5-10x.Enable local payment 
-                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-cyan-300"  ,textcol:"text-cyan-200" ,dur:0},
-    {heading: "Voice Search Optimization", description: `Enable local payment methods for your customers 
+                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-cyan-300", textcol: "text-cyan-200", dur: 0
+    },
+    {
+      heading: "Voice Search Optimization", description: `Enable local payment methods for your customers 
                                                 overseas and slash processing fees by 5-10x.Enable local payment 
-                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-violet-300"  ,textcol:"text-violet-200",dur:1},
-    {heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
+                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-violet-300", textcol: "text-violet-200", dur: 1
+    },
+    {
+      heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
                                                 overseas and slash processing fees by 5-10x.Enable local payment 
-                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-orange-300"  ,textcol:"text-orange-200",dur:1},
-    {heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
+                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-orange-300", textcol: "text-orange-200", dur: 1
+    },
+    {
+      heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
                                                 overseas and slash processing fees by 5-10x.Enable local payment 
-                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-purple-300" ,textcol:"text-purple-200" ,dur:2},
-    {heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
+                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-purple-300", textcol: "text-purple-200", dur: 2
+    },
+    {
+      heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
                                                 overseas and slash processing fees by 5-10x.Enable local payment 
-                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-indigo-300" ,textcol:"text-indigo-200" ,dur:2},
+                                                methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-indigo-300", textcol: "text-indigo-200", dur: 2
+    },
   ]
 
 
@@ -77,34 +89,39 @@ function App() {
 
 
     <>
-      <div className='w-full   relative flex flex-col items-center overflow-auto'>
+      <div className='w-full h-auto  relative flex flex-col items-center overflow-auto'>
+     
 
-        <motion.div className='absolute flex flex-row  invert opacity-20'    variants={marqueeVariants}    animate="animate"  >   
+        <div className='w-full h-screen relative overflow-y-hidden  flex flex-col items-center '>
+       
+        <motion.div className='absolute items-start  invert opacity-20 left-6 '    variants={marqueeVariants}    animate="animate"   >
+            <img className='' src={sideimg} alt="" />
+            <img className='' src={sideimg} alt="" />
+            <img className='' src={sideimg} alt="" />
 
-               <img className='' src={sideimg} alt="" />
-               <img className='' src={sideimg} alt="" />
-               <img className='' src={sideimg} alt="" />
-               <img className='' src={sideimg} alt="" />
-               <img className='' src={sideimg} alt="" />
-               <img className='' src={sideimg} alt="" />
-               <img className='' src={sideimg} alt="" />
-               <img className='' src={sideimg} alt="" />
-               <img className='' src={sideimg} alt="" />
-
-        </motion.div> 
-
-        <div className="w-[60%] h-screen flex flex-col justify-center items-center overflow-hidden ">
-
-
+         </motion.div>
         
-          <img src={logo} width="200" alt="" />
-          <h1 className='text-center font-Cabin font-extrabold text-[50px] leading-10'>MUMBLING <br />MONKEYS</h1>
-          <p className='text-center mt-4'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
+        <motion.div className='absolute items-start  invert opacity-20 right-6 '    variants={marqueeVariants}    animate="animate"   >
+            <img className='' src={sideimg} alt="" />
+            <img className='' src={sideimg} alt="" />
+            <img className='' src={sideimg} alt="" />
 
-          <button className='rounded-md bg-slate-600 font-light text-sm text-white px-3 py-2 mt-4'>Get Stsrted Today</button>
+         </motion.div>
 
+         
+          <div className="w-[60%] h-screen flex flex-col justify-center items-center  ">
+
+
+
+
+            <img src={logo} width="200" alt="" />
+            <h1 className='text-center font-Cabin font-extrabold text-[50px] leading-10'>MUMBLING <br />MONKEYS</h1>
+            <p className='text-center mt-4'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
+
+            <button className='rounded-md bg-slate-600 font-light text-sm text-white px-3 py-2 mt-4'>Get Stsrted Today</button>
+
+          </div>
         </div>
-
 
 
 
@@ -113,11 +130,11 @@ function App() {
         <div className='w-[80%]  h-auto py-6 px-14 flex'>
 
           <motion.div className='w-3/5 h-full py-6 pr-6'
-          initial={{x:-200,y:0,opacity:0}}
-          whileInView={{x:0,y:0,opacity:100}}
-          transition={{ duration: 1 }}
-          viewport={{amount: 0.5,once:true}}
-          
+            initial={{ x: -200, y: 0, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, opacity: 100 }}
+            transition={{ duration: 1 }}
+            viewport={{ amount: 0.5, once: true }}
+
           >
             <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> ABOUT COMPANY</button>
             <h1 className='font-Cabin text-4xl pt-4'>Mumbling monkey</h1>
@@ -148,15 +165,15 @@ function App() {
             <img className=' absolute z-10 top-1 right-0 ' width="180" src={pattern} alt="" />
 
             <motion.div className='w-[350px] z-20 mt-8 me-16 rounded-lg object-contain bg-slate-50 overflow-hidden '
-            initial={{x:0,y:100,opacity:0}}
-            whileInView={{x:0,y:0,opacity:100}}
-            transition={{ duration: 1.5 }}
-            viewport={{amount: 0.5,once:true}}
+              initial={{ x: 0, y: 100, opacity: 0 }}
+              whileInView={{ x: 0, y: 0, opacity: 100 }}
+              transition={{ duration: 1.5 }}
+              viewport={{ amount: 0.5, once: true }}
 
             >
               <motion.img
-             
-              src={GroupPhoto} className='rounded-lg w-full h-full' alt=""  />
+
+                src={GroupPhoto} className='rounded-lg w-full h-full' alt="" />
 
             </motion.div>
 
@@ -218,19 +235,19 @@ function App() {
 
 
           <motion.div className=' grid grid-flow-row grid-cols-2 gap-4 justify-center '
-         >
+          >
 
             {data2.map((value, key) => {
               return (
 
-                <motion.div 
-                initial={{x:0,y:`${-100 *value.dur}`}}
-                whileInView={{x:0,y:0}}
-                transition={{ duration: 1 }}
-                viewport={{amount: 0.5}}
-                
-                
-                key={key} className={`h-40  p-6  flex items-center rounded-lg ${value.colour}`}>
+                <motion.div
+                  initial={{ x: 0, y: `${-100 * value.dur}` }}
+                  whileInView={{ x: 0, y: 0 }}
+                  transition={{ duration: 1 }}
+                  viewport={{ amount: 0.5 }}
+
+
+                  key={key} className={`h-40  p-6  flex items-center rounded-lg ${value.colour}`}>
                   <div className='w-[80%] pr-2'>
                     <h1 className='text-lg font-semibold'> {value.heading}</h1>
                     <p className='text-sm '> {value.description}</p>
@@ -238,13 +255,13 @@ function App() {
                   </div>
                   <div className='w-[10%]'>
                     <div className='w-14 h-14 bg-black flex justify-center items-center relative group' >
-                    <div className={`${value.textcol} text-4xl  absolute group-hover:scale-50 group-hover:opacity-0 transition-all duration-300`}>
-                    <HiOutlineSpeakerphone/>
-                    </div>
-               
-                    <div className={`text-yellow-300 text-4xl font-thin scale-0  origin-center absolute group-hover:scale-100  transition-all duration-200`}>
-                    <HiOutlineMailOpen/>
-                    </div>
+                      <div className={`${value.textcol} text-4xl  absolute group-hover:scale-50 group-hover:opacity-0 transition-all duration-300`}>
+                        <HiOutlineSpeakerphone />
+                      </div>
+
+                      <div className={`text-yellow-300 text-4xl font-thin scale-0  origin-center absolute group-hover:scale-100  transition-all duration-200`}>
+                        <HiOutlineMailOpen />
+                      </div>
 
                     </div>
 
