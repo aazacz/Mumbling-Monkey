@@ -42,7 +42,8 @@ function recommendProducts(currentUser, allUsers) {
          if (otherUser !== currentUser && otherUserAgeRange !== null &&
             userAgeRange.toString() === otherUserAgeRange.toString()) {
             for (const product of otherUser.likedProducts) {
-               if (!recommendations.some((recProduct) => recProduct.title === product.title)) {
+               if (!recommendations.some(
+                  (recProduct) => recProduct.title === product.title)) {
                   recommendations.push(product);
                }
             }

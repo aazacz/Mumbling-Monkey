@@ -14,9 +14,10 @@ import Tick from "/Tick.png"
 import map from "/map.png"
 import address from "/address.png"
 import social from "/social.png"
+import burger from "/burger.png"
 
 function App() {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(false)
   const easing = cubicBezier(.39, -0.23, .4, 1.4)
   const marqueeVariants = {
     animate: {
@@ -97,6 +98,16 @@ function App() {
 
 
         <div className='w-full h-screen relative overflow-y-hidden  flex flex-col items-center '>
+
+
+          <div className='w-full flex justify-between px-24 '>
+            <img src={logo} width={90} alt="" />
+
+            <div className='flex items-center gap-3' >
+              <h1 className='text-gray-500 font-extrabold text-xl'>MENU</h1>
+              <img src={burger} width={50} alt="" onClick={()=>setShow(!show)} />
+            </div>
+          </div>
 
           <motion.div className='absolute items-start  invert opacity-20 left-6 ' variants={marqueeVariants} animate="animate"   >
             <img className='' src={sideimg} alt="" />
@@ -347,7 +358,7 @@ function App() {
 
         <div className='w-full  grid grid-flow-col col-span-4 px-12 py-6 '>
 
-         
+
           <div className='w-auto'>
             <div className='flex items-center gap-6 '>
               <img src={logo} width={65} alt="" />
@@ -358,8 +369,8 @@ function App() {
 
 
             <div className=' flex gap-2 mt-8'>
-            <img src={social} width={150} alt="" />
-           
+              <img src={social} width={150} alt="" />
+
 
             </div>
           </div>
@@ -370,21 +381,21 @@ function App() {
             <p className=''> About us </p>
             <p className=''> Our Services </p>
             <p className=''> Our Expertise </p>
-         </div>
-         <div className=' flex flex-col border-white border-2 gap-y-4'>
+          </div>
+          <div className=' flex flex-col border-white border-2 gap-y-4'>
             <p className=''> Our Team</p>
             <p className=''> Contact Us </p>
-            
-         </div>
-         <div className=' flex flex-col border-white border-2 gap-y-4'>
+
+          </div>
+          <div className=' flex flex-col border-white border-2 gap-y-4'>
             <h1 className='font-semibold'> Contact Us</h1>
             <p className=''> Address</p>
-            
-         </div>
+
+          </div>
 
         </div>
         <div className='w-full h-10 bg-gray-300 px-11 text-xs text-gray-500  flex items-center' >
-        ©2024 Mumbling monkey; All Rights Reserved.
+          ©2024 Mumbling monkey; All Rights Reserved.
         </div>
 
 
