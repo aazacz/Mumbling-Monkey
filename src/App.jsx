@@ -10,13 +10,16 @@ import GroupPhoto from "/Photo.png"
 import Rectangle from "/Rectangle.png"
 import Rectangle2 from "/Rectangle2.png"
 import { HiOutlineSpeakerphone, HiOutlineMailOpen } from "react-icons/hi";
+import Tick from "/Tick.png"
+import map from "/map.png"
+import address from "/address.png"
 
 function App() {
   const [show, setShow] = useState(true)
   const easing = cubicBezier(.39, -0.23, .4, 1.4)
   const marqueeVariants = {
     animate: {
-      y: [-2000,0,-2000],
+      y: [-2000, 0, -2000],
       transition: {
         y: {
           repeat: Infinity,
@@ -90,25 +93,25 @@ function App() {
 
     <>
       <div className='w-full h-auto  relative flex flex-col items-center overflow-auto'>
-     
+
 
         <div className='w-full h-screen relative overflow-y-hidden  flex flex-col items-center '>
-       
-        <motion.div className='absolute items-start  invert opacity-20 left-6 '    variants={marqueeVariants}    animate="animate"   >
+
+          <motion.div className='absolute items-start  invert opacity-20 left-6 ' variants={marqueeVariants} animate="animate"   >
             <img className='' src={sideimg} alt="" />
             <img className='' src={sideimg} alt="" />
             <img className='' src={sideimg} alt="" />
 
-         </motion.div>
-        
-        <motion.div className='absolute items-start  invert opacity-20 right-6 '    variants={marqueeVariants}    animate="animate"   >
+          </motion.div>
+
+          <motion.div className='absolute items-start  invert opacity-20 right-6 ' variants={marqueeVariants} animate="animate"   >
             <img className='' src={sideimg} alt="" />
             <img className='' src={sideimg} alt="" />
             <img className='' src={sideimg} alt="" />
 
-         </motion.div>
+          </motion.div>
 
-         
+
           <div className="w-[60%] h-screen flex flex-col justify-center items-center  ">
 
 
@@ -280,6 +283,76 @@ function App() {
 
           </motion.div>
         </div>
+
+
+
+
+
+
+        {/* next Section */}
+        <div className='w-[80%] h-auto py-6 px-14 flex flex-col'>
+
+          <div className='mb-6'>
+            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> CONTACT  US </button>
+            {/* <h1 className='font-Cabin text-4xl pt-4'>Evolve your position & own your category</h1> */}
+            <p className='text-slate-700 font-semibold w-2/3'>We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas</p>
+          </div>
+
+          <div className='w-full h-auto flex  gap-9'>
+
+            <div className='w-1/2 '>
+              <form action="">
+
+                <div className='flex flex-col mt-4'>
+                  <label className='text-gray-700' htmlFor="name">YOUR NAME</label>
+                  <input className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500' type="text" id='name' />
+                </div>
+                <div className='flex flex-col mt-4'>
+                  <label className='text-gray-700' htmlFor="email">EMAIL</label>
+                  <input className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500' type="email" id='email' />
+                </div>
+
+                <div className='flex flex-col mt-4'>
+                  <label className='text-gray-700' htmlFor="email">message</label>
+                  <textarea className='w-full  rounded-xl mt-3 border-[1px] outline-2 border-gray-500' placeholder='Your Message Goes Here' name="" id="" cols="30" rows="5"></textarea>
+                </div>
+
+                <div className='flex flex-row mt-4 items-center justify-between'>
+                  <div className='flex py-3 items-center'>
+                    <img src={Tick} alt="" />
+                    <p className='pl-4'>I agree with the <span className='underline'>Term Of Uses</span> and <span className='underline'> Privacy Policy </span></p>
+                  </div>
+                  <button className='px-11 text-sm text-white  py-3  rounded-xl bg-black '>Send</button>
+                </div>
+
+              </form>
+
+            </div>
+
+            <div className='w-1/2 flex flex-col items-end '>
+
+              <img src={map} className='w-full' alt="" />
+              <div className='mt-5 '>
+                <img src={address} className='w-full' alt="" />
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+  {/* Footer Section */}
+
+<div className='w-full h-20 grid grid-flow-col col-span-4 px-8 '>
+
+  <div className='bg-black border-white border-2'>
+
+  </div>
+  <div className='bg-black border-white border-2'></div>
+  <div className='bg-black border-white border-2'></div>
+  <div className='bg-black border-white border-2'></div>
+</div>
 
 
 

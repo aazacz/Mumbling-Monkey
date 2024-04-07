@@ -13,7 +13,9 @@ class User {
 }
 
 function recommendProducts(currentUser, allUsers) {
+  
    const recommendations = [];
+
    const ageRanges = [
       [1, 10], [11, 20], [21, 30], [31, 40], [41, 50],
       [51, 60], [61, 70], [71, 80], [81, 90], [91, 100]
@@ -63,6 +65,8 @@ const user3 = new User('Michael', 45, [product2, product3, product5]);
 const user4 = new User('Sarah', 48, [product2, product3, product5]);
 
 const allUsers = [user1, user2, user3, user4];
+
+
 const recommendations = recommendProducts(user3, allUsers);
 
 console.log('Hey, users of similar age range have liked these products:');
