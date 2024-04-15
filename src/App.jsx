@@ -94,26 +94,31 @@ function App() {
 
 
     <>
-      <div className='w-full h-auto  relative flex flex-col items-center overflow-auto'>
+      <div className='  mw-full h-auto  relative flex flex-col items-center overflow-auto'>
 
 
-        <div className='w-full h-screen relative overflow-y-hidden  flex flex-col items-center '>
 
 
-          <div className='w-full flex justify-between px-24 '>
-            <img src={logo} width={90} alt="" />
+        {/* first screen */}
+        <div className='w-full h-screen relative overflow-y-hidden  flex flex-col  items-center'>
 
-            <div className='flex items-center gap-3' >
-              <h1 className='text-gray-500 font-extrabold text-xl absolute right-48'>MENU</h1>
-              <img src={burger} width={50} alt="" className={`absolute right-32 z-20 ${show ? "translate-y-12" : ""} transition-all duration-500`} onClick={() => setShow(!show)} />
+
+          <div className='w-full flex justify-between items-center px-10 md:px-24 py-2  '>
+            <img src={logo}  className='w-[50px]  md:w-[90px]' alt="" />
+
+            <div className='flex items-center gap-3 ' >
+              <h1 className='text-gray-500 font-extrabold md:text-xl  '>MENU</h1>
+              <img src={burger}  alt="" className={` w-[30px] md:w-[50px] z-20 ${show ? "translate-y-12" : ""} transition-all duration-500`} onClick={() => setShow(!show)} />
             </div>
           </div>
 
-          <AnimatePresence>
 
+
+                      {/* NAVBAR OPEN CLOSE */}
+          <AnimatePresence>
             {show &&
 
-              <motion.div className='absolute w-full h-screen flex items-center overflow-hidden'>
+              <motion.div className='absolute  w-full h-screen flex items-center overflow-hidden'>
 
 
 
@@ -152,28 +157,24 @@ function App() {
 
           <AnimatePresence>
 
-
-
-
-
             {show && <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.1 }}
               exit={{ opacity: 0 }}
-              className={`absolute py-36 w-full h-screen px-64 bg-slate-600 flex flex-col  items-center  transition-all duration-500 `} >
+              className={`absolute py-36 w-full h-screen md:px-64 bg-slate-600 flex flex-col  items-center  transition-all duration-500 `} >
 
               <img src={logo} width={90} alt="" />
 
-              <ul className=' mt-10 flex justify-around text-xl font-bold list-disc gap-14 '>
-                <li >ABOUT US</li>
-                <li>SERVICES</li>
-                <li>OUR EXPERTISE</li>
-                <li>OUR TEAM</li>
-                <li>CONTACT US</li>
+              <ul className=' mt-10 flex md:flex-row flex-col justify-around md:text-xl font-bold md:list-disc gap-14 text-center md:text-left'>
+                <li className='text-white md:text-black'>ABOUT US</li>
+                <li className='text-white md:text-black'>SERVICES</li>
+                <li className='text-white md:text-black'>OUR EXPERTISE</li>
+                <li className='text-white md:text-black'>OUR TEAM</li>
+                <li className='text-white md:text-black'>CONTACT US</li>
               </ul>
 
-
+                              
             </motion.div>}
 
 
@@ -185,49 +186,60 @@ function App() {
 
 
 
-          <motion.div className='absolute items-start  invert opacity-20 left-6 ' variants={marqueeVariants} animate="animate"   >
-            <img className='' src={sideimg} alt="" />
-            <img className='' src={sideimg} alt="" />
-            <img className='' src={sideimg} alt="" />
+          <motion.div className='absolute   invert opacity-20 md:left-6 left-0 ' variants={marqueeVariants} animate="animate"   >
+          <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
 
           </motion.div>
 
-          <motion.div className='absolute items-start  invert opacity-20 right-6 ' variants={marqueeVariants} animate="animate"   >
-            <img className='' src={sideimg} alt="" />
-            <img className='' src={sideimg} alt="" />
-            <img className='' src={sideimg} alt="" />
+          <motion.div className='absolute flex flex-col items-end md:flex-none   invert opacity-20 md:right-6 right-0' variants={marqueeVariants} animate="animate"   >
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+            
 
           </motion.div>
 
 
-          <div className="w-[60%] h-screen flex flex-col justify-center items-center  ">
+          <motion.div 
+          initial={{y:100}}
+          animate={{ y: 0 }}
+          
+          className="md:w-[60%] h-full flex flex-col justify-center items-center  ">
 
 
 
 
-            <img src={logo} width="200" alt="" />
+            <img src={logo} className='w-[200px]' alt="" />
+            < motion.div   
+             initial={{y:100}}
+             animate={{ y: 0 }}
+             transition={{ type: "spring", duration: 0.8 ,damping:10,mass: 1 ,stiffness: 200 }}>
+
             <h1 className='text-center font-Cabin font-extrabold text-[50px] leading-10'>MUMBLING <br />MONKEYS</h1>
             <p className='text-center mt-4'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
+            </motion.div>
 
             <button className='rounded-md bg-slate-600 font-light text-sm text-white px-3 py-2 mt-4'>Get Stsrted Today</button>
 
-          </div>
+          </motion.div>
         </div>
 
 
 
 
         {/* next Section */}
-        <div className='w-[80%]  h-auto py-6 px-14 flex'>
+        <div className='md:w-[80%] w-full h-auto py-6 md:px-14 px-5 md:flex'>
 
-          <motion.div className='w-3/5 h-full py-6 pr-6'
+          <motion.div className='md:w-3/5 w-full  h-full py-6 pr-6'
             initial={{ x: -200, y: 0, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 100 }}
             transition={{ duration: 1 }}
             viewport={{ amount: 0.5, once: true }}
 
           >
-            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> ABOUT COMPANY</button>
+            <button className='text-white md:text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> ABOUT COMPANY</button>
             <h1 className='font-Cabin text-4xl pt-4'>Mumbling monkey</h1>
             <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys,your trusted digital marketing agency.</p>
 
