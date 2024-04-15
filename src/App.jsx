@@ -100,7 +100,7 @@ function App() {
 
 
         {/* first screen */}
-        <div className='w-full h-screen relative overflow-y-hidden  flex flex-col  items-center'>
+        <div className='w-full   h-screen relative overflow-y-hidden  flex flex-col  items-center'>
 
 
           <div className='w-full flex justify-between items-center px-10 md:px-24 py-2  '>
@@ -206,7 +206,7 @@ function App() {
           initial={{y:100}}
           animate={{ y: 0 }}
           
-          className="md:w-[60%] h-full flex flex-col justify-center items-center  ">
+          className="md:w-[60%]  h-full  flex flex-col justify-center items-center  ">
 
 
 
