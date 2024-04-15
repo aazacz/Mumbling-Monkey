@@ -289,7 +289,7 @@ function App() {
 
 
         {/* next Section */}
-        <div className='md:w-[80%] w-[90%] h-auto py-6 md:px-14 flex flex-col'>
+        <div className='md:w-[80%] w-[90%] h-auto py-6 md:px-14  flex flex-col'>
 
           <div className='mb-6'>
             <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> TEAM</button>
@@ -330,17 +330,16 @@ function App() {
 
 
         {/* next Section */}
-        <div className='md:w-[80%] w-[90%]  h-auto py-6 md:px-14 px-4 flex flex-col'>
+        <div className='md:w-[80%] w-[90%]  h-auto py-6 md:px-14 px-3 flex flex-col'>
 
           <div className='mb-6'>
             <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> GROWING WITH OUR CLIENTS </button>
             <h1 className='font-Cabin md:text-4xl text-xl pt-4'>Evolve your position & own your category</h1>
-            <p className='text-slate-700 font-semibold'>We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas, Creative Content And Unique Strategies. With Us, You Get A Team Of Highly Experienced And Skilled Individuals Who Are Happy To Help You Round The Clock, At Cost-Effective Prices. </p>
+            <p className='text-slate-700 font-semibold text-justify md:text-left'>We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas, Creative Content And Unique Strategies. With Us, You Get A Team Of Highly Experienced And Skilled Individuals Who Are Happy To Help You Round The Clock, At Cost-Effective Prices. </p>
           </div>
 
 
-          <motion.div className=' grid grid-flow-row md:grid-cols-2 grid-cols-1 gap-4 justify-center '
-          >
+          <motion.div className=' grid grid-flow-row md:grid-cols-2 grid-cols-1 gap-4 justify-center ' >
 
             {data2.map((value, key) => {
               return (
@@ -352,8 +351,8 @@ function App() {
                   viewport={{ amount: 0.5 }}
 
 
-                  key={key} className={`h-40  p-6  flex items-center rounded-lg ${value.colour}`}>
-                  <div className='w-[80%] pr-2'>
+                  key={key} className={`md:h-40  h-50 p-6  flex items-center rounded-lg ${value.colour}`}>
+                  <div className='w-[80%] md:pr-2'>
                     <h1 className='text-lg font-semibold'> {value.heading}</h1>
                     <p className='text-sm '> {value.description}</p>
 
