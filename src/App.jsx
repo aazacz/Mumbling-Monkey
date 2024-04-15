@@ -391,17 +391,17 @@ function App() {
 
 
         {/* next Section */}
-        <div className='w-[80%] h-auto py-6 px-14 flex flex-col'>
+        <div className='md:w-[80%] w-[90%] h-auto py-6 md:px-14 px-3  flex flex-col'>
 
           <div className='mb-6'>
             <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> CONTACT  US </button>
             {/* <h1 className='font-Cabin text-4xl pt-4'>Evolve your position & own your category</h1> */}
-            <p className='text-slate-700 font-semibold w-2/3'>We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas</p>
+            <p className='text-slate-700 font-semibold md:w-2/3'>We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas</p>
           </div>
 
-          <div className='w-full h-auto flex  gap-9'>
+          <div className='w-full  h-auto flex md:flex-row flex-col-reverse  md:gap-9'>
 
-            <div className='w-1/2 '>
+            <div className='md:w-1/2  '>
               <form action="">
 
                 <div className='flex flex-col mt-4'>
@@ -415,22 +415,22 @@ function App() {
 
                 <div className='flex flex-col mt-4'>
                   <label className='text-gray-700' htmlFor="email">message</label>
-                  <textarea className='w-full  rounded-xl mt-3 border-[1px] outline-2 border-gray-500' placeholder='Your Message Goes Here' name="" id="" cols="30" rows="5"></textarea>
+                  <textarea className='w-full placeholder:pl-3 placeholder:pt-3 rounded-xl mt-3 border-[1px] outline-2 border-gray-500' placeholder='Your Message Goes Here' name="" id="" cols="30" rows="5"></textarea>
                 </div>
 
                 <div className='flex flex-row mt-4 items-center justify-between'>
                   <div className='flex py-3 items-center'>
-                    <img src={Tick} alt="" />
-                    <p className='pl-4'>I agree with the <span className='underline'>Term Of Uses</span> and <span className='underline'> Privacy Policy </span></p>
+                    <img src={Tick} alt="" className='w-[12%]' />
+                    <p className='pl-4 text-xs md:text-base'>I agree with the <span className='underline'>Term Of Uses</span> and <span className='underline'> Privacy Policy </span></p>
                   </div>
-                  <button className='px-11 text-sm text-white  py-3  rounded-xl bg-black '>Send</button>
+                  <button className='md:px-11 px-6 text-sm text-white  md:py-3 p-2  rounded-xl bg-black '>Send</button>
                 </div>
 
               </form>
 
             </div>
 
-            <div className='w-1/2 flex flex-col items-end '>
+            <div className='md:w-1/2 flex flex-col items-end '>
 
               <img src={map} className='w-full' alt="" />
               <div className='mt-5 '>
