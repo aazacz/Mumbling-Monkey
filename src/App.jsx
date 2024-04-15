@@ -230,16 +230,16 @@ function App() {
 
 
         {/* next Section */}
-        <div className='md:w-[80%] w-full h-auto py-6 md:px-14 px-5 md:flex'>
+        <div className='md:w-[80%] w-[90%] h-auto py-6 md:px-14 px-4 md:flex'>
 
-          <motion.div className='md:w-3/5 w-full  h-full py-6 pr-6'
-            initial={{ x: -200, y: 0, opacity: 0 }}
+          <motion.div className='md:w-3/5 w-full h-full py-6 pr-6'
+            initial={{ x: -195, y: 0, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 100 }}
             transition={{ duration: 1 }}
             viewport={{ amount: 0.5, once: true }}
 
           >
-            <button className='text-white md:text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> ABOUT COMPANY</button>
+            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> ABOUT COMPANY</button>
             <h1 className='font-Cabin text-4xl pt-4'>Mumbling monkey</h1>
             <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys,your trusted digital marketing agency.</p>
 
@@ -263,7 +263,9 @@ function App() {
 
 
           </motion.div>
-          <div className='w-2/5 relative h-full flex justify-end py-6 '>
+
+
+          <div className='md:w-2/5 relative h-full flex justify-end py-6 '>
 
             <img className=' absolute z-10 top-1 right-0 ' width="180" src={pattern} alt="" />
 
@@ -287,7 +289,7 @@ function App() {
 
 
         {/* next Section */}
-        <div className='w-[80%] h-auto py-6 px-14 flex flex-col'>
+        <div className='md:w-[80%] w-[90%] h-auto py-6 md:px-14 flex flex-col'>
 
           <div className='mb-6'>
             <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> TEAM</button>
@@ -296,7 +298,7 @@ function App() {
           </div>
 
 
-          <div className=' grid grid-flow-row grid-cols-2 gap-5 justify-center '>
+          <div className=' grid grid-flow-row md:grid-cols-2 grid-cols-1 gap-5 justify-center '>
 
 
             {data.map((value, key) => {
@@ -309,7 +311,7 @@ function App() {
 
 
 
-                  <div className='w-[80%] group-hover:-translate-y-full transition-all duration-500 absolute m-auto -bottom-[120px] left-0 right-0 z-20'>
+                  <div className='w-[80%] md:group-hover:-translate-y-full group-hover:-translate-y-[125px] transition-all duration-500 absolute m-auto -bottom-[120px] left-0 right-0 z-20'>
                     <h1 className='text-white font-bold text-2xl '> Email Marketing</h1>
                     <p className='text-white leading-5'>Fuelled by extensive market research and creative expertise, we partner with companies to optimize their position and
                       elevate them above the noise. Whether it’s their brand,their products or their people, the journey to category leadership starts with Tomorrow People.</p>
@@ -328,7 +330,7 @@ function App() {
 
 
         {/* next Section */}
-        <div className='w-[80%] h-auto py-6 px-14 flex flex-col'>
+        <div className='md:w-[80%] w-[90%]  h-auto py-6 px-14 flex flex-col'>
 
           <div className='mb-6'>
             <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> GROWING WITH OUR CLIENTS </button>
