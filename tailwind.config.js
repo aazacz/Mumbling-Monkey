@@ -7,6 +7,7 @@ module.exports = {
     extend: {},
     fontFamily:{
       Cabin:["Cabin","sans-serif"],
+      montserrat: ['Montserrat', 'sans-serif'],
       fontWeight: "700"
     }
   },
