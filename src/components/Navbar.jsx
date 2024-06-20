@@ -7,6 +7,7 @@ import { cubicBezier } from "framer-motion"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -16,9 +17,9 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='w-screen z-30 absolute '>
+            <div className='w-[100%] z-30 absolute  h-[15vh]'>
 
-                <div className='w-full z-30 flex justify-between items-center b px-10 md:px-24 py-2  '>
+                <div className='w-full z-30 flex justify-between items-center  px-10 md:px-24 py-2  '>
 
                     {/* left logo */}
                     <div className='rounded-full w-[90px] h-[90px] bg-white bg-opacity-15 flex justify-center items-center'>
@@ -103,12 +104,15 @@ const Navbar = () => {
                         <img src={logo} width={90} alt="" />
 
 
-                        <ul className=' mt-10 flex md:flex-row flex-col justify-around md:text-xl font-bold md:list-disc gap-14 text-center md:text-left'>
-                            <li className='text-white md:text-black'>ABOUT US</li>
-                            <li className='text-white md:text-black'>SERVICES</li>
-                            <li className='text-white md:text-black'>OUR EXPERTISE</li>
-                            <li className='text-white md:text-black'>OUR TEAM</li>
-                            <li className='text-white md:text-black'>CONTACT US</li>
+                        <ul className=' mt-10 flex md:flex-row flex-col justify-around md:text-xl font-bold  gap-24 text-center md:text-left'>
+                        
+                            <li className='text-white md:text-black md:w-max after:content-[""] after:w-2 after:block after:transition-all after:duration-500 hover:after:w-full after:border-2 '><Link onClick={()=>setShow(false)} to="/">HOME</Link></li>
+                            <li className='text-white md:text-black md:w-max after:content-[""] after:w-2 after:block after:transition-all after:duration-500 hover:after:w-full after:border-2 '><Link onClick={()=>setShow(false)} to="/aboutus">ABOUT US</Link></li>
+                            <li className='text-white md:text-black md:w-max after:content-[""] after:w-2 after:block after:transition-all after:duration-500 hover:after:w-full after:border-2 '><Link onClick={()=>setShow(false)} to="/services">SERVICES</Link></li>
+                            <li className='text-white md:text-black md:w-max after:content-[""] after:w-2 after:block after:transition-all after:duration-500 hover:after:w-full after:border-2 '><Link onClick={()=>setShow(false)} to="/ourexpertise">OUR EXPERTISE</Link></li>
+                            <li className='text-white md:text-black md:w-max after:content-[""] after:w-2 after:block after:transition-all after:duration-500 hover:after:w-full after:border-2 '><Link onClick={()=>setShow(false)} to="/ourteam">OUR TEAM</Link></li>
+                            <li className='text-white md:text-black md:w-max after:content-[""] after:w-2 after:block after:transition-all after:duration-500 hover:after:w-full after:border-2 '><Link onClick={()=>setShow(false)} to="/contactus">CONTACT US</Link></li>
+                      
                         </ul>
 
 

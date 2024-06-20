@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
+
 import tick from "/Icon.png"
 import pattern from "/Pattern.png"
 import GroupPhoto from "/Photo.png"
+import Rectangle from "/Rectangle.png"
+import Rectangle2 from "/Rectangle2.png"
+import { HiOutlineSpeakerphone, HiOutlineMailOpen } from "react-icons/hi";
 import NavScreen from '../components/NavScreen'
 import Footer from '../components/Footer'
 import ContactUs from '../components/ContactUs'
@@ -12,14 +16,8 @@ import { MdCheckCircle } from 'react-icons/md'
 import goals from "/Goals.png"
 import Megaphone from "/Megaphone.png"
 import bar from "/bar.png"
-import AboutUsimg from "/AboutUs.webp"
 
-const AboutUs = (Data) => {
-
-    const NavData= {
-        heading:"About Us",
-        Description:"Creative Services For Boost Your Business Growth"
-    }
+const OurTeam = (Data) => {
 
     console.log(Data.Data)
     const data = [
@@ -103,7 +101,7 @@ const AboutUs = (Data) => {
             <div className='  md-full h-auto  relative flex flex-col items-center overflow-auto'>
 
 
-            <NavScreen bg={AboutUsimg} Data={NavData} />
+                <NavScreen bg={Data} />
 
 
                 {/*#######################################  Section 1 Starts #######################################*/}
@@ -290,6 +288,73 @@ const AboutUs = (Data) => {
 
 
 
+
+
+
+
+                {/*#######################################  Section 3 Starts #######################################*/}
+                <div className='md:w-full md:max-w-[1200px]  w-[90%]  h-auto py-6  px-3 flex flex-col'>
+
+                    <div className='mb-6'>
+                        <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 italic py-1'>
+                            Ready to Elevate Your Brand's Cool Quotient? Let's Talk!
+                        </button>
+
+                        <h1 className='font-Cabin md:text-4xl text-xl pt-4'>DIGITAL MARKETING SERVICES</h1>
+                        <p className='text-slate-700 font-semibold text-justify md:text-left'>
+                            We, at Mumbling Monkeys, are committed to working on your
+                            business as our own. We aspire to achieve goals with innovative ideas,
+                            creative content and unique strategies. With us, you get a team of highly
+                            experienced and skilled individuals who are happy to help you boost your brand’s
+                            visibility and profitability, round the clock.
+                            Here's a glimpse of what we can do for you
+                        </p>
+                    </div>
+
+
+                    <motion.div className=' grid grid-flow-row md:grid-cols-2 grid-cols-1 gap-4 justify-center ' >
+
+                        {data2.map((value, key) => {
+                            return (
+
+                                <motion.div
+                                    initial={{ x: 0, y: `${-100 * value.dur}` }}
+                                    whileInView={{ x: 0, y: 0 }}
+                                    transition={{ duration: 1 }}
+                                    viewport={{ amount: 0.5 }}
+
+
+                                    key={key} className={`md:h-40  h-50 p-6  flex items-center rounded-lg ${value.colour}`}>
+                                    <div className='w-[80%] md:pr-2'>
+                                        <h1 className='text-lg font-semibold'> {value.heading}</h1>
+                                        <p className='text-sm '> {value.description}</p>
+
+                                    </div>
+                                    <div className='w-[10%]'>
+                                        <div className='w-14 h-14 bg-black flex justify-center items-center relative group' >
+                                            <div className={`${value.textcol} text-4xl  absolute group-hover:scale-50 group-hover:opacity-0 transition-all duration-300`}>
+                                                <HiOutlineSpeakerphone />
+                                            </div>
+
+                                            <div className={` text-4xl font-thin scale-0  origin-center absolute group-hover:scale-100  transition-all duration-200`}>
+                                                <HiOutlineMailOpen />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </motion.div>
+
+                            )
+                        })}
+
+                    </motion.div>
+                </div>
+
+
+
+
+
+
                 <ContactUs />
                 <Footer />
             </div>
@@ -298,4 +363,4 @@ const AboutUs = (Data) => {
     )
 }
 
-export default AboutUs
+export default OurTeam

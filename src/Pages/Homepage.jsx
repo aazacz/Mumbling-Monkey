@@ -10,12 +10,16 @@ import { HiOutlineSpeakerphone, HiOutlineMailOpen } from "react-icons/hi";
 import NavScreen from '../components/NavScreen'
 import Footer from '../components/Footer'
 import ContactUs from '../components/ContactUs'
-
+import logo from "/Logo.png"
 
 
 const Homepage = () => {
 
 
+  const NavData= {
+    heading:"About Us",
+    Description:"Creative Services For Boost Your Business Growth"
+}
   const data = [
     {
       heading: "Cutting-Edge Strategies", image1: "Rectangle", image2: "Rectangle2",
@@ -96,7 +100,25 @@ const Homepage = () => {
       <div className='  md-full h-auto  relative flex flex-col items-center overflow-auto'>
 
 
-        <NavScreen />
+      <motion.div 
+          initial={{y:100}}
+          animate={{ y: 0 }}
+
+          className="md:w-[100%]  h-screen  flex flex-col justify-center items-center  ">
+
+
+
+            <img src={logo} className='w-[200px]' alt="" />
+            < motion.div   
+             initial={{y:100}}
+             animate={{ y: 0 }}
+             transition={{ type: "spring", duration: 0.8 ,damping:10,mass: 1 ,stiffness: 200 }}>
+            <h1 className='text-center font-Cabin font-extrabold text-[50px] leading-10'>MUMBLING <br />MONKEYS</h1>
+            <p className='text-center mt-4'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
+            </motion.div>
+            <button className='rounded-md bg-slate-600 font-light text-sm text-white px-3 py-2 mt-4'>Get Stsrted Today</button>
+          </motion.div>
+   
 
 
         {/*#######################################  Section 1 Starts #######################################*/}
