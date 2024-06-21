@@ -10,41 +10,16 @@ import TeamWork from '/expertise/TeamWork.png';
 import { Carousel } from "flowbite-react";
 import MeshLeftSide from "/expertise/Mesh.png"
 import { MdCheckCircle } from 'react-icons/md';
-
+import CardImg1 from "/expertise/CardImg1.png"
+import CardImg2 from "/expertise/CardImg2.png"
+import CardImg3 from "/expertise/CardImg3.png"
+import CardImg4 from "/expertise/CardImg4.png"
+import { FaArrowRight } from 'react-icons/fa';
 
 
 const OurExpertise = (Data) => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const slides = [
-        {
-            src: "https://flowbite.com/docs/images/carousel/carousel-1.svg",
-            alt: "Slide 1",
-            caption: "First Slide",
-        },
-        {
-            src: "https://flowbite.com/docs/images/carousel/carousel-2.svg",
-            alt: "Slide 2",
-        },
-        {
-            src: "https://flowbite.com/docs/images/carousel/carousel-3.svg",
-            alt: "Slide 3",
-        },
-    ];
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, [slides.length]);
 
-    const handlePrev = () => {
-        setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
-    };
-
-    const handleNext = () => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    };
 
     const Divs = [
         {
@@ -69,58 +44,8 @@ const OurExpertise = (Data) => {
         },
     ];
 
-    const data2 = [
-        {
-            heading: "Influencer Marketing",
-            description: `Collaborate with trendsetting influencers to instantly enhance your brand's appeal and visibility.`,
-            colour: "bg-yellow-200",
-            textcol: "text-yellow-200",
-            dur: 0
-        },
-        {
-            heading: "Public Relations",
-            description: `Develop a captivating brand narrative and oversee your reputation with finesse.`,
-            colour: "bg-cyan-300",
-            textcol: "text-cyan-200",
-            dur: 0
-        },
-        {
-            heading: "Voice Search Optimization",
-            description: `Enable local payment methods for your customers overseas and slash processing fees by 5-10x.`,
-            colour: "bg-violet-300",
-            textcol: "text-violet-200",
-            dur: 1
-        },
-        {
-            heading: "Social Media Marketing",
-            description: `Enable local payment methods for your customers overseas and slash processing fees by 5-10x.`,
-            colour: "bg-orange-300",
-            textcol: "text-orange-200",
-            dur: 1
-        },
-        {
-            heading: "Social Media Marketing",
-            description: `Enable local payment methods for your customers overseas and slash processing fees by 5-10x.`,
-            colour: "bg-purple-300",
-            textcol: "text-purple-200",
-            dur: 2
-        },
-        {
-            heading: "Social Media Marketing",
-            description: `Enable local payment methods for your customers overseas and slash processing fees by 5-10x.`,
-            colour: "bg-indigo-300",
-            textcol: "text-indigo-200",
-            dur: 2
-        },
-    ];
 
-    const Data3 = [
-        { description: "Mumbling Monkeys specialises in Influencer marketing and Public Relations. With our expertise " },
-        { description: "Mumbling Monkeys believes that digital marketing entails more than just optimising websites and creating eye-catching advertisements. It's all about creating one-of-a-kind, engaging experiences that connect with your target audience and inspire them to act. As a result, we collaborate closely with each of our clients to understand their specific goals, challenges, and target audiences, and to develop a tailored digital marketing strategy that delivers real results." },
-        { description: "Our team at Mumbling Monkeys is made up of talented and experienced individuals, including Google Marketing Certified experts in digital marketing, social media analysis, and content development. In addition, we have graphic designers who are experts in Adobe Photoshop and Autodesk Sketchbook." },
-        { description: "To conduct audits and complete tasks, our marketing professionals use tools such as SEMrush, Google Analytics, Google Search Console, Webmaster Tools, Google Keyword Planner, Google AdSense, Google Voice Search, Google Trends, Small SEO Tools, and others." },
-        { description: "Mumbling Monkeys is dedicated to providing exceptional results and exceptional customer service. We understand that digital marketing can be complicated and intimidating, and we're here to help you every step of the way. Our team is always ready to answer your questions, share insights, and assist you in making informed decisions about your digital marketing strategy." },
-    ];
+
 
     const NavData = {
         heading: "EXPERTISE",
@@ -146,7 +71,8 @@ const OurExpertise = (Data) => {
                 "Influencer Identification",
                 "Influencer Outreach and Campaign Management",
                 "Campaign Reporting"
-            ]
+            ],
+            bg: "bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF]"
         },
         {
             title: "Public Relations",
@@ -163,8 +89,40 @@ const OurExpertise = (Data) => {
                 "Crisis Management/ Public Affairs",
                 "Media Monitoring",
                 "Event Management"
-            ]
+            ],
+            bg: "bg-gradient-to-tl from-[#E9F7FF]  via-[#FFDBD4] to-[#FFF3CA]"
         }
+    ]
+
+    const cards2 = [
+        {
+            bg: "bg-[#C9E1FF]",
+            icon: CardImg1,
+            heading: "A Customized Digital Marketing Strategy",
+            description: "We customize a tailored plan based on your business, goals, and budget to ensure it meets your specific needs."
+
+        },
+        {
+            bg: "bg-[#FFDADA]",
+            icon: CardImg2,
+            heading: "Expert Execution",
+            description: "Our experienced team collaborates to flawlessly execute your digital marketing plan using the latest tools and techniques for optimal results."
+
+        },
+        {
+            bg: "bg-[#D6FFD4]",
+            icon: CardImg3,
+            heading: "Regular Reporting",
+            description: "We offer regular reports on your digital marketing campaigns so you can see results and make informed decisions for future strategies."
+
+        },
+        {
+            bg: "bg-[#DFCCFF]",
+            icon: CardImg4,
+            heading: "Exceptional Customer Service",
+            description: " We're Always Here To Answer Your Questions And Provide Support Whenever You Need It."
+
+        },
     ]
 
 
@@ -205,7 +163,7 @@ const OurExpertise = (Data) => {
                                 return (
 
 
-                                    <div key={index} className='rounded-xl w-full max-w-[1000px] items-center h-[500px] p-10 relative flex   bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF] gap-x-8'>
+                                    <div key={index} className={`rounded-xl w-full max-w-[1200px] items-center h-[500px] p-10 relative flex  ${val.bg}  gap-x-8`}>
                                         <img src={MeshLeftSide} className=' absolute top-2 left-2 h-[200px]' alt="" />
                                         <div className="w-1/3 z-20 rounded-2xl h-full bg-[url('/expertise/CardPhoto1.png')]" > </div>
                                         <div className='w-2/3  h-full flex flex-col '>
@@ -225,7 +183,7 @@ const OurExpertise = (Data) => {
                                                         return (
 
 
-                                                            <div key={index} className='flex items-center w-full gap-x-2 py-2 '>
+                                                            <div key={index} className='flex items-center w-full gap-x-2 py-1 '>
                                                                 <MdCheckCircle className='text-[22px] text-[#292930]' />
                                                                 <h1 className='font-montserrat font-normal text-gray-600'>{value} </h1>
                                                             </div>
@@ -247,18 +205,60 @@ const OurExpertise = (Data) => {
                             })}
 
 
-
-
-
-
-
-
-
-
-
-
                         </Carousel>
                     </div>
+                </div>
+
+
+
+
+                <div className='w-full h-max md:px-16'>
+
+                    <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-slate-500 px-3 py-1'>SPECIAL FEATURES</button>
+                    <div className='flex justify-between items-end'>
+                        <div className='w-1/2 h-max'>
+                            <h1 className='font-montserrat pt-5 font-semibold text-gray-700 text-xl'>Capitalize on low hanging fruit to identify a ballpark value added
+                                activity beta test. Override the digital divide with additional from DevOps.</h1>
+                        </div>
+                        <div className='w-1/2 h-max flex justify-end'>
+                            <button className='px-4 py-2 bg-black rounded-3xl text-white font-montserrat font-semibold '>Get in touch</button>
+                        </div>
+                    </div>
+
+                    <div className='w-full pt-4 h-max grid grid-flow-row  md:grid-cols-4 grid-cols-1  gap-x-8 items-start place-items-center'>
+
+                        {cards2.map((val, index) => {
+                            return (
+
+
+                                <div className={`h-max p-6 ${val.bg} flex flex-col rounded-2xl`}>
+                                    {/* icon div */}
+                                    <div className='w-full h-max pb-6'>
+                                        <div className='rounded-full bg-black w-14 h-14 flex justify-center items-center'>
+                                            <img src={val.icon} className='w-8 h-8' alt="" />
+                                        </div>
+                                    </div>
+
+                                    <div className='w-full'>
+                                        <h1 className='font-montserrat font-semibold pb-4 text-lg text-center'> {val.heading}</h1>
+
+                                        <h1 className='font-montserrat font-light text-'>  {val.description}</h1>
+                                    </div>
+                                    <div className='w-full h-8 flex items-center gap-x-2' >
+                                        <h1 className='font-montserrat font-semibold'> Read More </h1> <FaArrowRight />
+
+                                    </div>
+
+                                </div>
+                            )
+                        })}
+
+
+
+                    </div>
+
+
+
                 </div>
 
 
