@@ -21,74 +21,25 @@ const AboutUs = (Data) => {
         Description:"Creative Services For Boost Your Business Growth"
     }
 
-    console.log(Data.Data)
-    const data = [
-        {
-            heading: "Cutting-Edge Strategies", image1: "Rectangle", image2: "Rectangle2",
-            description: `We thrive on staying ahead of the curve and crafting strategies that ride the wave of the latest trends and technologies, ensuring your brand is always in vogue.`
+    const marketingData = [
+         {
+            title: "Creative Ideas",
+            description: "Experience the difference with our creative ideas that spark engagement and inspire action. We blend imagination and strategy to deliver unforgettable marketing campaigns."
         },
         {
-            heading: "Full-Service Portfolio", image1: "Rectangle", image2: "Rectangle2",
-            description: `From Influencer Marketing, Public Relations, and SEO to Video Production, Content Marketing, and Voice Search Optimization, our services are as trendy and diverse as the digital landscape itself.`
+            title: "Best Features",
+            description: "From advanced analytics and robust influencer networks to personalized campaign strategies, we deliver excellence in every detail. Our comprehensive influencer databases, real-time campaign tracking, and tailored marketing strategies ensure success."
         },
         {
-            heading: "Youthful Team", image1: "Rectangle", image2: "Rectangle2",
-            description: `Our team is made up of young, creative minds who bring fresh perspectives to every project. We're on the same wavelength as the trends and tastes of today's audience.`
+            title: "Experience",
+            description: "Benefit from our extensive experience in influencer marketing. We blend industry knowledge with innovative strategies to create powerful campaigns that drive growth."
         },
         {
-            heading: "Client-First Approach", image1: "Rectangle", image2: "Rectangle2",
-            description: `Fuelled by extensive market research and creative expertise, we partner with companies to optimize their position and
-                          elevate them above the noise. Whether it’s their brand,their products or their people, the journey to category leadership starts with Tomorrow People.`},
-        {
-            heading: "Measurable Coolness", image1: "Rectangle", image2: "Rectangle2",
-            description: `Our campaigns don't just look cool; they deliver measurable results. We're all about the ROI.`
-        },
-        {
-            heading: "A customized digital marketing strategy", image1: "Rectangle", image2: "Rectangle2",
-            description: `We take the time to get to know your
-                business and your goals, and create a customized plan that's tailored to your needs and budget.`},
-        {
-            heading: "Expert execution", image1: "Rectangle", image2: "Rectangle2",
-            description: `Our team of experienced marketers, designers, and developers will work together to execute your digital marketing plan flawlessly, using the latest tools and techniques to get the best results`
-        },
-        {
-            heading: "Regular reporting", image1: "Rectangle", image2: "Rectangle2",
-            description: `We provide regular reports on the progress of your digital marketing campaigns, so you can see the results for yourself and make informed decisions about future strategies.`
-        },
-        {
-            heading: "Exceptional customer service", image1: "Rectangle", image2: "Rectangle2",
-            description: `We pride ourselves on providing exceptional customer service to all of our clients. We're always here to answer your questions and provide support whenever you need it.`
-        },
+            title: "Seamless Solutions",
+            description: "Experience the convenience of our seamless solutions. Our integrated approach ensures smooth, hassle-free execution of your marketing strategies."
+        }
     ]
 
-    const data2 = [
-        {
-            heading: "Influencer Marketing", description: `Collaborate with trendsetting influencers to instantly enhance your brand's appeal and visibility. `, colour: "bg-yellow-200", textcol: "text-yellow-200", dur: 0
-        },
-        {
-            heading: "Public Relations", description: `Develop a captivating brand narrative and oversee your reputation with finesse. `, colour: "bg-cyan-300", textcol: "text-cyan-200", dur: 0
-        },
-        {
-            heading: "Voice Search Optimization", description: `Enable local payment methods for your customers 
-                                                      overseas and slash processing fees by 5-10x.Enable local payment 
-                                                      methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-violet-300", textcol: "text-violet-200", dur: 1
-        },
-        {
-            heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
-                                                      overseas and slash processing fees by 5-10x.Enable local payment 
-                                                      methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-orange-300", textcol: "text-orange-200", dur: 1
-        },
-        {
-            heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
-                                                      overseas and slash processing fees by 5-10x.Enable local payment 
-                                                      methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-purple-300", textcol: "text-purple-200", dur: 2
-        },
-        {
-            heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
-                                                      overseas and slash processing fees by 5-10x.Enable local payment 
-                                                      methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-indigo-300", textcol: "text-indigo-200", dur: 2
-        },
-    ]
 
     const Data3 = [
         { description: "Our company was founded with a single goal in mind: to assist businesses of all sizes in harnessing the power of the internet to reach new audiences, drive traffic, and generate more leads and sales." },
@@ -188,10 +139,13 @@ const AboutUs = (Data) => {
                     </div>
                     <div className='w-[100%] '>
                         <div className='  flex justify-between place-items-start '>
-                            <Animation />
-                            <Animation />
-                            <Animation />
-                            <Animation />
+                           {marketingData.map((value,index)=>{
+                            return(
+                                <Animation key={index}  data={value} />
+
+                            )
+                           })}
+                            
 
                         </div>
                     </div>
@@ -201,18 +155,22 @@ const AboutUs = (Data) => {
                     <div className='rounded-xl w-full  flex mt-8 p-10 bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF] gap-x-8'>
 
                         {/* Left Side */}
-                        <div className='w-1/2 h-full grid grid-flow-col grid-rows-3 gap-y-10 '>
+                        <div className='w-1/2 h-full flex flex-col  '>
 
-                            <div className='border-b-[1.5px] border-[#CFCFCF] w-full  '>
+                            <div className='border-b-[2px]  border-[#CFCFCF] w-full  h-[90px]  '>
                                 <h1 className='font-montserrat font-semibold text-3xl text-gray-800'>Our bulletproof process to win on Social Media</h1>
                             </div>
 
-                            <div >
-                                <h1 className='text-gray-700 text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit sollicitudinbibendum senectus scelerisque non. Turpis matis morbi vivera ipsum adipiscing Mauris volutpat  Ipsum duis tempor.</h1>
+                            <div  className=' flex w-full h-max'>
+                                <h1 className='text-gray-700 text-lg font-montserrat text-justify '>&emsp; &emsp;&emsp;In today's dynamic digital landscape, succeeding on social media requires more than just posting content. It demands a strategic, data-driven approach that ensures your brand not only reaches but resonates with your target audience. Our bulletproof process is designed to deliver 
+                                    consistent and exceptional results, transforming your social media presence into a powerful marketing tool. </h1>
                             </div>
 
 
-                            <div className='w-full grid grid-flow-row grid-rows-3 gap-y-3' >
+                            <div className='w-full pt-4 grid grid-flow-row grid-rows-3 gap-y-3' >
+                              
+                              
+                              
                                 <div className='flex items-center w-full gap-x-2 '>
                                     <MdCheckCircle className='text-[22px] text-[#292930]' />
                                     <h1 className='font-montserrat font-normal text-gray-600'>Dolor duis lorem enim eu nulla semper </h1>
@@ -227,13 +185,56 @@ const AboutUs = (Data) => {
                         </div>
                         {/* right Side */}
 
-                        <div className='w-1/2 overflow-hidden relative'>
+                        <div className='w-1/2 overflow-x-scroll grid grid-flow-col snap-x snap-mandatory  '>
 
 
 
 
 
-                            <div className='w-full h-full  flex items-center'>
+                            <div className='w-[550px] h-full  snap-center flex items-center'>
+
+                                <div className='relative w-[20%] overflow-hidden h-full grid grid-flow-row justify-center  items-center'>
+                                    <div className='absolute w-full h-[90%] left-1/2  border-l-2 border-dashed  border-[#E38676] '></div>
+
+                                    <div className='rounded-full z-20 w-[90px] h-[90px] max-w-[90px] max-h-[90px] bg-[#FFD1C8] flex justify-center items-center '>
+                                        <div className=' rounded-full w-[80px] h-[80px] max-w-[74px] max-h-[74px] bg-white flex justify-center items-center'>
+                                            <img src={goals} className='w-[50%]' alt="" />
+                                        </div>
+                                    </div>
+                                    <div className='rounded-full z-20 w-[90px] h-[90px] max-w-[90px] max-h-[90px] bg-[#FFD1C8] flex justify-center items-center '>
+                                        <div className=' rounded-full w-[80px] h-[80px] max-w-[74px] max-h-[74px] bg-white flex justify-center items-center'>
+                                            <img src={Megaphone} className='w-[50%]' alt="" />
+                                        </div>
+                                    </div>
+                                    <div className='rounded-full z-20 w-[90px] h-[90px] max-w-[90px] max-h-[90px] bg-[#FFD1C8] flex justify-center items-center '>
+                                        <div className=' rounded-full w-[80px] h-[80px] max-w-[74px] max-h-[74px] bg-white flex justify-center items-center'>
+                                            <img src={bar} className='w-[50%]' alt="" />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div className='flex-1 h-full grid grid-flow-row justify-center  items-center'>
+                                    <div>
+                                        <h1 className='font-montserrat text-lg font-semibold pb-2'>Social Media Content Plan</h1>
+                                        <h1 className='font-montserrat '>consectetur amet dolor sit comeneer ilremsilom dolce issilm acalrm </h1>
+
+                                    </div>
+                                    <div>
+                                        <h1 className='font-montserrat text-lg font-semibold pb-2'>Publishing & Execution</h1>
+                                        <h1 className='font-montserrat '>consectetur amet dolor sit comeneer ilremsilom dolce issilm acalrm </h1>
+
+
+                                    </div>
+                                    <div>
+                                        <h1 className='font-montserrat text-lg font-semibold pb-2'>Measure & Scale</h1>
+                                        <h1 className='font-montserrat '>consectetur amet dolor sit comeneer ilremsilom dolce issilm acalrm </h1>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div className='w-[550px] h-full  snap-center flex items-center'>
 
                                 <div className='relative w-[20%] overflow-hidden h-full grid grid-flow-row justify-center  items-center'>
                                     <div className='absolute w-full h-[90%] left-1/2  border-l-2 border-dashed  border-[#E38676] '></div>
