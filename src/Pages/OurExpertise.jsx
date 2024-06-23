@@ -24,22 +24,22 @@ const OurExpertise = (Data) => {
     const Divs = [
         {
             Heading: "Effieciency",
-            Description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            Description: "Our streamlined processes ensure efficiency in every campaign, maximizing results while minimizing time and resources.",
             Icon: gearIcon
         },
         {
             Heading: "Accountability",
-            Description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            Description: "We take full accountability for our actions, ensuring transparent communication and measurable outcomes",
             Icon: Accountability
         },
         {
             Heading: "Commitment",
-            Description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            Description: "We are dedicated to your success, committed to delivering exceptional service and achieving your marketing goals.",
             Icon: Commitment
         },
         {
             Heading: "Team Work",
-            Description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            Description: "Collaboration is at our core; together, we harness collective expertise to drive impactful strategies and outcomes.",
             Icon: TeamWork
         },
     ];
@@ -89,6 +89,18 @@ const OurExpertise = (Data) => {
                 "Crisis Management/ Public Affairs",
                 "Media Monitoring",
                 "Event Management"
+            ],
+            bg: "bg-gradient-to-tl from-[#E9F7FF]  via-[#FFDBD4] to-[#FFF3CA]"
+        },
+        {
+            title: "Celebrity Management",
+            description: `Effective celebrity management can significantly amplify brand visibility and resonate with target audiences. Our expertise lies in forging strategic alliances with influential personalities to drive impactful marketing campaigns.`,
+            services: [
+                "Strategic Selection: Careful selection of celebrities aligned with your brand values and audience demographics.",
+                "Creative Collaboration: Collaborative efforts to integrate celebrities seamlessly into campaign narratives.",
+                "Audience Engagement: Leveraging celebrities' influence to enhance engagement and brand affinity.",
+                "Measurement and Optimization: Continuous monitoring and optimization of celebrity-led initiatives to maximize ROI and impact.",
+              
             ],
             bg: "bg-gradient-to-tl from-[#E9F7FF]  via-[#FFDBD4] to-[#FFF3CA]"
         }

@@ -13,8 +13,23 @@ import { useState } from 'react'
 import MeshLeftSide from "/MeshLeftSide.png"
 import ServicesImage from "/ServicesImage.png"
 import { PiPulseBold } from 'react-icons/pi'
+import Swal from 'sweetalert2'
+import Modal from '../components/Modal'
 
 const Services = (Data) => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState({ title: "", description: "" });
+  
+    const openModal = (title, description) => {
+      setModalContent({ title, description });
+      setIsModalOpen(true);
+    };
+  
+    const closeModal = () => {
+      setIsModalOpen(false);
+    };
+ 
 
     const services = [
         {
@@ -92,115 +107,94 @@ const Services = (Data) => {
     const displayedServices = showAll ? services : services.slice(0, 6);
     return (
         <>
-            <div className='h-auto flex flex-col items-center overflow-auto'>
-                <NavScreen bg={servicespng} Data={NavData} />
-
-                <div className='w-full py-16  flex justify-center'>
-                    <div className='flex flex-wrap justify-start lg:max-w-[1300px] md:max-w-[1000px] gap-8 w-full h-max  '>
-                        {displayedServices.map((val, index) => (
-                            <div key={index} className='w-[300px] group h-[400px] rounded-2xl flex flex-col justify-between bg-[#424245] py-8 px-4'>
-                                <div className='w-[100px] h-[100px] rounded-full bg-[#292930] flex justify-center items-center'>
-                                    <img src={ChatMarketing} className='w-[50%] group-hover:w-[65%] transition-all duration-700' alt="" />
-                                </div>
-                                <h1 className='font-montserrat text-white font-semibold text-xl w-full'>{val.title}</h1>
-                                <h1 className='font-montserrat text-base font-light text-white line-clamp-3'>{val.description}</h1>
-                                <button className='border-[1px] font-montserrat font-semibold group-hover:bg-[#FFDC60] group-hover:text-lg transition-all duration-700 w-full h-14 border-[#525255] text-[#525255] flex items-center gap-x-3 justify-center'>
-                                    Read More <FaChevronCircleRight className='group-hover:text-violet-600' />
-                                </button>
-                            </div>
-                        ))}
-                    </div>
+        <div className='h-auto flex flex-col items-center overflow-auto'>
+          <NavScreen bg={servicespng} Data={NavData} />
+  
+          <div className='w-full py-16 flex justify-center'>
+            <div className='flex flex-wrap justify-start lg:max-w-[1300px] md:max-w-[1000px] gap-8 w-full h-max'>
+              {displayedServices.map((val, index) => (
+                <div key={index} className='w-[300px] group h-[400px] rounded-2xl flex flex-col justify-between bg-[#424245] py-8 px-4'>
+                  <div className='w-[100px] h-[100px] rounded-full bg-[#292930] flex justify-center items-center'>
+                    <img src={ChatMarketing} className='w-[50%] group-hover:w-[65%] transition-all duration-700' alt="" />
+                  </div>
+                  <h1 className='font-montserrat text-white font-semibold text-xl w-full'>{val.title}</h1>
+                  <h1 className='font-montserrat text-base font-light text-white line-clamp-3'>{val.description}</h1>
+                  <button 
+                    onClick={() => openModal(val.title, val.description)}
+                    className='border-[1px] font-montserrat font-semibold group-hover:bg-[#FFDC60] group-hover:text-lg transition-all duration-700 w-full h-14 border-[#525255] text-[#525255] flex items-center gap-x-3 justify-center'
+                  >
+                    Read More <FaChevronCircleRight className='group-hover:text-violet-600' />
+                  </button>
                 </div>
-                {!showAll && (
-                    <div className='w-full flex justify-center mb-10 animate-bounce'>
-
-                    <button
-                        className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-4 py-2 '
-                        onClick={() => setShowAll(true)}
-                        >
-                        See More
-                    </button>
-                        </div>
-                )}
-
-                <div className='w-full h-max relative  flex pl-24'>
-
-
-                    <img className=' absolute -z-10 left-0 -top-8 ' width="250" src={MeshLeftSide} alt="" />      {/* Mesh Design */}
-
-                    {/* left side */}
-
-                    <div className='w-1/2  bg-green-100 flex flex-col  rounded-lg '>
-
-
-                        <div className="relative  w-full h-[540px] max-h-[540px] bg-[url('/ServicesImage.png')] bg-cover ">
-
-                            <div className='absolute py-4  px-2 right-[1px] bottom-20 flex flex-col w-[200px] h-max  bg-white rounded-xl ' >
-
-                                <div className='w-8 h-8 rounded-full bg-[#282628] text-white flex justify-center items-center text-lg'>
-                                    <PiPulseBold />
-
-                                </div>
-
-                                <div className='text-center p-6'>
-                                    <h1 className='font-montserrat font-bold text-5xl text-[#7C8D97] '>20K+ </h1>
-                                    <h1 className='font-montserrat font-light text-base text-black'>Projects Done </h1>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                    </div>
-                    {/* right Side */}
-                    <div className='w-1/2 mx-2 gap-2  p-8'>
-
-                        <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> WHY CHOOSE US</button>
-                        <h1 className='font-semibold font-montserrat text-5xl leading-[80px]'>Choose Us to Grow Your Business</h1>
-                        <h1 className='font-montserrat'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
-
-                        <div className='flex items-center gap-x-2 py-2'>
-                            <div className='w-8 h-8 rounded-full bg-[#282628] text-white flex justify-center items-center text-lg'>
-                                <PiPulseBold />
-                            </div>
-                             <h1 className='font-montserrat '>Result Driven Approach</h1>
-                        </div>
-                    
-                        <div className='flex items-center gap-x-2 py-2'>
-                            <div className='w-8 h-8 rounded-full bg-[#282628] text-white flex justify-center items-center text-lg'>
-                                <PiPulseBold />
-                            </div>
-                            <h1  className='font-montserrat '>Expertise in Multiple Platforms</h1>
-                          
-                        </div>
-                     
-                        <div className='flex items-center gap-x-2 py-2'>
-                            <div className='w-8 h-8 rounded-full bg-[#282628] text-white flex justify-center items-center text-lg'>
-                                <PiPulseBold />
-                            </div>
-                             <h1 className='font-montserrat '>Continuous Optimization</h1>
-                        </div>
-
-
-
-
-                    </div>
-
-
-
-
-
-
-                </div>
-
-
-<ContactUs/>
-<Footer/>
-
-
+              ))}
             </div>
-        </>
+          </div>
+          {!showAll && (
+            <div className='w-full flex justify-center mb-10 animate-bounce'>
+              <button
+                className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-4 py-2'
+                onClick={() => setShowAll(true)}
+              >
+                See More
+              </button>
+            </div>
+          )}
+  
+          <div className='w-full h-max relative flex pl-24'>
+            <img className='absolute -z-10 left-0 -top-8' width="250" src={MeshLeftSide} alt="" />
+  
+            <div className='w-1/2 bg-green-100 flex flex-col rounded-lg'>
+              <div className="relative w-full h-[540px] max-h-[540px] bg-[url('/ServicesImage.png')] bg-cover">
+                <div className='absolute py-4 px-2 right-[1px] bottom-20 flex flex-col w-[200px] h-max bg-white rounded-xl'>
+                  <div className='w-8 h-8 rounded-full bg-[#282628] text-white flex justify-center items-center text-lg'>
+                    <PiPulseBold />
+                  </div>
+                  <div className='text-center p-6'>
+                    <h1 className='font-montserrat font-bold text-5xl text-[#7C8D97]'>120+</h1>
+                    <h1 className='font-montserrat font-light text-base text-black'>Projects Done</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div className='w-1/2 mx-2 gap-2 p-8'>
+              <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'>WHY CHOOSE US</button>
+              <h1 className='font-semibold font-montserrat text-5xl leading-[80px]'>Choose Us to Grow Your Business</h1>
+              <h1 className='font-montserrat'>
+                Partner with us for innovative strategies, a robust influencer network, and data-driven results. We specialize in personalized solutions that elevate your brand, driving engagement and achieving your marketing goals with proven success.
+              </h1>
+              <div className='flex items-center gap-x-2 py-2 pt-4'>
+                <div className='w-8 h-8 rounded-full bg-[#282628] text-white flex justify-center items-center text-lg'>
+                  <PiPulseBold />
+                </div>
+                <h1 className='font-montserrat'>Result Driven Approach</h1>
+              </div>
+              <div className='flex items-center gap-x-2 py-2'>
+                <div className='w-8 h-8 rounded-full bg-[#282628] text-white flex justify-center items-center text-lg'>
+                  <PiPulseBold />
+                </div>
+                <h1 className='font-montserrat'>Expertise in Multiple Platforms</h1>
+              </div>
+              <div className='flex items-center gap-x-2 py-2'>
+                <div className='w-8 h-8 rounded-full bg-[#282628] text-white flex justify-center items-center text-lg'>
+                  <PiPulseBold />
+                </div>
+                <h1 className='font-montserrat'>Continuous Optimization</h1>
+              </div>
+            </div>
+          </div>
+  
+          <ContactUs />
+          <Footer />
+        </div>
+  
+        <Modal 
+          isOpen={isModalOpen} 
+          onClose={closeModal} 
+          title={modalContent.title} 
+          description={modalContent.description} 
+        />
+      </>
     )
 }
 
