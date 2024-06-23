@@ -5,9 +5,23 @@ import ContactUs from '../components/ContactUs'
 import ourteam from '/ourteam/navscreen.png'
 import ceo from '/ourteam/CEO.png'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
-
+import ceo1 from "/ceophoto1.jpg"
+import ceo2 from "/ceophoto2.jpg"
 const OurTeam = (Data) => {
 
+    const team=[
+{
+    name:"Aashik Paalyam ",
+    position:"Founder & CEO",
+    photo:ceo1
+},
+{
+    name:"Ramika Donti Paalyam  ",
+    position:"Founder & CEO",
+    photo:ceo2
+}
+
+    ]
 
     const NavData = {
         heading: "EXPERTISE",
@@ -33,23 +47,31 @@ const OurTeam = (Data) => {
                         et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
 
                     {/*  */}
-                    <div className='w-full place grid grid-flow-row grid-cols-3 gap-x-8'>
-                        <div className='h-[600px]  group flex flex-col'>
-                            <div className='w-full rounded-2xl h-[400px] overflow-hidden  relative'>
-                                <img src={ceo} className='rounded-2xl transition-transform group-hover:scale-110 duration-300 ease-in-out' alt="" />
+                    <div className='w-full flex gap-x-8  justify-center  '>
+                        {team.map((val,index)=>{
+                            return(
 
-                                <h1 className='px-3 py-1 rounded-2xl text-white bg-black font-montserrat font-normal absolute bottom-5 right-0'>Company CEO</h1>
+                        <div className='h-[600px]  w-full max-w-[350px] group flex flex-col'>
+                            <div className='w-full rounded-2xl h-[400px] overflow-hidden  relative'>
+                                <img src={val.photo} className='w-full rounded-2xl transition-transform group-hover:scale-110 duration-300 ease-in-out' alt="" />
+
+                                <h1 className='px-3 py-1 rounded-2xl text-white bg-black font-montserrat font-normal absolute bottom-5 right-0'>{val.position}</h1>
                             </div>
                             <div className=''>
-                                <h1 className='font-montserrat text-center py-4 text-3xl font-bold text-gray pt-6'>Lilly Victoria</h1>
+                                <h1 className='font-montserrat text-center py-4 text-2xl font-bold text-gray pt-6'>{val.name}</h1>
                                 <h1 className='font-montserrat text-center text-lg font-light text-gray-800'>Leverage agile frameworks to provide a robust synopsis for high level overviews.</h1>
                             </div>
                             <div className='w-full justify-center flex pt-4 gap-x-4'>
-                                <FaTwitter className='  transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
-                                <FaInstagram className='transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
-                                <FaFacebook className=' transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
+                                <FaTwitter className=' cursor-pointer transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
+                               <a href='https://www.instagram.com/mumblingmonkeysmedia/' target='blank'>
+
+                                <FaInstagram className='cursor-pointer transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
+                               </a>
+                                <FaFacebook className=' cursor-pointer transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
                             </div>
                         </div>
+                            )
+                        })}
                     </div>
 
 

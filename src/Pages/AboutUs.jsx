@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useRef,useEffect } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import tick from "/Icon.png"
 import pattern from "/Pattern.png"
@@ -7,19 +7,79 @@ import NavScreen from '../components/NavScreen'
 import Footer from '../components/Footer'
 import ContactUs from '../components/ContactUs'
 import CountUp from 'react-countup';
+import { useCountUp } from 'react-countup';
 import Animation from './Animation'
 import { MdCheckCircle } from 'react-icons/md'
 import goals from "/Goals.png"
 import Megaphone from "/Megaphone.png"
 import bar from "/bar.png"
 import AboutUsimg from "/AboutUs.webp"
+import './AboutUs.css'
+
+
 
 const AboutUs = (Data) => {
+    const targetRef = useRef(null);
+    const [isInViewport, setIsInViewport] = useState(false);
+    const countUpRef = useRef(0)
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsInViewport(entry.isIntersecting);
+            },
+            {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1,
+            }
+        );
+
+        if (targetRef.current) {
+            observer.observe(targetRef.current);
+        }
+
+        return () => {
+            if (targetRef.current) {
+                observer.unobserve(targetRef.current);
+            }
+        };
+    }, []);
+
 
     const NavData= {
         heading:"About Us",
         Description:"Creative Services For Boost Your Business Growth"
     }
+    const rightData1=[
+        {title:"Strategic Planning",
+        description:"We start by understanding your brand, goals, and target audience. Our team crafts a bespoke strategy tailored to your unique needs and objectives.",
+        icon:goals
+        },
+        {title:"Influencer Matching",
+        description:"Using advanced analytics, we identify and connect you with the most relevant influencers who align perfectly with your brand and audience.",
+        icon:megaphone
+        },
+        {title:"Creative Content Creation",
+        description:"Our experts develop engaging and authentic content that resonates with your audience, ensuring maximum impact and engagement.",
+        icon:bar
+        },
+
+    ]
+    const rightData2=[
+        {title:"Campaign Execution",
+        description:"With meticulous attention to detail, we launch and manage your campaigns, ensuring everything runs smoothly and efficiently.",
+        icon:goals
+        },
+        {title:"Performance Monitoring",
+        description:"We continuously track and analyze campaign performance, providing you with real-time insights and actionable feedback to optimize results",
+        icon:megaphone
+        },
+        {title:"Comprehensive Reporting",
+        description:"At the end of each campaign, we deliver detailed reports that highlight key metrics, successes, and areas for improvement, ensuring you always stay ahead of the game",
+        icon:bar
+        },
+
+    ]
 
     const marketingData = [
          {
@@ -106,26 +166,29 @@ const AboutUs = (Data) => {
 
                 </div>
 
-                <div className='w-full flex max-w-[1000px] justify-around'>
-
-
+                <div ref={targetRef} className='w-full flex max-w-[1000px] justify-around'>
+                {isInViewport && ( 
+<>
+                <div >
+                                <CountUp start={95} end={120} duration={1.5} separator="" decimal="," suffix='+' className='font-bold font-montserrat text-5xl' />
+                                <h1 className='font-montserrat text-gray-700 pt-4'>Successful Work</h1>
+                           
+                       
+                        </div>
                     <div>
-                        <CountUp start={989} end={1128} duration={2.75} separator="" decimal="," suffix='+' className='font-bold font-montserrat text-5xl'></CountUp>
-                        <h1 className='font-montserrat text-gray-700 pt-4'>Successful Work</h1>
+                        <CountUp start={12} end={25} duration={1.5} separator="" decimal="," suffix='+' className='font-bold font-montserrat text-5xl'></CountUp>
+                        <h1 className='font-montserrat text-gray-700 pt-4'>Team Members</h1>
                     </div>
                     <div>
-                        <CountUp start={989} end={1128} duration={2.75} separator="" decimal="," suffix='+' className='font-bold font-montserrat text-5xl'></CountUp>
-                        <h1 className='font-montserrat text-gray-700 pt-4'>Successful Work</h1>
+                        <CountUp start={95} end={112} duration={1.5} separator="" decimal="," suffix='+' className='font-bold font-montserrat text-5xl'></CountUp>
+                        <h1 className='font-montserrat text-gray-700 pt-4'>Happy Customers</h1>
                     </div>
                     <div>
-                        <CountUp start={989} end={1128} duration={2.75} separator="" decimal="," suffix='+' className='font-bold font-montserrat text-5xl'></CountUp>
-                        <h1 className='font-montserrat text-gray-700 pt-4'>Successful Work</h1>
+                        <CountUp start={60} end={100} duration={1.5} separator="" decimal="," suffix='+' className='font-bold font-montserrat text-5xl'></CountUp>
+                        <h1 className='font-montserrat text-gray-700 pt-4'>Creative Ideas</h1>
                     </div>
-                    <div>
-                        <CountUp start={989} end={1128} duration={2.75} separator="" decimal="," suffix='+' className='font-bold font-montserrat text-5xl'></CountUp>
-                        <h1 className='font-montserrat text-gray-700 pt-4'>Successful Work</h1>
-                    </div>
-
+</>
+ )}
                 </div>
 
                 {/*#######################################  Section 2 Starts #######################################*/}
@@ -185,7 +248,7 @@ const AboutUs = (Data) => {
                         </div>
                         {/* right Side */}
 
-                        <div className='w-1/2 overflow-x-scroll grid grid-flow-col snap-x snap-mandatory  '>
+                        <div className='w-1/2 overflow-x-scroll grid grid-flow-col snap-x snap-mandatory  yScrollbar'>
 
 
 
@@ -194,23 +257,17 @@ const AboutUs = (Data) => {
                             <div className='w-[550px] h-full  snap-center flex items-center'>
 
                                 <div className='relative w-[20%] overflow-hidden h-full grid grid-flow-row justify-center  items-center'>
-                                    <div className='absolute w-full h-[90%] left-1/2  border-l-2 border-dashed  border-[#E38676] '></div>
+                                    <div className='absolute  w-full h-[90%] left-1/2  border-l-2 border-dashed  border-[#E38676] '></div>
+                              {rightData1.map((val,index)=>{
+                                return(
 
                                     <div className='rounded-full z-20 w-[90px] h-[90px] max-w-[90px] max-h-[90px] bg-[#FFD1C8] flex justify-center items-center '>
                                         <div className=' rounded-full w-[80px] h-[80px] max-w-[74px] max-h-[74px] bg-white flex justify-center items-center'>
-                                            <img src={goals} className='w-[50%]' alt="" />
+                                            <img src={val.icon} className='w-[50%]' alt="" />
                                         </div>
                                     </div>
-                                    <div className='rounded-full z-20 w-[90px] h-[90px] max-w-[90px] max-h-[90px] bg-[#FFD1C8] flex justify-center items-center '>
-                                        <div className=' rounded-full w-[80px] h-[80px] max-w-[74px] max-h-[74px] bg-white flex justify-center items-center'>
-                                            <img src={Megaphone} className='w-[50%]' alt="" />
-                                        </div>
-                                    </div>
-                                    <div className='rounded-full z-20 w-[90px] h-[90px] max-w-[90px] max-h-[90px] bg-[#FFD1C8] flex justify-center items-center '>
-                                        <div className=' rounded-full w-[80px] h-[80px] max-w-[74px] max-h-[74px] bg-white flex justify-center items-center'>
-                                            <img src={bar} className='w-[50%]' alt="" />
-                                        </div>
-                                    </div>
+                                )
+                              })}
 
                                 </div>
 
@@ -288,7 +345,7 @@ const AboutUs = (Data) => {
                     </div>
 
                 </div>
-
+           
 
 
                 <ContactUs />
