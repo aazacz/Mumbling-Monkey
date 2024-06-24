@@ -1,18 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react';
+import sideimg from "/Frame_29.png";
+import { motion } from "framer-motion";
 
-import sideimg from "/Frame_29.png"
-
-import { motion} from "framer-motion"
-
-
-
-
-
-const NavScreen = ({bg,Data}) => {
-    console.log("Data in navscreen")
-    console.log(Data)
-    console.log(bg)
-
+const NavScreen = ({ bg, Data }) => {
+    console.log("Data in navscreen", Data, bg);
 
     const marqueeVariants = {
         animate: {
@@ -28,45 +19,39 @@ const NavScreen = ({bg,Data}) => {
         },
     };
 
-    // const [IsHovering, setIsHovering] = useState(false)
-
-
-
-
-
     return (
         <>
-            <div className='w-full  h-screen relative overflow-y-hidden  flex flex-col  items-center'>
-                <img src={bg} className='w-full  absolute top-0' alt="" />
+            <div className='w-full h-screen relative overflow-y-hidden flex flex-col items-center'>
+                <img src={bg} className='w-full h-full absolute top-0' alt="" />
 
-                <div className='w-full   absolute flex px-32  bottom-24 '>
-                    <div className='w-full rounded-3xl max-w-[500px]  bg-white bg-opacity-75 px-8 py-5'>
-
-                        <div className='text-white text-sm w-fit  font-normal font-montserrat uppercase rounded-2xl bg-slate-500 px-3 py-1'> {Data.heading}</div>
-                        <h1 className='font-bold text-4xl w-full max-w-[350px] font-montserrat'>{Data.Description}</h1>
-                        <h1 className='font-montserrat text-lg text-gray-700'>-- MUMBLING MONKEYS --</h1>
+                <div className='w-full absolute flex md:px-32 px-6 bottom-24'>
+                    <div className='w-full rounded-3xl max-w-[500px] bg-white bg-opacity-75 md:px-8 px-4 py-5'>
+                        <div className='text-white text-sm w-fit font-normal font-montserrat uppercase rounded-2xl bg-slate-500 px-3 py-1'>
+                            {Data.heading}
+                        </div>
+                        <h1 className='font-bold md:text-4xl text-2xl w-full max-w-[350px] font-montserrat'>
+                            {Data.Description}
+                        </h1>
+                        <h1 className='font-montserrat md:text-lg text-base text-gray-700'>
+                            -- MUMBLING MONKEYS --
+                        </h1>
                     </div>
-
                 </div>
 
-
-                <motion.div className='absolute    opacity-40 md:left-0 left-0 ' variants={marqueeVariants} animate="animate"   >
+                <motion.div className='absolute opacity-40 md:left-0 left-0' variants={marqueeVariants} animate="animate">
                     <img className='w-1/2 md:w-full' src={sideimg} alt="" />
                     <img className='w-1/2 md:w-full' src={sideimg} alt="" />
                     <img className='w-1/2 md:w-full' src={sideimg} alt="" />
                 </motion.div>
 
-                <motion.div className='absolute flex flex-col items-end md:flex-none  opacity-40 md:right-0 right-0' variants={marqueeVariants} animate="animate"   >
+                <motion.div className='absolute flex flex-col items-end md:items-start opacity-40 md:right-0 right-0' variants={marqueeVariants} animate="animate">
                     <img className='w-1/2 md:w-full' src={sideimg} alt="" />
                     <img className='w-1/2 md:w-full' src={sideimg} alt="" />
                     <img className='w-1/2 md:w-full' src={sideimg} alt="" />
                 </motion.div>
-
-
             </div>
-
         </>
-    )
+    );
 }
 
-export default NavScreen
+export default NavScreen;

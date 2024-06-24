@@ -30,9 +30,9 @@ const Navbar = () => {
 
 
                     <div className='flex items-center gap-3 ' >
-                        <h1 className='text-white font-montserrat md:text-xl  '>Menu</h1>
+                        <h1 className='text-Black font-montserrat md:text-xl drop-shadow-lg '>Menu</h1>
 
-                        <div className={`bg-white z-50 rounded-full w-12 h-12 transition-all duration-300 ${show ? "rotate-90" : ""} flex justify-center items-center `}>
+                        <div className={`bg-gray-300 z-50 rounded-full w-12 h-12 transition-all duration-300 ${show ? "rotate-90" : ""} flex justify-center items-center `}>
                             {show ? (
                                 <MdClose
                                     className="text-lg w-[30px] md:w-[50px] z-40 transition-all  duration-500"
