@@ -31,13 +31,13 @@ const Animation = ({data}) => {
                     <div className='w-full h-max group-hover:translate-y-8 transition-all duration-300 z-10 '>
 
                         <h1 className='font-montserrat w-full  font-semibold text-[20px]'>{data.title}</h1>
-                        <h1 className='font-montserrat text-gray-500 font-semibold text-xs'>{data.description}</h1>
+                        <h1 className='font-montserrat text-gray-500 font-semibold text-[12px]'>{data.description}</h1>
                     </div>
 
-                    <div className='flex gap-x-2 items-center'>
+                    {/* <div className='flex gap-x-2 items-center'>
                         <h1 className='font-montserrat font-semibold'>Read more</h1>
                         <GoArrowRight />
-                    </div>
+                    </div> */}
 
                 </div>
           
