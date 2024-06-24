@@ -43,7 +43,7 @@ const OurTeam = (Data) => {
 
                     <h1 className='font-montserrat font-semibold text-xl'>Meet Our Great Team</h1>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    <p className='py-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                         et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
 
                     {/*  */}

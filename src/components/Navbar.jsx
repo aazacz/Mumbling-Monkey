@@ -99,7 +99,7 @@ const Navbar = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1.1 }}
                         exit={{ opacity: 0 }}
-                        className={`absolute z-30 top-0 py-36 w-full h-screen md:px-64 bg-slate-600 flex flex-col  items-center  transition-all duration-500 `} >
+                        className={`absolute z-30 top-0 py-36 w-full h-screen md:px-64 bg-[#7d8a91] flex flex-col  items-center  transition-all duration-500 `} >
 
 
                         <img src={logo} width={90} alt="" />

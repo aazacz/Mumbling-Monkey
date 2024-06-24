@@ -12,10 +12,24 @@ import Footer from '../components/Footer'
 import ContactUs from '../components/ContactUs'
 import logo from "/Logo.png"
 import { Link } from 'react-router-dom'
+import sideimg from "/Frame_28.png"
 
 
 const Homepage = () => {
 
+  const marqueeVariants = {
+    animate: {
+      y: [-2000, 0, -2000],
+      transition: {
+        y: {
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: [.39, -0.23, .4, 1.4],
+          duration: 20
+        },
+      },
+    },
+  };
 
   const NavData = {
     heading: "About Us",
@@ -100,14 +114,26 @@ const Homepage = () => {
 
   return (
     <>
-      <div className='  md-full h-auto  bg-gray-200 relative flex flex-col items-center overflow-auto'>
-
+      <div className=' relative  md-full h-auto   flex flex-col items-center overflow-auto'>
 
         <motion.div
           initial={{ y: 100 }}
           animate={{ y: 0 }}
 
-          className="md:w-[100%]  h-screen  flex flex-col justify-center items-center  ">
+          className="md:w-[100%] overflow-y-hidden relative h-screen  flex flex-col justify-center items-center  ">
+
+
+          <motion.div className='absolute    opacity-40 md:left-0 left-0 ' variants={marqueeVariants} animate="animate"   >
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+          </motion.div>
+
+          <motion.div className='absolute flex flex-col items-end md:flex-none  opacity-40 md:right-0 right-0' variants={marqueeVariants} animate="animate"   >
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+          </motion.div>
 
 
 
