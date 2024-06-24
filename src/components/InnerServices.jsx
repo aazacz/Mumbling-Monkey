@@ -1,13 +1,21 @@
 import React from 'react'
-import sideimg from "/Frame_29.png"
+import sideimg from "/Frame_28.png"
 import { motion } from "framer-motion"
 import innerServiceImage from "/innerServiceImage.svg"
-import bar from "/insideservices/bar.png"
+import Bar from "/insideservices/bar.png"
 import lightning from "/insideservices/lightning.png"
 import youtube from "/insideservices/youtube.png"
 import bitcoin from "/insideservices/bitcoin.png"
 import calculator from "/insideservices/calculator.png"
 import chat from "/insideservices/chat.png"
+import { MdCheckCircle } from 'react-icons/md'
+import slider from '/insideservices/slider.png'
+import goals from "/Goals.png"
+import Megaphone from "/Megaphone.png"
+import bar from "/bar.png"
+import ContactUs from './ContactUs'
+import Footer from './Footer'
+
 
 const InnerServices = () => {
 
@@ -25,12 +33,53 @@ const InnerServices = () => {
         },
     };
 
+
+    const rightData1 = [
+        {
+            title: "Strategic Planning",
+            description: "We start by understanding your brand, goals, and target audience. Our team crafts a bespoke strategy tailored to your unique needs and objectives.",
+            icon: goals
+        },
+        {
+            title: "Influencer Matching",
+            description: "Using advanced analytics, we identify and connect you with the most relevant influencers who align perfectly with your brand and audience.",
+            icon: Megaphone
+        },
+        {
+            title: "Creative Content Creation",
+            description: "Our experts develop engaging and authentic content that resonates with your audience, ensuring maximum impact and engagement.",
+            icon: bar
+        },
+
+    ]
+
+
+    const rightData2 = [
+        {
+            title: "Campaign Execution",
+            description: "With meticulous attention to detail, we launch and manage your campaigns, ensuring everything runs smoothly and efficiently.",
+            icon: goals
+        },
+        {
+            title: "Performance Monitoring",
+            description: "We continuously track and analyze campaign performance, providing you with real-time insights and actionable feedback to optimize results",
+            icon: Megaphone
+        },
+        {
+            title: "Comprehensive Reporting",
+            description: "At the end of each campaign, we deliver detailed reports that highlight key metrics, successes, and areas for improvement, ensuring you always stay ahead of the game",
+            icon: bar
+        },
+
+    ]
+
+
     const cardData = [
 
         {
             title: "Content Strategy",
             description: "Lorem ipsum dolor sit amet consecte tur adipiscing elit olme do semper dalaracc lacus vel facilisis volutpat est velitolm.",
-            icon: bar
+            icon: Bar
         },
         {
             title: "Brand Awareness",
@@ -58,13 +107,12 @@ const InnerServices = () => {
             icon: chat
         },
 
-
     ]
 
     return (
         <>
 
-            <div className='w-full  bg-gray-200 h-max px-16 relative overflow-y-hidden  flex flex-col  items-center'>
+            <div className='w-full   h-max px-16 relative overflow-y-hidden  flex flex-col  items-center'>
 
                 <div className='relative w-full h-screen flex  items-center'>
 
@@ -151,19 +199,175 @@ const InnerServices = () => {
             </div>
 
 
-            <div className='w-screen '>
+            <div className='w-screen  flex gap-x-2 px-16'>
+
+                {/* Left side */}
+                <div className='w-1/2  h-max flex justify-end items-center'>
+
+                    <img src={slider} className='  h-[480px]' alt="" />
+
+                </div>
+                {/* Right side */}
+
+                <div className='w-1/2 h-max  p-8'>
+                    <span className='bg-[#69767e] font-montserrat px-2 py-2 rounded-2xl text-white ' > ABOUT THIS SERVICE</span>
+
+                    <h1 className='w-full h-[100px] border-b-2 font-montserrat font-semibold text-4xl mt-4'>We take your business reach from thousands to millions</h1>
+                    <p className='text-base font-montserrat mt-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit sollicitudinbibendum senectus scelerisque non.
+                        Turpis matis morbi vivera ipsum adipiscing Mauris volutpat sagittis,
+                        sit nulla. Velit et augues vitae Mattis at nibh nullas placerat imperdiet cursus viverra justo amet. Ipsum duis tempor.</p>
 
 
-                <div class></div>
-                <div class></div>
+                    <div className='flex items-center w-full gap-x-2 py-3 '>
+                        <MdCheckCircle className='text-[28px] text-[#292930]' />
+                        <h1 className='font-montserrat text-lg font-normal text-gray-600'>Dolor duis lorem enim eu nulla semper </h1>
+                    </div>
+
+                    <div className='flex items-center w-full gap-x-2 py-3 '>
+                        <MdCheckCircle className='text-[28px] text-[#292930]' />
+                        <h1 className='font-montserrat text-lg font-normal text-gray-600'>Dolor duis lorem enim eu nulla semper </h1>
+                    </div>
+
+                    <div className='flex items-center w-full gap-x-2 py-3 '>
+                        <MdCheckCircle className='text-[28px] text-[#292930]' />
+                        <h1 className='font-montserrat text-lg font-normal text-gray-600'>Dolor duis lorem enim eu nulla semper </h1>
+                    </div>
 
 
 
-
+                </div>
 
             </div>
 
 
+            {/*Section 3  */}
+
+            <div className='w-full flex justify-center'>
+                <div className='rounded-xl w-full md:max-w-[1200px]  flex mt-8 p-10 bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF] gap-x-8'>
+
+                    {/* Left Side */}
+                    <div className='w-1/2 h-full flex flex-col  '>
+
+                        <div className='border-b-[2px]  border-[#CFCFCF] w-full  h-[90px]  '>
+                            <h1 className='font-montserrat font-semibold text-3xl text-gray-800'>Our bulletproof process to win on Social Media</h1>
+                        </div>
+
+                        <div className=' flex w-full h-max'>
+                            <h1 className='text-gray-700 text-lg font-montserrat text-justify '>&emsp; &emsp;&emsp;In today's dynamic digital landscape, succeeding on social media requires more than just posting content. It demands a strategic, data-driven approach that ensures your brand not only reaches but resonates with your target audience. Our bulletproof process is designed to deliver
+                                consistent and exceptional results, transforming your social media presence into a powerful marketing tool. </h1>
+                        </div>
+
+
+                        <div className='w-full pt-4 grid grid-flow-row grid-rows-3 gap-y-3' >
+
+
+
+                            <div className='flex items-center w-full gap-x-2 '>
+                                <MdCheckCircle className='text-[22px] text-[#292930]' />
+                                <h1 className='font-montserrat font-normal text-gray-600'>Dolor duis lorem enim eu nulla semper </h1>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+                    {/* right Side */}
+
+                    <div className='w-1/2 overflow-x-scroll grid grid-flow-col snap-x snap-mandatory  yScrollbar'>
+
+
+
+
+
+                        <div className='w-[550px] h-full  snap-center flex items-center'>
+
+                            <div className='relative w-[20%] overflow-hidden h-full grid grid-flow-row justify-center  items-center'>
+                                <div className='absolute  w-full h-[90%] left-1/2  border-l-2 border-dashed  border-[#E38676] '></div>
+                                {rightData1.map((val, index) => {
+                                    return (
+
+                                        <div key={index} className='rounded-full z-20 w-[90px] h-[90px] max-w-[90px] max-h-[90px] bg-[#FFD1C8] flex justify-center items-center '>
+                                            <div className=' rounded-full w-[80px] h-[80px] max-w-[74px] max-h-[74px] bg-white flex justify-center items-center'>
+                                                <img src={val.icon} className='w-[50%]' alt="" />
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+
+                            </div>
+
+                            <div className='flex-1 h-full grid grid-flow-row justify-center  items-center'>
+                                {rightData1.map((val, index) => {
+                                    return (
+                                        <div key={index}>
+                                            <h1 className='font-montserrat text-lg font-semibold pb-2'>{val.title}</h1>
+                                            <h1 className='font-montserrat '>{val.description} </h1>
+
+                                        </div>
+                                    )
+                                })}
+
+
+                            </div>
+
+                        </div>
+                        <div className='w-[550px] h-full  snap-center flex items-center'>
+
+                            <div className='relative w-[20%] overflow-hidden h-full grid grid-flow-row justify-center  items-center'>
+                                <div className='absolute w-full h-[90%] left-1/2  border-l-2 border-dashed  border-[#E38676] '></div>
+                                {rightData2.map((val, index) => {
+                                    return (
+
+                                        <div key={index} className='rounded-full z-20 w-[90px] h-[90px] max-w-[90px] max-h-[90px] bg-[#FFD1C8] flex justify-center items-center '>
+                                            <div className=' rounded-full w-[80px] h-[80px] max-w-[74px] max-h-[74px] bg-white flex justify-center items-center'>
+                                                <img src={val.icon} className='w-[50%]' alt="" />
+                                            </div>
+                                        </div>
+
+
+                                    )
+                                })}
+
+
+
+
+
+                            </div>
+
+                            <div className='flex-1 h-full grid grid-flow-row justify-center  items-center'>
+                                {rightData2.map((val, index) => {
+                                    return (
+
+
+
+                                        <div key={index}>
+                                            <h1 className='font-montserrat text-lg font-semibold pb-2'>{val.title}</h1>
+                                            <h1 className='font-montserrat '>{val.description} </h1>
+
+                                        </div>
+                                    )
+                                })}
+
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+<ContactUs/>
+<Footer/>
 
         </>
     )

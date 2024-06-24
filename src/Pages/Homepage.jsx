@@ -17,10 +17,10 @@ import { Link } from 'react-router-dom'
 const Homepage = () => {
 
 
-  const NavData= {
-    heading:"About Us",
-    Description:"Creative Services For Boost Your Business Growth"
-}
+  const NavData = {
+    heading: "About Us",
+    Description: "Creative Services For Boost Your Business Growth"
+  }
   const data = [
     {
       heading: "Cutting-Edge Strategies", image1: "Rectangle", image2: "Rectangle2",
@@ -92,8 +92,8 @@ const Homepage = () => {
   const ref = useRef(null);
 
   const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'});
-      };
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
 
 
@@ -103,25 +103,25 @@ const Homepage = () => {
       <div className='  md-full h-auto  bg-gray-200 relative flex flex-col items-center overflow-auto'>
 
 
-      <motion.div 
-          initial={{y:100}}
+        <motion.div
+          initial={{ y: 100 }}
           animate={{ y: 0 }}
 
           className="md:w-[100%]  h-screen  flex flex-col justify-center items-center  ">
 
 
 
-            <img src={logo} className='w-[200px]' alt="" />
-            < motion.div   
-             initial={{y:100}}
-             animate={{ y: 0 }}
-             transition={{ type: "spring", duration: 0.8 ,damping:10,mass: 1 ,stiffness: 200 }}>
+          <img src={logo} className='w-[200px]' alt="" />
+          < motion.div
+            initial={{ y: 100 }}
+            animate={{ y: 0 }}
+            transition={{ type: "spring", duration: 0.8, damping: 10, mass: 1, stiffness: 200 }}>
             <h1 className='text-center font-Cabin font-extrabold text-[50px] leading-10'>MUMBLING <br />MONKEYS</h1>
             <p className='text-center mt-4'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
-            </motion.div>
-            <Link to={'/services'}  className='cursor-pointer rounded-md bg-slate-600 font-light text-sm text-white px-3 py-2 mt-4'>Get Started Today</Link>
           </motion.div>
-   
+          <Link to={'/services'} className='cursor-pointer rounded-md bg-slate-600 font-light text-sm text-white px-3 py-2 mt-4'>Get Started Today</Link>
+        </motion.div>
+
 
 
         {/*#######################################  Section 1 Starts #######################################*/}
