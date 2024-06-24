@@ -133,7 +133,7 @@ const AboutUs = (Data) => {
                         viewport={{ amount: 0.5, once: true }}
 
                     >
-                        <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> ABOUT COMPANY</button>
+                        <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> ABOUT COMPANY</button>
                         <h1 className='font-Cabin text-4xl pt-4'>Mumbling monkey</h1>
                         <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your one-stop destination for all your digital marketing needs!</p>
 
@@ -202,7 +202,7 @@ const AboutUs = (Data) => {
                 <div className='md:w-full md:max-w-[1200px]  w-[90%] h-auto py-6 md:px-0  flex flex-col'>
 
                     <div className='mb-6'>
-                        <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> TEAM</button>
+                        <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> TEAM</button>
                         <h1 className='font-Cabin text-4xl pt-4'>Meet Our Great Team</h1>
                         <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your trusted digital marketing agency.</p>
                     </div>
@@ -221,7 +221,8 @@ const AboutUs = (Data) => {
 
                     {/*#######################################  Section 3 Starts #######################################*/}
 
-                    <div className='rounded-xl w-full  flex mt-8 p-10 bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF] gap-x-8'>
+
+                    <div className='rounded-xl w-full md:max-w-[1200px]  flex mt-8 p-10 bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF] gap-x-8'>
 
                         {/* Left Side */}
                         <div className='w-1/2 h-full flex flex-col  '>

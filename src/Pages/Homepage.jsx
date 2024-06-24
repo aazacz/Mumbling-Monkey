@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 
 import tick from "/Icon.png"
@@ -11,6 +11,7 @@ import NavScreen from '../components/NavScreen'
 import Footer from '../components/Footer'
 import ContactUs from '../components/ContactUs'
 import logo from "/Logo.png"
+import { Link } from 'react-router-dom'
 
 
 const Homepage = () => {
@@ -88,16 +89,18 @@ const Homepage = () => {
     },
   ]
 
+  const ref = useRef(null);
 
-
-
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+      };
 
 
 
 
   return (
     <>
-      <div className='  md-full h-auto  relative flex flex-col items-center overflow-auto'>
+      <div className='  md-full h-auto  bg-gray-200 relative flex flex-col items-center overflow-auto'>
 
 
       <motion.div 
@@ -116,13 +119,13 @@ const Homepage = () => {
             <h1 className='text-center font-Cabin font-extrabold text-[50px] leading-10'>MUMBLING <br />MONKEYS</h1>
             <p className='text-center mt-4'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
             </motion.div>
-            <button className='rounded-md bg-slate-600 font-light text-sm text-white px-3 py-2 mt-4'>Get Stsrted Today</button>
+            <Link to={'/services'}  className='cursor-pointer rounded-md bg-slate-600 font-light text-sm text-white px-3 py-2 mt-4'>Get Started Today</Link>
           </motion.div>
    
 
 
         {/*#######################################  Section 1 Starts #######################################*/}
-        <div className='md:w-full  md:max-w-[1250px] w-[90%]  h-auto py-6 md:px-0 px-4 md:flex'>
+        <div id='section1' ref={ref} className='md:w-full  md:max-w-[1250px] w-[90%]  h-auto py-6 md:px-0 px-4 md:flex'>
 
           <motion.div className='md:w-3/5 w-full h-full py-6 pr-6'
             initial={{ x: -195, y: 0, opacity: 0 }}
@@ -131,7 +134,7 @@ const Homepage = () => {
             viewport={{ amount: 0.5, once: true }}
 
           >
-            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> ABOUT COMPANY</button>
+            <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> ABOUT COMPANY</button>
             <h1 className='font-Cabin text-4xl pt-4'>Mumbling monkey</h1>
             <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your one-stop destination for all your digital marketing needs!</p>
 
@@ -180,10 +183,10 @@ const Homepage = () => {
 
         {/*#######################################  Section 2 Starts #######################################*/}
 
-        <div className='md:w-full md:max-w-[1200px]  w-[90%] h-auto py-6 md:px-0  flex flex-col'>
+        <div className='md:w-full md:max-w-[1250px] w-[90%] h-auto py-6 md:px-0  flex flex-col'>
 
           <div className='mb-6'>
-            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> TEAM</button>
+            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1 cursor-default'> TEAM</button>
             <h1 className='font-Cabin text-4xl pt-4'>Meet Our Great Team</h1>
             <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your trusted digital marketing agency.</p>
           </div>
@@ -202,10 +205,10 @@ const Homepage = () => {
 
 
 
-                  <div className='w-[80%] md:group-hover:-translate-y-full group-hover:-translate-y-[125px] 
-                                   transition-all duration-500 absolute m-auto
-                                  md:group-hover:bottom-0 -bottom-[10%] group left-0 right-0 z-20'>
-                    <h1 className='text-white font-bold text-3xl '> {value.heading}</h1>
+                  <div className='w-[80%] h-[40%] md:group-hover:-translate-y-[-100px]   relative -bottom-full -translate-y-[45%] group-hover:bottom-0
+                                   transition-all duration-500 m-auto
+                                     group  z-20'>
+                    <h1 className='text-white font-bold text-2xl py-3'> {value.heading}</h1>
                     <p className='text-white leading-5'>{value.description}</p>
                   </div>
                 </div>
@@ -220,10 +223,10 @@ const Homepage = () => {
 
 
         {/*#######################################  Section 3 Starts #######################################*/}
-        <div className='md:w-full md:max-w-[1200px]  w-[90%]  h-auto py-6  px-3 flex flex-col'>
+        <div className='md:w-full md:max-w-[1250px]  w-[90%]  h-auto py-6   flex flex-col'>
 
           <div className='mb-6'>
-            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 italic py-1'>
+            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 italic py-1 cursor-default'>
               Ready to Elevate Your Brand's Cool Quotient? Let's Talk!
             </button>
 

@@ -10,6 +10,8 @@ import OurExpertise from './Pages/OurExpertise';
 import OurTeam from './Pages/OurTeam';
 import ContactUsPage from './Pages/ContactUsPage';
 import Services from './Pages/Services';
+import Testimonials from './components/Testimonials';
+import InnerServices from './components/InnerServices';
 function App() {
   
 
@@ -27,7 +29,8 @@ function App() {
           <Route path='/ourexpertise' element={<OurExpertise Data={"about"} />} />
           <Route path='/ourteam' element={<OurTeam Data={"about"} />} />
           <Route path='/contactus' element={<ContactUsPage Data={"about"} />} />
-          <Route path='/a' element={<Animation Data={"about"} />} />
+          <Route path='/a' element={<Testimonials/>} />
+          <Route path='/b' element={<InnerServices/>} />
           <Route path='*' element={<ErrorPage />} />
           
         </Routes>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import logo from "/Logo.png"
+
 import sideimg from "/Frame_29.png"
-import burger from "/burger.png"
-import { motion, AnimatePresence } from "framer-motion"
-import { cubicBezier } from "framer-motion"
+
+import { motion} from "framer-motion"
+
 
 
 
@@ -13,8 +13,7 @@ const NavScreen = ({bg,Data}) => {
     console.log(Data)
     console.log(bg)
 
-    // const [show, setShow] = useState(false)
-    // const easing = cubicBezier(.39, -0.23, .4, 1.4)
+
     const marqueeVariants = {
         animate: {
             y: [-2000, 0, -2000],

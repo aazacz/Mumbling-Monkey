@@ -2,6 +2,7 @@ import React from 'react'
 import logo from "/Logo.png"
 import social from "/social.png"
 import { IoIosCall } from 'react-icons/io'
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -14,9 +15,18 @@ const Footer = () => {
             <h1 className='text-center font-Cabin font-extrabold text-[20px] leading-6'>MUMBLING <br />MONKEYS</h1>
           </div>
           <p className='w-full'>Description content or information about can be added here</p>
-          <div className='w-full mt-8'>
-            <img src={social} className='w-[150px]' alt="Social Icons" />
-          </div>
+          <div className='w-full mt-8  flex   gap-x-4'>
+          
+               <FaTwitter className=' cursor-pointer transition-all duration-500 text-black text-3xl ' />
+                          
+             <a href='https://www.instagram.com/mumblingmonkeysmedia/' target='blank'>
+                    <FaInstagram className='cursor-pointer transition-all duration-500 text-black text-3xl ' />
+             </a>
+                             
+                <FaFacebook className=' cursor-pointer transition-all duration-500 text-black text-3xl ' />
+
+           </div>
+          
         </div>
 
         <div className='col-span-1 gap-y-4 text-left'>

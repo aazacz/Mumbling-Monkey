@@ -24,7 +24,7 @@ const OurTeam = (Data) => {
     ]
 
     const NavData = {
-        heading: "EXPERTISE",
+        heading: "OUR TEAM",
         Description: "Our Expertise"
     }
 
