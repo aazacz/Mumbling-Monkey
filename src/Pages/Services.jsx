@@ -15,6 +15,7 @@ import ServicesImage from "/ServicesImage.png"
 import { PiPulseBold } from 'react-icons/pi'
 import Swal from 'sweetalert2'
 import Modal from '../components/Modal'
+import { Link } from 'react-router-dom'
 
 const Services = (Data) => {
 
@@ -119,12 +120,14 @@ const Services = (Data) => {
                   </div>
                   <h1 className='font-montserrat text-white font-semibold text-xl w-full'>{val.title}</h1>
                   <h1 className='font-montserrat text-base font-light text-white line-clamp-3'>{val.description}</h1>
+                <Link to={'/b'}>
                   <button 
-                    onClick={() => openModal(val.title, val.description)}
+                    
                     className='border-[1px] font-montserrat font-semibold group-hover:bg-[#FFDC60] group-hover:text-lg transition-all duration-700 w-full h-14 border-[#525255] text-[#525255] flex items-center gap-x-3 justify-center'
-                  >
+                    >
                     Read More <FaChevronCircleRight className='group-hover:text-violet-600' />
                   </button>
+                    </Link>
                 </div>
               ))}
             </div>
