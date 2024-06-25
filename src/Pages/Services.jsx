@@ -21,7 +21,7 @@ const Services = (Data) => {
 
   const marqueeVariants = {
     animate: {
-     x: [-2000, 0, -2000],
+      x: [-2000, 0, -2000],
       transition: {
         x: {
           repeat: Infinity,
@@ -47,9 +47,9 @@ const Services = (Data) => {
 
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [pathname])
 
 
 
@@ -135,29 +135,29 @@ const Services = (Data) => {
       <div className='h-auto  flex flex-col items-center overflow-auto'>
         <NavScreen bg={servicespng} Data={NavData} />
 
-        <div className='w-full py-16 md:px-20 flex justify-center'>
+        <div className='w-full py-16 md:px-20 px-4 flex justify-center'>
           <div className='flex flex-wrap justify-between  gap-16  w-full h-max '>
-           
+
             <div className=' w-screen'>
               <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97]  px-4 py-2'>
                 SERVICES
-               </button>
+              </button>
 
-              <h1 className='font-montserrat w-[60%] font-bold text-4xl pt-4'>High-impact services to take your business to the next level</h1>
+              <h1 className='font-montserrat md:w-[60%] font-bold text-4xl pt-4'>High-impact services to take your business to the next level</h1>
             </div>
 
 
             {displayedServices.map((val, index) => (
-             
-             <div key={index} className='w-full sm:w-[350px] group h-[440px] rounded-3xl flex flex-col justify-between bg-[#34343b] py-8 px-8'>
-                
+
+              <div key={index} className='w-full sm:w-[350px] group h-[440px] rounded-3xl flex flex-col justify-between bg-[#34343b] py-8 px-8'>
+
                 <div className='w-[150px] h-[150px] rounded-full bg-[#292930] flex  justify-center items-center mx-3'>
                   <img src={ChatMarketing} className='w-[50%] group-hover:w-[65%] transition-all duration-700' alt="" />
                 </div>
-              
+
                 <h1 className='px-4 font-montserrat  text-white font-semibold text-2xl w-full'>      {val.title}       </h1>
                 <h1 className='w-full px-4 font-montserrat text- text-base font-light text-white line-clamp-3'> {val.description} </h1>
-               
+
                 <Link to={'/b'}>
                   <button
                     className=' border-[1px] rounded-md font-montserrat font-semibold group-hover:bg-[#FFDC60] group-hover:text-lg transition-all duration-700 w-full h-14 border-[#525255] text-[#525255] flex items-center gap-x-3 justify-center'
@@ -188,7 +188,7 @@ const Services = (Data) => {
 
 
         <div className='w-screen h-max relative flex flex-col md:flex-row px-4 md:px-20'>
-          <img className='absolute -z-10 left-0 -top-8' width="250" src={MeshLeftSide} alt="" />
+          <img className='absolute -z-10 md:left-0 -left-8 -top-8 md:w-[250px] w-[150px]  '   src={MeshLeftSide} alt="" />
 
           {/*  LEFT SIDE  */}
           <div className='w-full lg:w-1/2  flex flex-col rounded-lg'>
@@ -206,10 +206,10 @@ const Services = (Data) => {
           </div>
 
           {/*  RIGHT SIDE  */}
-          <div className='w-full lg:w-1/2  gap-2 p-8 '>
+          <div className='w-full lg:w-1/2  gap-2 md:p-8 pt-7 md:pt-0 '>
             <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>WHY CHOOSE US</button>
             <h1 className='font-semibold font-montserrat text-3xl lg:text-5xl leading-snug lg:leading-[80px]'>Choose Us to Grow Your Business</h1>
-            <h1 className='font-montserrat'>
+            <h1 className='font-montserrat md:text-left text-justify'>
               Partner with us for innovative strategies, a robust influencer network, and data-driven results. We specialize in personalized solutions that elevate your brand, driving engagement and achieving your marketing goals with proven success.
             </h1>
             <div className='flex items-center gap-x-2 py-2 pt-4'>
@@ -235,16 +235,19 @@ const Services = (Data) => {
 
         <div className='w-screen overflow-x-hidden'>
 
-        <motion.div className='  flex  opacity-40 md:left-0 left-0 ' variants={marqueeVariants} animate="animate"   >
-            <img className='w-1/2 md:w-full' src={Frame_28H} alt="" />
-            <img className='w-1/2 md:w-full' src={Frame_28H} alt="" />
-            <img className='w-1/2 md:w-full' src={Frame_28H} alt="" />
+          <motion.div className='  flex  opacity-40 md:left-0  ' variants={marqueeVariants} animate="animate"   >
+            <img className='w-[100%]  md:w-full h-8 ' src={Frame_28H} alt="" />
+            <img className='w-[100%]  md:w-full h-8 ' src={Frame_28H} alt="" />
+            <img className='w-[100%]  md:w-full h-8 ' src={Frame_28H} alt="" />
+            <img className='w-[100%]  md:w-full h-8 block md:hidden' src={Frame_28H} alt="" />
+            <img className='w-[100%]  md:w-full h-8 block md:hidden' src={Frame_28H} alt="" />
+            <img className='w-[100%]  md:w-full h-8 block md:hidden' src={Frame_28H} alt="" />
           </motion.div>
         </div>
 
-      <div className='w-full  flex justify-center overflow-x-hidden md:px-20  '>
+        <div className='w-full  flex justify-center overflow-x-hidden md:px-20  '>
           <ContactUs />
-      </div>
+        </div>
 
         <Footer />
       </div>
