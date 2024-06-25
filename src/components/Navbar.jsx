@@ -106,14 +106,14 @@ const Navbar = () => {
 </Link>
 
 
-                        <ul className=' mt-10 flex md:flex-row flex-col justify-around md:text-xl font-bold  gap-24 text-center md:text-left'>
+                        <ul className=' mt-10 flex md:flex-row flex-col justify-around md:text-xl font-bold  md:gap-24 gap-12 text-center md:text-left'>
 
                            
-                            <li className='text-white font-montserrat md:text-black md:w-max after:content-[""] after:w-8 after:block after:transition-all after:duration-500 hover:after:w-full after:border-[1px] after:border-white '><Link onClick={() => setShow(false)} to="/aboutus">ABOUT US</Link></li>
-                            <li className='text-white font-montserrat md:text-black md:w-max after:content-[""] after:w-8 after:block after:transition-all after:duration-500 hover:after:w-full after:border-[1px] after:border-white '><Link onClick={() => setShow(false)} to="/services">SERVICES</Link></li>
-                            <li className='text-white font-montserrat md:text-black md:w-max after:content-[""] after:w-8 after:block after:transition-all after:duration-500 hover:after:w-full after:border-[1px] after:border-white '><Link onClick={() => setShow(false)} to="/ourexpertise">OUR EXPERTISE</Link></li>
-                            <li className='text-white font-montserrat md:text-black md:w-max after:content-[""] after:w-8 after:block after:transition-all after:duration-500 hover:after:w-full after:border-[1px] after:border-white '><Link onClick={() => setShow(false)} to="/ourteam">OUR TEAM</Link></li>
-                            <li className='text-white font-montserrat md:text-black md:w-max after:content-[""] after:w-8 after:block after:transition-all after:duration-500 hover:after:w-full after:border-[1px] after:border-white '><Link onClick={() => setShow(false)} to="/contactus">CONTACT US</Link></li>
+                            <li className='text-white font-montserrat md:text-black md:w-max md:after:content-[""] after:w-8 after:block after:transition-all after:duration-500 hover:after:w-full md:after:border-[1px] after:border-white '><Link onClick={() => setShow(false)} to="/aboutus">ABOUT US</Link></li>
+                            <li className='text-white font-montserrat md:text-black md:w-max md:after:content-[""] after:w-8 after:block after:transition-all after:duration-500 hover:after:w-full md:after:border-[1px] after:border-white '><Link onClick={() => setShow(false)} to="/services">SERVICES</Link></li>
+                            <li className='text-white font-montserrat md:text-black md:w-max md:after:content-[""] after:w-8 after:block after:transition-all after:duration-500 hover:after:w-full md:after:border-[1px] after:border-white '><Link onClick={() => setShow(false)} to="/ourexpertise">OUR EXPERTISE</Link></li>
+                            <li className='text-white font-montserrat md:text-black md:w-max md:after:content-[""] after:w-8 after:block after:transition-all after:duration-500 hover:after:w-full md:after:border-[1px] after:border-white '><Link onClick={() => setShow(false)} to="/ourteam">OUR TEAM</Link></li>
+                            <li className='text-white font-montserrat md:text-black md:w-max md:after:content-[""] after:w-8 after:block after:transition-all after:duration-500 hover:after:w-full md:after:border-[1px] after:border-white '><Link onClick={() => setShow(false)} to="/contactus">CONTACT US</Link></li>
 
                         </ul>
 

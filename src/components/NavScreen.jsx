@@ -22,7 +22,7 @@ const NavScreen = ({ bg, Data }) => {
     return (
         <>
             <div className='w-full h-screen relative overflow-y-hidden flex flex-col items-center'>
-                <img src={bg} className='w-full  absolute top-0' alt="" />
+                <img src={bg} className='w-full h-full object-cover absolute top-0' alt="" />
 
                 <div className='w-full absolute flex md:px-32 px-6 bottom-24'>
 
