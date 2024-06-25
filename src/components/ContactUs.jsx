@@ -66,14 +66,14 @@ const ContactUs = () => {
     return (
         <>
             <ToastContainer />
-            <div className='w-full md:w-[100%] h-auto py-6   flex flex-col md:px-0'>
+            <div className='w-full md:w-[100%] h-auto py-6 px-4   flex flex-col md:px-0'>
                 <div className='mb-6 text-center md:text-left '>
                     <button className='cursor-default text-white font-montserrat tracking-widest text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-2  '>CONTACT US</button>
                     <p className='text-slate-700 font-semibold md:w-2/3 py-4 '>We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas</p>
                 </div>
 
                 <div className='w-full h-auto flex flex-col md:flex-row md:gap-9'>
-                    <div className='md:w-1/2 w-full px-6 md:px-0'>
+                    <div className='md:w-1/2 w-full px-4 md:px-0'>
                         <form onSubmit={handleSubmit}>
                             <div className='flex flex-col mt-4'>
                                 <label className='text-gray-700' htmlFor="name">YOUR NAME</label>
@@ -119,7 +119,7 @@ const ContactUs = () => {
                             </div>
                         </form>
                     </div>
-                    <div className='md:w-1/2 w-full flex flex-col items-center md:items-end px-6 pt-6 md:pt-0 rounded-xl bg-gray-200 justify-center'>
+                    <div className='md:w-1/2 w-full flex flex-col items-center md:items-end py-4 md:py-0 px-6 pt-6 md:pt-0 rounded-xl bg-gray-200 justify-center'>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.575715318924!2d77.6080443!3d12.9349689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14518a7ca777%3A0x8af1f552aff4a808!2sArivuPro%20Academy%20CA%20CS%20ACCA%20%2C%20CIMA%20(UK)%20CMA%20(US)%20CPA%20(US)%20PUC%20Coaching%20in%20Bangalore!5e0!3m2!1sen!2sin!4v1719053763648!5m2!1sen!2sin"
                             width="100%"
@@ -131,12 +131,11 @@ const ContactUs = () => {
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
                         <div className='mt-5 w-full flex flex-col items-center gap-2'>
-                            <div className='bg-white w-max px-2 py-1 text-xs md:text-xs rounded-2xl flex items-center gap-x-2'>
+                            <div className='bg-white w-max px-2 py-1 text-[7px] md:text-xs rounded-2xl flex items-center gap-x-2'>
                                 <IoLocationSharp />1st Floor, SAI PREMA Christ Lane, No.39 Krishnanagar, Hosur Main Road, Industrial Area,
                             </div>
-                            <a href="tel:09686665253" className='bg-white w-max px-2 py-1 text-xs md:text-sm rounded-2xl flex items-center gap-x-2'>
-                                <IoIosCall />
-                                09686665253
+                            <a href="tel:09686665253" className='bg-white w-max px-2 py-1 text-[7px] md:text-sm rounded-2xl flex items-center gap-x-2'>
+                                <IoIosCall />         09686665253
                             </a>
                         </div>
                     </div>

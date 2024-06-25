@@ -205,7 +205,7 @@ const Homepage = () => {
           initial={{ y: 100 }}
           animate={{ y: 0 }}
 
-          className="md:w-[100%] overflow-y-hidden relative h-screen  flex flex-col justify-center items-center  ">
+          className="md:w-[100%]  overflow-y-hidden relative h-screen  flex flex-col justify-center items-center  ">
 
 
           <motion.div className='absolute    opacity-40 md:left-0 left-0 ' variants={marqueeVariants} animate="animate"   >
@@ -222,13 +222,13 @@ const Homepage = () => {
 
 
 
-          <img src={logo} className='w-[230px] py-8' alt="" />
+          <img src={logo} className='w-[150px] md:w-[230px] py-8' alt="" />
           < motion.div
             initial={{ y: 100 }}
             animate={{ y: 0 }}
             transition={{ type: "spring", duration: 0.8, damping: 10, mass: 1, stiffness: 200 }}>
-            <h1 className='text-center font-Cabin font-extrabold text-[80px] leading-[70px]'>MUMBLING <br />MONKEYS</h1>
-            <p className='text-center mt-4 font-semibold font-montserrat'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
+            <h1 className='text-center font-Cabin font-extrabold md:text-[80px] text-[40px] leading-[40px] md:leading-[70px]'>MUMBLING <br />MONKEYS</h1>
+            <p className=' text-center px-8 md:text-base mt-4 font-semibold font-montserrat'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
           </motion.div>
           <Link to={'/services'} className='cursor-pointer rounded-md bg-[#3a3a3a] font-bold text- text-white px-5 py-2 mt-4'>Get Started Today</Link>
         </motion.div>
@@ -236,9 +236,9 @@ const Homepage = () => {
 
 
         {/*#######################################  Section 1 Starts #######################################*/}
-        <div id='section1' ref={ref} className='md:w-full   w-[90%]  h-auto py-6 md:px-16 px-4 md:flex'>
+        <div id='section1' ref={ref} className='md:w-full   w-[100%]  h-auto py-6 md:px-16 px-4 md:flex  md:flex-row'>
 
-          <motion.div className='md:w-3/5 w-full h-full py-6 pr-6'
+          <motion.div className='md:w-3/5 w-full h-full bg-red-300 py-6 md:pr-6'
             initial={{ x: -195, y: 0, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 100 }}
             transition={{ duration: 1 }}
@@ -250,7 +250,7 @@ const Homepage = () => {
             <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your one-stop destination for all your digital marketing needs!</p>
 
             <div className='flex w-auto h-auto py-3 items'> {/* First Sentence */}
-              <div className='w-[4%]  pr-3 pt-1'>
+              <div className='w-[4%]  pr-6 md:pr-3 pt-1'>
                 <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
 
               </div>
@@ -263,7 +263,7 @@ const Homepage = () => {
 
 
             <div className='flex w-auto h-auto py-3 items'> {/* Second Sentence */}
-              <div className='w-[4%]  pr-3 pt-1'>
+              <div className='w-[4%]  pr-6 md:pr-3 pt-1'>
                 <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
 
               </div>
@@ -273,7 +273,7 @@ const Homepage = () => {
             </div>
 
             <div className='flex w-auto h-auto py-3 items'> {/* Second Sentence */}
-              <div className='w-[4%]  pr-3 pt-1'>
+              <div className='w-[4%]  pr-6 md:pr-3 pt-1'>
                 <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
 
               </div>
@@ -283,12 +283,12 @@ const Homepage = () => {
             </div>
 
             <div className='flex w-auto h-auto py-3 items'> {/* Second Sentence */}
-              <div className='w-[4%]  pr-3 pt-1'>
+              <div className='w-[4%]  pr-6 md:pr-3 pt-1'>
                 <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
 
               </div>
               <div className='w-[95%]'>
-                <p className='w-[88%]'>Our mission is to take full responsibility for bridging the gaps by customising social platforms for maximum media reach and unparalleled results for any business needs.</p>
+                <p className=''>Our mission is to take full responsibility for bridging the gaps by customising social platforms for maximum media reach and unparalleled results for any business needs.</p>
               </div>
             </div>
 
@@ -335,7 +335,7 @@ const Homepage = () => {
 
             {data.map((value, key) => {
               return (
-                <div key={key} className=' h-[300px] hover overflow-hidden  relative group'>
+                <div key={key} className=' md:h-[300px] h-[250px] hover overflow-hidden  relative group'>
 
 
                   <img src={Rectangle} className='z-20 w-full h-full absolute top-0  left-0 object-cover group-hover:scale-110 transition-all duration-700 group-hover:opacity-0 group-hover:duration-300 ' alt="" />
@@ -343,7 +343,7 @@ const Homepage = () => {
 
 
 
-                  <div className='w-[80%] h-[40%] md:group-hover:-translate-y-[-100px]   relative -bottom-full -translate-y-[45%] group-hover:bottom-0
+                  <div className='w-[80%] h-[40%] md:group-hover:-translate-y-[-100px] group-hover:-translate-y-[-10px]   relative -bottom-full -translate-y-[60%] md:-translate-y-[45%] group-hover:bottom-0
                                    transition-all duration-500 m-auto
                                      group  z-20'>
                     <h1 className='text-white font-bold text-2xl py-3'> {value.heading}</h1>
@@ -364,7 +364,7 @@ const Homepage = () => {
         <div className='md:w-full md:px-20  w-[90%]  h-auto py-6    flex flex-col'>
 
           <div className='mb-6'>
-            <button className='text-white text-sm font-normal rounded-2xl bg-[#7c8d97] px-3 italic py-1 cursor-default'>
+            <button className='text-white text-[11px] md:text-sm font-normal md:rounded-2xl rounded-3xl bg-[#7c8d97] px-3 italic py-1 cursor-default'>
               Ready to Elevate Your Brand's Cool Quotient? Let's Talk!
             </button>
 
