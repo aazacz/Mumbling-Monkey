@@ -160,7 +160,7 @@ const Homepage = () => {
             viewport={{ amount: 0.5, once: true }}
 
           >
-            <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> ABOUT COMPANY</button>
+            <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'> ABOUT COMPANY</button>
             <h1 className='font-Cabin text-4xl pt-4'>Mumbling monkey</h1>
             <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your one-stop destination for all your digital marketing needs!</p>
 
@@ -212,7 +212,7 @@ const Homepage = () => {
         <div className='md:w-full md:max-w-[1250px] w-[90%] h-auto py-6 md:px-0  flex flex-col'>
 
           <div className='mb-6'>
-            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1 cursor-default'> TEAM</button>
+            <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1 cursor-default'> TEAM</button>
             <h1 className='font-Cabin text-4xl pt-4'>Meet Our Great Team</h1>
             <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your trusted digital marketing agency.</p>
           </div>
@@ -252,7 +252,7 @@ const Homepage = () => {
         <div className='md:w-full md:max-w-[1250px]  w-[90%]  h-auto py-6   flex flex-col'>
 
           <div className='mb-6'>
-            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 italic py-1 cursor-default'>
+            <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 italic py-1 cursor-default'>
               Ready to Elevate Your Brand's Cool Quotient? Let's Talk!
             </button>
 

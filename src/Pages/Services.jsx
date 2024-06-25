@@ -158,7 +158,7 @@ const Services = (Data) => {
           </div>
 
           <div className='w-full lg:w-1/2 mx-2 gap-2 p-8'>
-            <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'>WHY CHOOSE US</button>
+            <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>WHY CHOOSE US</button>
             <h1 className='font-semibold font-montserrat text-3xl lg:text-5xl leading-snug lg:leading-[80px]'>Choose Us to Grow Your Business</h1>
             <h1 className='font-montserrat'>
               Partner with us for innovative strategies, a robust influencer network, and data-driven results. We specialize in personalized solutions that elevate your brand, driving engagement and achieving your marketing goals with proven success.

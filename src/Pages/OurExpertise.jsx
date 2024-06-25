@@ -19,11 +19,9 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const OurExpertise = (Data) => {
 
-
-
     const Divs = [
         {
-            Heading: "Effieciency",
+            Heading: "Efficiency",
             Description: "Our streamlined processes ensure efficiency in every campaign, maximizing results while minimizing time and resources.",
             Icon: gearIcon
         },
@@ -43,9 +41,6 @@ const OurExpertise = (Data) => {
             Icon: TeamWork
         },
     ];
-
-
-
 
     const NavData = {
         heading: "EXPERTISE",
@@ -100,7 +95,6 @@ const OurExpertise = (Data) => {
                 "Creative Collaboration: Collaborative efforts to integrate celebrities seamlessly into campaign narratives.",
                 "Audience Engagement: Leveraging celebrities' influence to enhance engagement and brand affinity.",
                 "Measurement and Optimization: Continuous monitoring and optimization of celebrity-led initiatives to maximize ROI and impact.",
-              
             ],
             bg: "bg-gradient-to-tl from-[#E9F7FF]  via-[#FFDBD4] to-[#FFF3CA]"
         }
@@ -137,17 +131,15 @@ const OurExpertise = (Data) => {
         },
     ]
 
-
-
     return (
         <>
-            <div className='md-full h-auto relative flex flex-col items-center overflow-auto'>
+            <div className='w-full h-auto relative flex flex-col items-center overflow-auto'>
                 <NavScreen bg={expertiseNavscreen} Data={NavData} />
                 {/* Section 1 Starts */}
-                <div className='md:w-full md:max-w-[1250px] w-[90%] h-auto py-6 md:px-0 px-4'>
-                    <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-slate-500 px-3 py-1'>OUR VALUES</button>
-                    <p className='text-slate-700 font-semibold font-montserrat'>Mumbling Monkeys specialises in Influencer marketing and Public Relations. With our expertise in these fields, we help you and your brand increase visibility and reputation in the market.</p>
-                    <div className='w-full  h-auto py-6 flex flex-wrap gap-5'>
+                <div className='w-full max-w-[1250px] h-auto py-6 px-4 md:px-0'>
+                    <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>OUR VALUES</button>
+                    <p className='text-slate-700 font-semibold font-montserrat mt-4'>Mumbling Monkeys specializes in Influencer marketing and Public Relations. With our expertise in these fields, we help you and your brand increase visibility and reputation in the market.</p>
+                    <div className='w-full h-auto py-6 flex flex-wrap gap-5'>
                         {Divs.map((val, index) => (
                             <div
                                 key={index}
@@ -158,43 +150,35 @@ const OurExpertise = (Data) => {
                                 <div className='rounded-full flex justify-center items-center bg-[#292930] w-[150px] h-[150px]'>
                                     <img src={val.Icon} alt="" />
                                 </div>
-                                <h1 className='text-white font-montserrat text-xl'>{val.Heading}</h1>
-                                <h1 className='text-white font-montserrat text-base text-center'>{val.Description}</h1>
-                                <div className='w-[60px] h-6'>
+                                <h1 className='text-white font-montserrat text-xl text-center mt-4'>{val.Heading}</h1>
+                                <h1 className='text-white font-montserrat text-base text-center mt-2'>{val.Description}</h1>
+                                <div className='w-[60px] h-6 mt-4'>
                                     <hr className='border-2'></hr>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    {/* Carousal Slider */}
-                    <div className="h-max  w-full">
+                    {/* Carousel Slider */}
+                    <div className="h-max w-full">
                         <Carousel>
-
                             {servicesData.map((val, index) => {
                                 return (
-
-
-                                    <div key={index} className={`rounded-xl w-full max-w-[1200px] items-center h-[500px] p-10 relative flex  ${val.bg}  gap-x-8`}>
-                                        <img src={MeshLeftSide} className=' absolute top-2 left-2 h-[200px]' alt="" />
-                                        <div className="w-1/3 z-20 rounded-2xl h-full bg-[url('/expertise/CardPhoto1.png')]" > </div>
-                                        <div className='w-2/3  h-full flex flex-col '>
+                                    <div key={index} className={`rounded-xl w-full max-w-[1200px] items-center h-[500px] p-10 relative flex flex-col md:flex-row ${val.bg} gap-x-8`}>
+                                        <img src={MeshLeftSide} className='absolute top-2 left-2 h-[200px]' alt="" />
+                                        <div className="w-full md:w-1/3 z-20 rounded-2xl h-[200px] md:h-full bg-[url('/expertise/CardPhoto1.png')] bg-cover" > </div>
+                                        <div className='w-full md:w-2/3 h-full flex flex-col mt-4 md:mt-0'>
                                             <div className='w-full h-[40px] pb-2'>
-                                                <button className='text-white w-max text-sm font-montserrat font-normal rounded-2xl bg-slate-500 px-3 py-1'>{val.title}</button>
+                                                <button className='text-white w-max text-sm font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>{val.title}</button>
                                             </div>
                                             <div className='w-full h-[100px] '>
-
-                                                <h1 className='font-montserrat font-semibold text-2xl'>Building Trust, Driving Growth with Influencers</h1>
+                                                <h1 className='font-montserrat font-semibold text-2xl mt-4'>Building Trust, Driving Growth with Influencers</h1>
                                             </div>
-                                            <div className='w-full h-full flex flex-col justify-between'>
-
-
+                                            <div className='w-full h-full flex flex-col justify-between mt-4'>
                                                 <h1 className='font-montserrat font-medium text-base'>{val.description}</h1>
-                                                <div className='grid grid-flow-col grid-rows-4'>
+                                                <div className='grid grid-flow-col grid-rows-4 mt-4'>
                                                     {val.services.map((value, index) => {
                                                         return (
-
-
                                                             <div key={index} className='flex items-center w-full gap-x-2 py-1 '>
                                                                 <MdCheckCircle className='text-[22px] text-[#292930]' />
                                                                 <h1 className='font-montserrat font-normal text-gray-600'>{value} </h1>
@@ -203,76 +187,47 @@ const OurExpertise = (Data) => {
                                                     })}
                                                 </div>
                                             </div>
-
-
-
-
-
                                         </div>
                                     </div>
-
-
-
                                 )
                             })}
-
-
                         </Carousel>
                     </div>
                 </div>
 
-
-
-
-                <div className='w-full h-max md:px-16'>
-
-                    <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-slate-500 px-3 py-1'>SPECIAL FEATURES</button>
-                    <div className='flex justify-between items-end'>
-                        <div className='w-1/2 h-max'>
-                            <h1 className='font-montserrat pt-5 font-semibold text-gray-700 text-xl'>Capitalize on low hanging fruit to identify a ballpark value added
-                                activity beta test. Override the digital divide with additional from DevOps.</h1>
+                <div className='w-full h-max px-4 md:px-16 mt-10'>
+                    <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>SPECIAL FEATURES</button>
+                    <div className='flex flex-col md:flex-row justify-between items-end mt-4'>
+                        <div className='w-full md:w-1/2 h-max'>
+                            <h1 className='font-montserrat font-semibold text-gray-700 text-xl'>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</h1>
                         </div>
-                        <div className='w-1/2 h-max flex justify-end'>
-                            <button className='px-4 py-2 bg-black rounded-3xl text-white font-montserrat font-semibold '>Get in touch</button>
+                        <div className='w-full md:w-1/2 h-max flex justify-end mt-4 md:mt-0'>
+                            <button className='px-4 py-2 bg-black rounded-3xl text-white font-montserrat font-semibold'>Get in touch</button>
                         </div>
                     </div>
 
-                    <div className='w-full pt-4 h-max grid grid-flow-row  md:grid-cols-4 grid-cols-1  gap-x-8 items-start place-items-center'>
-
+                    <div className='w-full pt-4 h-max grid grid-flow-row md:grid-cols-4 grid-cols-1 gap-x-8 gap-y-8 items-start place-items-center mt-4'>
                         {cards2.map((val, index) => {
                             return (
-
-
-                                <div className={`h-max p-6 ${val.bg} flex flex-col rounded-2xl`}>
+                                <div key={index} className={`h-max p-6 ${val.bg} flex flex-col rounded-2xl w-full md:w-auto`}>
                                     {/* icon div */}
                                     <div className='w-full h-max pb-6'>
                                         <div className='rounded-full bg-black w-14 h-14 flex justify-center items-center'>
                                             <img src={val.icon} className='w-8 h-8' alt="" />
                                         </div>
                                     </div>
-
                                     <div className='w-full'>
                                         <h1 className='font-montserrat font-semibold pb-4 text-lg text-center'> {val.heading}</h1>
-
-                                        <h1 className='font-montserrat font-light text-'>  {val.description}</h1>
+                                        <h1 className='font-montserrat font-light text-center'>  {val.description}</h1>
                                     </div>
-                                    <div className='w-full h-8 flex items-center gap-x-2' >
+                                    <div className='w-full h-8 flex items-center gap-x-2 mt-4'>
                                         <h1 className='font-montserrat font-semibold'> Read More </h1> <FaArrowRight />
-
                                     </div>
-
                                 </div>
                             )
                         })}
-
-
-
                     </div>
-
-
-
                 </div>
-
 
                 {/* Footer */}
                 <ContactUs />

@@ -33,7 +33,7 @@ const OurTeam = (Data) => {
                 <NavScreen bg={ourteam} Data={NavData} />
 
                 <div className='w-full h-max px-4 lg:px-16 pt-8'>
-                    <button className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-3 py-1'> TEAM</button>
+                    <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'> TEAM</button>
                     <h1 className='font-montserrat font-semibold text-xl'>Meet Our Great Team</h1>
                     <p className='py-4 text-sm md:text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, quis nostrud exercitation.</p>
 
