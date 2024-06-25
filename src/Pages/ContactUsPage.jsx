@@ -4,6 +4,8 @@ import ContactUs from '../components/ContactUs'
 import AboutUs from "/AboutUs.webp"
 import Tick from "/Tick.png"
 import address from "/address.png"
+import { IoLocationSharp } from 'react-icons/io5';
+import { IoIosCall } from 'react-icons/io';
 
 const ContactUsPage = (Data) => {
     const [name, setName] = useState('');
