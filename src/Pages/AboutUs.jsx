@@ -225,8 +225,8 @@ const AboutUs = (Data) => {
 
 
             {/* Section 3 */}
-            <div className='md:w-full  w-[90%] h-auto pt-12 py-6 md:px-20 flex flex-col'>
-                <div className='mb-6'>
+            <div className='md:w-full  w-[100%] h-auto pt-12 py-6 md:px-20 flex flex-col'>
+                <div className='mb-6 px-4'>
                     <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'> TEAM</button>
                     <h1 className='font-Cabin text-4xl pt-4'>Meet Our Great Team</h1>
                     <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your trusted digital marketing agency.</p>
@@ -285,15 +285,15 @@ const AboutUs = (Data) => {
                             </div>
                         </div>
                         <div className='w-full flex-shrink-0 h-full snap-center flex items-center'>
-                            <div className='relative w-[20%] overflow-hidden h-full grid grid-flow-row justify-center items-center'>
-                                <div className='absolute w-full h-[90%] left-1/2 border-l-2 border-dashed border-[#E38676]'></div>
-                                {rightData2.map((val, index) => (
-                                    <div key={index} className='rounded-full z-20 w-[90px] h-[90px] max-w-[90px] max-h-[90px] bg-[#FFD1C8] flex justify-center items-center'>
-                                        <div className='rounded-full w-[80px] h-[80px] max-w-[74px] max-h-[74px] bg-white flex justify-center items-center'>
-                                            <img src={val.icon} className='w-[50%]' alt="" />
+                        <div className='relative w-[20%]  overflow-hidden h-full grid grid-flow-row  justify-between md:justify-center place-content-between  items-start md:items-center'>
+                             <div className='absolute w-full h-[90%] left-1/2 border-l-2 border-dashed  border-[#E38676] '></div>
+                                    {rightData1.map((val, index) => (
+                                        <div key={index} className='  rounded-full z-20 md:w-[90px] w-[70px] h-[70px] md:h-[90px] max-w-[90px] max-h-[90px] bg-[#FFD1C8] flex justify-center items-center'>
+                                            <div className='rounded-full md:w-[80px] w-[60px] h-[60px] md:h-[80px] max-w-[74px] max-h-[74px] bg-white flex justify-center items-center'>
+                                                <img src={val.icon} className='md:w-[50%] w-[40%]' alt="" />
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
                             </div>
                             <div className='flex-1 h-full grid grid-flow-row justify-center items-center'>
                                 {rightData2.map((val, index) => (

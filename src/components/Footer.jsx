@@ -36,7 +36,7 @@ const Footer = () => {
 
           <h1 className='w-full font-semibold font-montserrat'>Quick Links</h1>
           <Link to={"/"}>              <p className='w-full font-montserrat '>Home</p>                </Link>
-          <Link to={"/aboutus"}>       <p className='w-full font-montserrat '>About us</p>            </Link>
+          <Link reloadDocument to={"/aboutus"}>       <p className='w-full font-montserrat '>About us</p>            </Link>
           <Link to={"/services"}>      <p className='w-full font-montserrat '>Our Services</p>        </Link>
           <Link to={"/ourexpertise"}>  <p className='w-full font-montserrat '>Our Expertise</p>       </Link>
         </div>

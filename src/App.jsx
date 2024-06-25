@@ -12,6 +12,7 @@ import ContactUsPage from './Pages/ContactUsPage';
 import Services from './Pages/Services';
 import Testimonials from './components/Testimonials';
 import InnerServices from './components/InnerServices';
+import ScrollToTop from './components/ScrollToTop';
 function App() {
   
 
@@ -21,7 +22,7 @@ function App() {
 <div className='w-full  overflow-x-hidden'>
 
 <Navbar/>
-
+<ScrollToTop/>
         <Routes>
           <Route path='/' element={<Homepage  />} />
           <Route path='/aboutus' element={<AboutUs Data={"about"} />} />
