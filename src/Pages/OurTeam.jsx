@@ -41,7 +41,7 @@ const OurTeam = (Data) => {
             <div className='w-full h-auto relative flex flex-col items-center overflow-auto'>
                 <NavScreen bg={ourteam} Data={NavData} />
 
-                <div className='w-full md:px-20 h-max px-4  pt-16'>
+                <div className='w-full md:px-20 h-max px-6  pt-16'>
                     <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'> TEAM</button>
                     <h1 className='font-montserrat font-bold text-3xl pt-2 '>Meet Our Great Team</h1>
 
@@ -55,12 +55,12 @@ const OurTeam = (Data) => {
 
 
 
-                    <div className='w-full flex pt-12 md:px-20 flex-wrap gap-x-8 gap-y-8 justify-center'>
+                    <div className='w-full flex pt-12 md:px-20 flex-wrap px-4  gap-x-8 gap-y-8 justify-center'>
                         {team.map((val, index) => {
                             return (
                                 <div key={index} className='w-full max-w-[350px] flex flex-col group items-center'>
                                     <div className='w-full rounded-2xl h-[400px] overflow-hidden relative'>
-                                        <img src={val.photo} className='w-full rounded-2xl transition-transform group-hover:scale-110 duration-300 ease-in-out' alt={val.name} />
+                                        <img src={val.photo} className='md:w-full` rounded-2xl transition-transform group-hover:scale-110 duration-300 ease-in-out' alt={val.name} />
                                         <h1 className='px-3 py-1 rounded-2xl text-white bg-black font-montserrat font-normal absolute bottom-5 right-0'>{val.position}</h1>
                                     </div>
                                     <div className='w-full text-center'>
@@ -80,7 +80,7 @@ const OurTeam = (Data) => {
                     </div>
                 </div>
 
-                <div className='w-full flex justify-center overflow-x-hidden md:mt-10 md:px-20  '>
+                <div className='w-full flex justify-center overflow-x-hidden mt-10 md:px-20  '>
 
                     <ContactUs />
                 </div>
