@@ -23,7 +23,7 @@ const Animation = ({data}) => {
                     {/* Circle with border */}
                     <div className='rounded-full z-30 flex flex-col justify-around items-center  absolute top-3 transition-all duration-1000 transform  group-hover:translate-x-[12px]  group-hover:border-[0.3px] group-hover:border-[#FFD2B1]   group-hover:translate-y-[10%] group-hover:w-[190px]  group-hover:h-[190px]  w-16 h-16 bg-black' >
 
-                        <img src={Monkey} className='relative  transition-all duration-700 group-hover:scale-[2] ' alt="" />
+                        <img src={data.icon} className='relative w-[50px] transition-all duration-700 group-hover:scale-[2] ' alt="" />
                     <h1 className='text-white hidden w-fit text-center transition-all duration-[1500] group-hover:block font-montserrat font-semibold text-xl '>{data.title}</h1>
                     </div>
 
@@ -34,10 +34,6 @@ const Animation = ({data}) => {
                         <h1 className='font-montserrat text-gray-500 font-semibold text-[12px]'>{data.description}</h1>
                     </div>
 
-                    {/* <div className='flex gap-x-2 items-center'>
-                        <h1 className='font-montserrat font-semibold'>Read more</h1>
-                        <GoArrowRight />
-                    </div> */}
 
                 </div>
           

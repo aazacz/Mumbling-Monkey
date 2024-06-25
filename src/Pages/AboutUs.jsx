@@ -14,6 +14,10 @@ import bar from "/bar.png";
 import AboutUsimg from "/AboutUs.webp";
 import './AboutUs.css';
 import Animation from './Animation';
+import monkeytool from "/monkeytool.svg"
+import monkey from "/monkeyhead.png"
+import monkey2 from "/monkeyhead2.png"
+import monkey3 from "/monkeyhead3.png"
 
 const AboutUs = (Data) => {
     const targetRef = useRef(null);
@@ -87,19 +91,23 @@ const AboutUs = (Data) => {
     const marketingData = [
         {
             title: "Creative Ideas",
-            description: "Experience the difference with our creative ideas that spark engagement and inspire action. We blend imagination and strategy to deliver unforgettable marketing campaigns."
+            description: "Experience the difference with our creative ideas that spark engagement and inspire action. We blend imagination and strategy to deliver unforgettable marketing campaigns.",
+            icon:monkey
         },
         {
             title: "Best Features",
-            description: "From advanced analytics and robust influencer networks to personalized campaign strategies, we deliver excellence in every detail. Our comprehensive influencer databases, real-time campaign tracking, and tailored marketing strategies ensure success."
+            description: "From advanced analytics and robust influencer networks to personalized campaign strategies, we deliver excellence in every detail. Our comprehensive influencer databases, real-time campaign tracking, and tailored marketing strategies ensure success.",
+            icon:monkey2
         },
         {
             title: "Experience",
-            description: "Benefit from our extensive experience in influencer marketing. We blend industry knowledge with innovative strategies to create powerful campaigns that drive growth."
+            description: "Benefit from our extensive experience in influencer marketing. We blend industry knowledge with innovative strategies to create powerful campaigns that drive growth.",
+            icon:monkey3
         },
         {
             title: "Seamless Solutions",
-            description: "Experience the convenience of our seamless solutions. Our integrated approach ensures smooth, hassle-free execution of your marketing strategies."
+            description: "Experience the convenience of our seamless solutions. Our integrated approach ensures smooth, hassle-free execution of your marketing strategies.",
+            icon:monkeytool
         }
     ];
 

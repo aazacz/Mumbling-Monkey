@@ -132,7 +132,7 @@ const Services = (Data) => {
         {!showAll && (
           <div className='w-full flex justify-center mb-10 animate-bounce'>
             <button
-              className='text-white text-sm font-normal rounded-2xl bg-slate-500 px-4 py-2'
+              className='text-white text-sm font-normal rounded-2xl bg-slate-600 px-4 py-2'
               onClick={() => setShowAll(true)}
             >
               See More

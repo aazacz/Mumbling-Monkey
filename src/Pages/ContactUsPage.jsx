@@ -97,7 +97,19 @@ const ContactUsPage = (Data) => {
                                 referrerPolicy="no-referrer-when-downgrade"
                             ></iframe>
                             <div className='mt-5'>
-                                <img src={address} className='w-full' alt="" />
+                              
+                                <div className='mt-5 w-full flex flex-col items-center gap-2'>
+                                    <div className='bg-white w-max px-2 py-1 text-xs md:text-xs rounded-2xl flex items-center gap-x-2'>
+                                        <IoLocationSharp />1st Floor, SAI PREMA Christ Lane, No.39 Krishnanagar, Hosur Main Road, Industrial Area,
+                                    </div>
+                                    <a href="tel:09686665253" className='bg-white w-max px-2 py-1 text-xs md:text-base rounded-2xl flex items-center gap-x-2'>
+                                        <IoIosCall />
+                                        09686665253
+                                    </a>
+                                </div>
+
+
+
                             </div>
                         </div>
                     </div>

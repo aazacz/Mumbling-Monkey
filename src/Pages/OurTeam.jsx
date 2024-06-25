@@ -24,7 +24,7 @@ const OurTeam = (Data) => {
 
     const NavData = {
         heading: "OUR TEAM",
-        Description: "Our Expertise"
+        Description: "The Consultors"
     }
 
     return (
@@ -34,8 +34,8 @@ const OurTeam = (Data) => {
 
                 <div className='w-full h-max px-4 lg:px-16 pt-8'>
                     <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'> TEAM</button>
-                    <h1 className='font-montserrat font-semibold text-xl'>Meet Our Great Team</h1>
-                    <p className='py-4 text-sm md:text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, quis nostrud exercitation.</p>
+                    <h1 className='font-montserrat font-bold text-3xl pt-2 '>Meet Our Great Team</h1>
+                    <p className='py-4 text-sm md:text-base text-gray-600'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, quis nostrud exercitation.</p>
 
                     <div className='w-full flex flex-wrap gap-x-8 gap-y-8 justify-center'>
                         {team.map((val, index) => {

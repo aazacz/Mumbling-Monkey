@@ -92,12 +92,12 @@ const Homepage = () => {
                                                   methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-orange-300", textcol: "text-orange-200", dur: 1
     },
     {
-      heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
+      heading: "Email Marketing", description: `Enable local payment methods for your customers 
                                                   overseas and slash processing fees by 5-10x.Enable local payment 
                                                   methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-purple-300", textcol: "text-purple-200", dur: 2
     },
     {
-      heading: "Social Media Marketing", description: `Enable local payment methods for your customers 
+      heading: "Content Marketing", description: `Enable local payment methods for your customers 
                                                   overseas and slash processing fees by 5-10x.Enable local payment 
                                                   methods for your customers overseas and slash processing fees by 5-10x. `, colour: "bg-indigo-300", textcol: "text-indigo-200", dur: 2
     },
@@ -151,7 +151,7 @@ const Homepage = () => {
 
 
         {/*#######################################  Section 1 Starts #######################################*/}
-        <div id='section1' ref={ref} className='md:w-full  md:max-w-[1250px] w-[90%]  h-auto py-6 md:px-0 px-4 md:flex'>
+        <div id='section1' ref={ref} className='md:w-full  md:max-w-[1200px] w-[90%]  h-auto py-6 md:px-5 px-4 md:flex'>
 
           <motion.div className='md:w-3/5 w-full h-full py-6 pr-6'
             initial={{ x: -195, y: 0, opacity: 0 }}
@@ -209,7 +209,7 @@ const Homepage = () => {
 
         {/*#######################################  Section 2 Starts #######################################*/}
 
-        <div className='md:w-full md:max-w-[1250px] w-[90%] h-auto py-6 md:px-0  flex flex-col'>
+        <div className='md:w-full md:max-w-[1200px] md:px-5 w-[90%] h-auto py-6   flex flex-col'>
 
           <div className='mb-6'>
             <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1 cursor-default'> TEAM</button>
@@ -249,7 +249,7 @@ const Homepage = () => {
 
 
         {/*#######################################  Section 3 Starts #######################################*/}
-        <div className='md:w-full md:max-w-[1250px]  w-[90%]  h-auto py-6   flex flex-col'>
+        <div className='md:w-full md:max-w-[1200px] md:px-6  w-[90%]  h-auto py-6    flex flex-col'>
 
           <div className='mb-6'>
             <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 italic py-1 cursor-default'>
@@ -280,19 +280,19 @@ const Homepage = () => {
                   viewport={{ amount: 0.5 }}
 
 
-                  key={key} className={`md:h-40  h-50 p-6  flex items-center rounded-lg ${value.colour}`}>
+                  key={key} className={`md:h-40  h-50 p-6 md:p-8  flex items-center rounded-lg ${value.colour}`}>
                   <div className='w-[80%] md:pr-2'>
                     <h1 className='text-lg font-semibold'> {value.heading}</h1>
                     <p className='text-sm '> {value.description}</p>
 
                   </div>
-                  <div className='w-[10%]'>
+                  <div className='w-[20%] flex justify-center'>
                     <div className='w-14 h-14 bg-black flex justify-center items-center relative group' >
-                      <div className={`${value.textcol} text-4xl  absolute group-hover:scale-50 group-hover:opacity-0 transition-all duration-300`}>
+                      <div className={`${value.textcol} text-4xl  absolute group-hover:scale-0 group-hover:opacity-0 transition-all duration-300`}>
                         <HiOutlineSpeakerphone />
                       </div>
 
-                      <div className={` text-4xl font-thin scale-0  origin-center absolute group-hover:scale-100  transition-all duration-200`}>
+                      <div className={` text-4xl font-thin scale-0 z-40 text-yellow-300  origin-center absolute group-hover:scale-100  transition-all duration-200`}>
                         <HiOutlineMailOpen />
                       </div>
 
