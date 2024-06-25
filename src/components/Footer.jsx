@@ -57,7 +57,7 @@ const Footer = () => {
 
       </div>
 
-      <div className='w-full h-10 bg-gray-300 px-11 text-xs text-gray-500 flex items-center'>
+      <div className='w-full md:h-10 bg-gray-300 px-11 text-xs text-gray-500 flex items-center'>
         ©2024 Mumbling monkey; All Rights Reserved.
       </div>
     </>
