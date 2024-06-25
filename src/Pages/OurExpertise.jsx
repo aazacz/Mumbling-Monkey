@@ -15,7 +15,8 @@ import CardImg2 from "/expertise/CardImg2.png"
 import CardImg3 from "/expertise/CardImg3.png"
 import CardImg4 from "/expertise/CardImg4.png"
 import { FaArrowRight } from 'react-icons/fa';
-
+import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
+import "./OurExpertise.css"
 
 const OurExpertise = (Data) => {
 
@@ -159,9 +160,11 @@ const OurExpertise = (Data) => {
                         ))}
                     </div>
 
+
+
                     {/* Carousel Slider */}
                     <div className="h-max w-full">
-                        <Carousel>
+                        <Carousel className='custom-carousel' leftControl={<Left/>}  rightControl={<Right/>}>
                             {servicesData.map((val, index) => {
                                 return (
                                     <div key={index} className={`rounded-xl w-full max-w-[1200px] items-center h-[500px] p-10 relative flex flex-col md:flex-row ${val.bg} gap-x-8`}>
@@ -206,7 +209,7 @@ const OurExpertise = (Data) => {
                         </div>
                     </div>
 
-                    <div className='w-full pt-4 h-max grid grid-flow-row md:grid-cols-4 grid-cols-1 gap-x-8 gap-y-8 items-start place-items-center mt-4'>
+                    <div className='w-full pt-4 h-max  grid grid-flow-row md:grid-cols-4 grid-cols-1 gap-x-8 gap-y-8 items-start place-items-center mt-4'>
                         {cards2.map((val, index) => {
                             return (
                                 <div key={index} className={`h-max p-6 ${val.bg} flex flex-col rounded-2xl w-full md:w-auto`}>
@@ -238,3 +241,22 @@ const OurExpertise = (Data) => {
 };
 
 export default OurExpertise;
+
+
+
+
+
+
+const Left = () => {
+  return (
+    <div className='absolute -bottom-12 left-14 text-4xl text-[#5956e8]'><FaCircleChevronLeft />
+</div>
+  )
+}
+
+const Right = () => {
+  return (
+    <div className=' absolute -bottom-12 right-14 text-4xl text-[#5956e8] '><FaCircleChevronRight /> </div>
+  )
+}
+
