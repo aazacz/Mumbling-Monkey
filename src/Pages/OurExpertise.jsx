@@ -180,14 +180,18 @@ const OurExpertise = (Data) => {
                                             <div className='w-full h-max mb-4'>
                                                 <h1 className='font-montserrat font-semibold text-2xl '>Building Trust, Driving Growth with Influencers</h1>
                                             </div>
-                                            <div className='w-full h-max flex flex-col justify-between '>
+                                            <div className='w-full h-max flex flex-col  justify-between '>
                                                 <h1 className='font-montserrat font-medium text-base'>{val.description}</h1>
-                                                <div className='grid grid-flow-col grid-rows-5 mt-4'>
+                                                <div className=' mt-2 grid grid-flow-col grid-rows-5 gap-2'>
                                                     {val.services.map((value, index) => {
                                                         return (
-                                                            <div key={index} className='flex items-center w-full gap-x-2 px- py-1 '>
-                                                                <MdCheckCircle className='text-xl  text-[#292930]' />
-                                                                <h1 className='font-montserrat  text-gray-600'>{value} </h1>
+                                                            <div key={index} className='flex items-start w-full  gap-x-2'>
+                                                                <div className='w-[20px]'>
+
+                                                                <MdCheckCircle className='text-[22px]  text-[#292930]' /> 
+                                                                </div>
+                                                                
+                                                                 <h1 className='font-montserrat  text-gray-600'>{value} </h1>
                                                             </div>
                                                         )
                                                     })}
