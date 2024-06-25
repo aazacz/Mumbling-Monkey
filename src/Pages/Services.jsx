@@ -175,7 +175,7 @@ const Services = (Data) => {
         </div>
 
         {!showAll && (
-          <div className='w-full flex justify-center mb-10 animate-bounce'>
+          <div className='w-full flex justify-center py-8 mb-10 animate-bounce'>
             <button
               className='text-white text-sm font-normal rounded-2xl bg-[#3a3a3a] px-4 py-2'
               onClick={() => setShowAll(true)}

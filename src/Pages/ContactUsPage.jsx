@@ -6,6 +6,8 @@ import Tick from "/Tick.png"
 import address from "/address.png"
 import { IoLocationSharp } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactUsPage = (Data) => {
     const [name, setName] = useState('');
@@ -21,22 +23,51 @@ const ContactUsPage = (Data) => {
         if (message.length < 5) {
             newErrors.message = "Message should be at least 5 characters long.";
         }
+        if (!email) {
+            newErrors.email = "Email is required.";
+        }
         return newErrors;
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setErrors({})
         const validationErrors = validate();
         if (Object.keys(validationErrors).length === 0) {
-            // Submit form or handle form data here
-            console.log("Form submitted successfully!");
+            toast.success('Email Sent ✔', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
+            setName("")
+            setEmail("")
+            setMessage("")
+
+
         } else {
             setErrors(validationErrors);
+            toast.warn('Please fill all required fields ', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
         }
     };
-
     return (
         <>
+         <ToastContainer />
             <div className='overflow-x-hidden  h-auto mt-[15vh] flex flex-col items-center overflow-auto'>
                 <div className='md:w-full md:px-20  w-[100%] px-0 h-auto py-6   flex flex-col'>
                     <div className='mb-6 px-0'>
@@ -58,15 +89,16 @@ const ContactUsPage = (Data) => {
                                     {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>}
                                 </div>
                                 <div className='flex flex-col mt-4'>
-                                    <label className='text-gray-700' htmlFor="email">EMAIL</label>
-                                    <input
-                                        className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
-                                        type="email"
-                                        id='email'
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                    />
-                                </div>
+                                <label className='text-gray-700' htmlFor="email">EMAIL</label>
+                                <input
+                                    className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
+                                    type="email"
+                                    id='email'
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                                {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
+                            </div>
                                 <div className='flex flex-col mt-4'>
                                     <label className='text-gray-700' htmlFor="message">MESSAGE</label>
                                     <textarea

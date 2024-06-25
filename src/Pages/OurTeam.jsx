@@ -80,7 +80,7 @@ const OurTeam = (Data) => {
                     </div>
                 </div>
 
-                <div className='w-full flex justify-center overflow-x-hidden md:px-20  '>
+                <div className='w-full flex justify-center overflow-x-hidden md:mt-10 md:px-20  '>
 
                     <ContactUs />
                 </div>

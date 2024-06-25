@@ -27,7 +27,7 @@ const NavScreen = ({ bg, Data }) => {
                 <div className='w-full absolute flex md:px-32 px-6 bottom-24'>
 
                     <div className='w-full rounded-3xl max-w-[500px]  bg-white bg-opacity-65 md:px-8 px-4 py-5'>
-                        <div className='text-white text-sm w-fit tracking-widest font-light font-montserrat uppercase rounded-2xl bg-slate-500 px-3 py-1'>
+                        <div className='text-white text-sm w-fit tracking-widest font-light font-montserrat uppercase rounded-2xl bg-[#7c8d97] mb-3 px-3 py-1'>
                             {Data.heading}
                         </div>
                         <h1 className='font-bold md:text-4xl text-2xl w-full font-montserrat'>

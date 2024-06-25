@@ -213,7 +213,7 @@ const InnerServices = () => {
                 {/* Right side */}
 
                 <div className='w-1/2 h-max  p-8'>
-                    <span className='bg-[#7c8d97] tracking-widest font-montserrat px-2 py-2 rounded-2xl text-white ' > ABOUT THIS SERVICE</span>
+                    <span className='bg-[#89877c] tracking-widest font-montserrat px-2 py-2 rounded-2xl text-white ' > ABOUT THIS SERVICE</span>
 
                     <h1 className='w-full h-[100px] border-b-2 font-montserrat font-semibold text-4xl mt-4'>We take your business reach from thousands to millions</h1>
                     <p className='text-base font-montserrat mt-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit sollicitudinbibendum senectus scelerisque non.
@@ -370,7 +370,7 @@ const InnerServices = () => {
             </div>
 
 
-            <div className='w-full flex justify-center overflow-x-hidden md:px-20  '>
+            <div className='w-full flex justify-center overflow-x-hidden pt-8 md:px-20  '>
 
                 <ContactUs />
             </div>
