@@ -246,7 +246,7 @@ const InnerServices = () => {
             {/*Section 3  */}
 
             <div className='w-full flex  md:px-20 justify-center'>
-                <div className='rounded-xl w-full md:max-w-[1200px]  flex mt-8 p-10 bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF] gap-x-8'>
+                <div className='rounded-xl w-full  flex mt-8 p-10 bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF] gap-x-8'>
 
                     {/* Left Side */}
                     <div className='w-1/2 h-full flex flex-col  '>
@@ -279,13 +279,10 @@ const InnerServices = () => {
                     </div>
                     {/* right Side */}
 
-                    <div className='w-1/2 overflow-x-scroll grid grid-flow-col snap-x snap-mandatory  yScrollbar'>
+                    <div className='w-1/2 overflow-x-scroll flex snap-x snap-mandatory  yScrollbar'>
 
 
-
-
-
-                        <div className='w-[550px] h-full  snap-center flex items-center'>
+                        <div className='w-full flex-shrink-0 h-full  snap-center flex items-center'>
 
                             <div className='relative w-[20%] overflow-hidden h-full grid grid-flow-row justify-center  items-center'>
                                 <div className='absolute  w-full h-[90%] left-1/2  border-l-2 border-dashed  border-[#E38676] '></div>
@@ -302,7 +299,7 @@ const InnerServices = () => {
 
                             </div>
 
-                            <div className='flex-1 h-full grid grid-flow-row justify-center  items-center'>
+                            <div className='flex-1  h-full grid grid-flow-row justify-center  items-center'>
                                 {rightData1.map((val, index) => {
                                     return (
                                         <div key={index}>
@@ -317,7 +314,10 @@ const InnerServices = () => {
                             </div>
 
                         </div>
-                        <div className='w-[550px] h-full  snap-center flex items-center'>
+
+
+                        
+                        <div className='w-full flex-shrink-0 h-full  snap-center flex items-center'>
 
                             <div className='relative w-[20%] overflow-hidden h-full grid grid-flow-row justify-center  items-center'>
                                 <div className='absolute w-full h-[90%] left-1/2  border-l-2 border-dashed  border-[#E38676] '></div>

@@ -168,7 +168,7 @@ const OurExpertise = (Data) => {
                         <Carousel className='max-h-[100%]  custom-carousel' leftControl={<Left />} indicators={true} rightControl={<Right />}>
                             {servicesData.map((val, index) => {
                                 return (
-                                    <div key={index} className={`rounded-xl w-full  max-w-[1200px] items-center h-[500px] p-10 relative flex flex-col md:flex-row ${val.bg} gap-x-8`}>
+                                    <div key={index} className={`rounded-xl w-full items-center h-[500px] p-10 relative flex flex-col md:flex-row ${val.bg} gap-x-8`}>
                                         <img src={MeshLeftSide} className='absolute top-2 left-2 h-[200px]' alt="" />
                                         <div className="w-full md:w-1/3 z-20 rounded-2xl h-[200px] md:h-full bg-[url('/expertise/CardPhoto1.png')] bg-cover" > </div>
                                         <div className='w-full md:w-2/3 h-full flex flex-col mt-4 md:mt-0'>
