@@ -22,17 +22,18 @@ const NavScreen = ({ bg, Data }) => {
     return (
         <>
             <div className='w-full h-screen relative overflow-y-hidden flex flex-col items-center'>
-                <img src={bg} className='w-full h-full absolute top-0' alt="" />
+                <img src={bg} className='w-full  absolute top-0' alt="" />
 
                 <div className='w-full absolute flex md:px-32 px-6 bottom-24'>
-                    <div className='w-full rounded-3xl max-w-[500px] bg-white bg-opacity-75 md:px-8 px-4 py-5'>
-                        <div className='text-white text-sm w-fit font-normal font-montserrat uppercase rounded-2xl bg-slate-500 px-3 py-1'>
+
+                    <div className='w-full rounded-3xl max-w-[500px]  bg-white bg-opacity-65 md:px-8 px-4 py-5'>
+                        <div className='text-white text-sm w-fit tracking-widest font-light font-montserrat uppercase rounded-2xl bg-slate-500 px-3 py-1'>
                             {Data.heading}
                         </div>
-                        <h1 className='font-bold md:text-4xl text-2xl w-full max-w-[350px] font-montserrat'>
+                        <h1 className='font-bold md:text-4xl text-2xl w-full font-montserrat'>
                             {Data.Description}
                         </h1>
-                        <h1 className='font-montserrat md:text-lg text-base text-gray-700'>
+                        <h1 className='font-montserrat md:text-sm py-2 text-base text-gray-700'>
                             -- MUMBLING MONKEYS --
                         </h1>
                     </div>

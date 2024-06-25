@@ -124,7 +124,7 @@ const AboutUs = (Data) => {
             <NavScreen bg={AboutUsimg} Data={NavData} />
 
             {/* Section 1 */}
-            <div className='md:w-full md:max-w-[1250px] w-[90%] h-auto py-6 md:px-0 px-4 md:flex flex-col md:flex-row'>
+            <div className='md:w-full md:max-w-[1250px] w-[90%] h-max py-6 md:px-0 px-4 md:flex flex-col md:flex-row'>
                 <motion.div className='md:w-3/5 w-full h-full py-6 pr-6'
                     initial={{ x: -195, y: 0, opacity: 0 }}
                     whileInView={{ x: 0, y: 0, opacity: 100 }}
@@ -142,21 +142,21 @@ const AboutUs = (Data) => {
                     ))}
                 </motion.div>
 
-                <div className='md:w-2/5 relative h-full flex justify-end py-6'>
+                <div className='md:w-3/5  relative  flex justify-end py-6'>
                     <img className='absolute z-10 top-1 right-0 ' width="180" src={pattern} alt="" />
-                    <motion.div className='w-[350px] z-20 mt-8 me-16 rounded-lg object-contain bg-slate-50 overflow-hidden '
+                    <motion.div className='w-[500px] z-20 mt-8 me-16 rounded-lg object-contain bg-slate-50 overflow-hidden '
                         initial={{ x: 0, y: 100, opacity: 0 }}
                         whileInView={{ x: 0, y: 0, opacity: 100 }}
                         transition={{ duration: 1.5 }}
                         viewport={{ amount: 0.5, once: true }}
                     >
-                        <motion.img src={GroupPhoto} className='rounded-lg w-full h-full' alt="" />
+                        <motion.img src={GroupPhoto} className='rounded-lg w-[550px]  ' alt="" />
                     </motion.div>
                 </div>
             </div>
 
             {/* Section 2 */}
-            <div ref={targetRef} className='w-full flex flex-wrap justify-around py-6'>
+            <div ref={targetRef} className='w-full max-w-[1100px] flex flex-wrap justify-around py-6'>
                 {isInViewport && (
                     <>
                         <div className='w-1/2 md:w-1/4 flex flex-col items-center'>
