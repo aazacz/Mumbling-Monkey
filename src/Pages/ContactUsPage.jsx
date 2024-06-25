@@ -38,12 +38,12 @@ const ContactUsPage = (Data) => {
     return (
         <>
             <div className='overflow-x-hidden  h-auto mt-[15vh] flex flex-col items-center overflow-auto'>
-                <div className='md:w-full w-[90%] px-16 h-auto py-6 md:px-14  flex flex-col'>
-                    <div className='mb-6 px-8'>
+                <div className='md:w-full md:max-w-[1200px]  w-[100%] px-0 h-auto py-6 md:px-0  flex flex-col'>
+                    <div className='mb-6 px-0'>
                         <h1 className='text-[#487A97] text-5xl rounded-2xl font-montserrat font-medium py-2'> Contact Us </h1>
                         <p className='text-slate-700 font-semibold md:w-2/3'>We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas</p>
                     </div>
-                    <div className='w-full px-8 h-auto flex md:flex-row flex-col-reverse md:gap-9'>
+                    <div className='w-full px-0 h-auto flex md:flex-row flex-col-reverse md:gap-9'>
                         <div className='md:w-1/2'>
                             <form onSubmit={handleSubmit}>
                                 <div className='flex flex-col mt-4'>
@@ -89,7 +89,7 @@ const ContactUsPage = (Data) => {
                                 </div>
                             </form>
                         </div>
-                        <div className='md:w-1/2 w-full flex flex-col items-center md:items-end px-6 pt-6 md:py-6 rounded-xl bg-gray-200 justify-center'>
+                        <div className='md:w-1/2 w-full flex flex-col items-center  px-6 pt-6 md:py-4 rounded-xl bg-gray-200 justify-center'>
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.575715318924!2d77.6080443!3d12.9349689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14518a7ca777%3A0x8af1f552aff4a808!2sArivuPro%20Academy%20CA%20CS%20ACCA%20%2C%20CIMA%20(UK)%20CMA%20(US)%20CPA%20(US)%20PUC%20Coaching%20in%20Bangalore!5e0!3m2!1sen!2sin!4v1719053763648!5m2!1sen!2sin"
                             width="100%"

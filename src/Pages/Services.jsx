@@ -139,7 +139,7 @@ const Services = (Data) => {
           <div className='flex flex-wrap justify-center  md:max-w-[1300px] gap-16  w-full h-max '>
             <div className=' w-screen'>
 
-              <button className='text-white text-sm  font-montserrat font-normal  rounded-2xl bg-[#7d8a91] px-3 py-1'>OUR VALUES</button>
+              <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'>SERVICES</button>
 
               <h1 className='font-montserrat w-[60%] font-bold text-4xl pt-4'>High-impact services to take your business
                 to the next level</h1>
@@ -176,7 +176,7 @@ const Services = (Data) => {
         {!showAll && (
           <div className='w-full flex justify-center mb-10 animate-bounce'>
             <button
-              className='text-white text-sm font-normal rounded-2xl bg-slate-600 px-4 py-2'
+              className='text-white text-sm font-normal rounded-2xl bg-[#3a3a3a] px-4 py-2'
               onClick={() => setShowAll(true)}
             >
               See More
@@ -237,7 +237,10 @@ const Services = (Data) => {
           </motion.div>
         </div>
 
-        <ContactUs />
+        <div className='w-full flex justify-center overflow-x-hidden md:px-2  '>
+
+<ContactUs />
+</div>
         <Footer />
       </div>
 

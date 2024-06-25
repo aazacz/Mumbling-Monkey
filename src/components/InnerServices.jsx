@@ -124,14 +124,14 @@ const InnerServices = () => {
                 <div className='relative w-full h-screen flex  items-center'>
 
                     <div className='w-2/3 z-20 md:pl-8'>
-                        <h1 className='font-montserrat font-bold text-5xl'>Social Media Marketing</h1>
+                        <h1 className='font-montserrat font-bold text-[#292930] text-6xl pb-6 '>Social Media<br/> Marketing</h1>
                         <h1 className='font-montserrat w-2/3  '>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h1>
 
 
                     </div>
 
-                    <img src={innerServiceImage} className='md:absolute -top-1/2 translate-y-1/2  right-0  w-[800px]' alt="" />
+                    <img src={innerServiceImage} className='md:absolute -top-1/2 translate-y-[50%]  right-0  w-[850px]' alt="" />
 
                 </div>
 
@@ -245,7 +245,7 @@ const InnerServices = () => {
 
             {/*Section 3  */}
 
-            <div className='w-full flex justify-center'>
+            <div className='w-full flex  md:px-24 justify-center'>
                 <div className='rounded-xl w-full md:max-w-[1200px]  flex mt-8 p-10 bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF] gap-x-8'>
 
                     {/* Left Side */}
@@ -370,7 +370,10 @@ const InnerServices = () => {
             </div>
 <div className='w-screen flex justify-center'>
 
-<ContactUs/>
+<div className='w-full flex justify-center overflow-x-hidden md:px-8  '>
+
+            <ContactUs />
+</div>
 </div>
 <Footer/>
 

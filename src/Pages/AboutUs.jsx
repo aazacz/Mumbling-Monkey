@@ -92,28 +92,32 @@ const AboutUs = (Data) => {
         {
             title: "Creative Ideas",
             description: "Experience the difference with our creative ideas that spark engagement and inspire action. We blend imagination and strategy to deliver unforgettable marketing campaigns.",
-            icon:monkey
+            icon: monkey
         },
         {
             title: "Best Features",
             description: "From advanced analytics and robust influencer networks to personalized campaign strategies, we deliver excellence in every detail. Our comprehensive influencer databases, real-time campaign tracking, and tailored marketing strategies ensure success.",
-            icon:monkey2
+            icon: monkey2
         },
         {
             title: "Experience",
             description: "Benefit from our extensive experience in influencer marketing. We blend industry knowledge with innovative strategies to create powerful campaigns that drive growth.",
-            icon:monkey3
+            icon: monkey3
         },
         {
             title: "Seamless Solutions",
             description: "Experience the convenience of our seamless solutions. Our integrated approach ensures smooth, hassle-free execution of your marketing strategies.",
-            icon:monkeytool
+            icon: monkeytool
         }
     ];
 
     const Data3 = [
         { description: "Our company was founded with a single goal in mind: to assist businesses of all sizes in harnessing the power of the internet to reach new audiences, drive traffic, and generate more leads and sales." },
         { description: "Mumbling Monkeys believes that digital marketing entails more than just optimising websites and creating eye-catching advertisements. It's all about creating one-of-a-kind, engaging experiences that connect with your target audience and inspire them to act. As a result, we collaborate closely with each of our clients to understand their specific goals, challenges, and target audiences, and to develop a tailored digital marketing strategy that delivers real results." },
+       
+    ];
+    const Data4 = [
+        
         { description: "Our team at Mumbling Monkeys is made up of talented and experienced individuals, including Google Marketing Certified experts in digital marketing, social media analysis, and content development. In addition, we have graphic designers who are experts in Adobe Photoshop and Autodesk Sketchbook. " },
         { description: "To conduct audits and complete tasks, our marketing professionals use tools such as SEMrush, Google Analytics, Google Search Console, Webmaster Tools, Google Keyword Planner, Google AdSense, Google Voice Search, Google Trends, Small SEO Tools, and others." },
         { description: "Mumbling Monkeys is dedicated to providing exceptional results and exceptional customer service. We understand that digital marketing can be complicated and intimidating, and we're here to help you every step of the way. Our team is always ready to answer your questions, share insights, and assist you in making informed decisions about your digital marketing strategy." },
@@ -124,8 +128,8 @@ const AboutUs = (Data) => {
             <NavScreen bg={AboutUsimg} Data={NavData} />
 
             {/* Section 1 */}
-            <div className='md:w-full md:max-w-[1200px] w-[90%] h-max py-6 md:px-0 px-4 md:flex flex-col md:flex-row'>
-                <motion.div className='md:w-3/5 w-full h-full py-6 pr-6'
+            <div className='md:w-full md:max-w-[1200px] w-[90%] h-max pt-6 md:px-0 px-4 md:flex flex-col md:flex-row'>
+                <motion.div className='md:w-3/5 w-full h-full pt-6  pr-6'
                     initial={{ x: -195, y: 0, opacity: 0 }}
                     whileInView={{ x: 0, y: 0, opacity: 100 }}
                     transition={{ duration: 1 }}
@@ -155,6 +159,19 @@ const AboutUs = (Data) => {
                 </div>
             </div>
 
+            <div className='w-screen max-w-[1200px]'>
+
+            {Data4.map((value, index) => (
+                        <div key={index} className='flex w-full h-auto py-3 items-start gap-x-3'>
+                            <img src={tick} className='w-[20px]' alt="" />
+                            <p>{value.description}</p>
+                        </div>
+                    ))}
+            </div>
+
+
+
+
             {/* Section 2 */}
             <div ref={targetRef} className='w-full max-w-[1100px] flex flex-wrap justify-around py-6'>
                 {isInViewport && (
@@ -179,8 +196,43 @@ const AboutUs = (Data) => {
                 )}
             </div>
 
+
+
+
+            <div className='w-full max-w-[1200px]   justify-center overflow-x-hidden md:px-0  '>
+<div>
+
+            <h1  className='font-montserrat font-bold  text-[20px] py-2 mt-3'>            MISSION             </h1>
+
+            <p>Our mission at Mumbling Monkeys is to help businesses of all sizes reach their full potential through innovative and effective digital marketing strategies. We are committed to developing customised solutions that assist our clients in increasing their online visibility, generating more leads and sales, and developing long-term relationships with their target audience.</p>
+           <p>We believe that digital marketing is a powerful tool for creating meaningful, impactful
+experiences that drive business success, not just a means to an end. Our mission is to assist our clients in harnessing this power and achieving their most ambitious objectives.
+Our mission is simple yet profound: To empower brands to achieve their full potential in the digital realm. We strive to be at the forefront of innovation and creativity, delivering results-driven campaigns that exceed expectations.
+</p>
+</div>
+    <div>
+            <h1 className='font-montserrat font-bold  text-[20px] py-2 mt-3'>            VISION             </h1>
+            <p>Our mission at Mumbling Monkeys is to help businesses of all sizes reach their full potential through innovative and effective digital marketing strategies. We are committed to developing customised solutions that assist our clients in increasing their online visibility, generating more leads and sales, and developing long-term relationships with their target audience.</p>
+         <p>We believe that digital marketing is a powerful tool for creating meaningful, impactful
+experiences that drive business success, not just a means to an end. Our mission is to assist our clients in harnessing this power and achieving their most ambitious objectives.
+Our mission is simple yet profound: To empower brands to achieve their full potential in the digital realm. We strive to be at the forefront of innovation and creativity, delivering results-driven campaigns that exceed expectations.
+</p>
+        </div>       
+         
+         
+            </div>
+
+
+
+
+
+
+
+
+
+
             {/* Section 3 */}
-            <div className='md:w-full md:max-w-[1200px] w-[90%] h-auto py-6 md:px-0 flex flex-col'>
+            <div className='md:w-full md:max-w-[1200px] w-[90%] h-auto pt-12 py-6 md:px-0 flex flex-col'>
                 <div className='mb-6'>
                     <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'> TEAM</button>
                     <h1 className='font-Cabin text-4xl pt-4'>Meet Our Great Team</h1>
@@ -257,7 +309,18 @@ const AboutUs = (Data) => {
                 </div>
             </div>
 
-            <ContactUs />
+
+
+
+
+
+
+           
+            
+            <div className='w-full flex justify-center overflow-x-hidden md:px-4  '>
+
+                <ContactUs />
+            </div>
             <Footer />
         </div>
     );

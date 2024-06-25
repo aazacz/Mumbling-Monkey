@@ -12,7 +12,9 @@ const Footer = () => {
       <div className=' w-full  grid md:grid-flow-col grid-flow-row md:col-span-4 row-span-1 md:px-20 px-4 md:py-16 bg-gray-50'>
         <div className='col-span-2 '>
           <div className='w-full flex items-center gap-6'>
+           <Link replace={true} to={"/"}>
             <img src={logo} className='w-[65px]' alt="Logo" />
+           </Link>
             <h1 className='text-center font-Cabin font-extrabold text-[20px] leading-6'>MUMBLING <br />MONKEYS</h1>
           </div>
           <p className='w-full pt-4'>Description content or information about can be added here</p>

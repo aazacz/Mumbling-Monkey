@@ -134,11 +134,11 @@ const OurExpertise = (Data) => {
 
     return (
         <>
-            <div className='w-full h-auto relative flex flex-col items-center overflow-auto'>
+            <div className='w-full h-auto relative  flex flex-col items-center overflow-auto'>
                 <NavScreen bg={expertiseNavscreen} Data={NavData} />
                 {/* Section 1 Starts */}
-                <div className='w-full max-w-[1250px] h-auto py-6 px-4 md:px-0'>
-                    <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>OUR VALUES</button>
+                <div className='w-full  max-w-[1200px] h-auto py-16 px-4 md:px-0'>
+                    <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'>OUR VALUES</button>
                     <p className='text-slate-700 font-semibold font-montserrat mt-4'>Mumbling Monkeys specializes in Influencer marketing and Public Relations. With our expertise in these fields, we help you and your brand increase visibility and reputation in the market.</p>
                     <div className='w-full h-auto py-6 flex flex-wrap gap-5'>
                         {Divs.map((val, index) => (
@@ -164,20 +164,22 @@ const OurExpertise = (Data) => {
 
                     {/* Carousel Slider */}
                     <div className="h-[600px]  mt-8 w-full">
-                        <Carousel className='max-h-[100%]  custom-carousel' leftControl={<Left/>} indicators={true} rightControl={<Right/>}>
+                        <Carousel className='max-h-[100%]  custom-carousel' leftControl={<Left />} indicators={true} rightControl={<Right />}>
                             {servicesData.map((val, index) => {
                                 return (
                                     <div key={index} className={`rounded-xl w-full  max-w-[1200px] items-center h-[500px] p-10 relative flex flex-col md:flex-row ${val.bg} gap-x-8`}>
                                         <img src={MeshLeftSide} className='absolute top-2 left-2 h-[200px]' alt="" />
                                         <div className="w-full md:w-1/3 z-20 rounded-2xl h-[200px] md:h-full bg-[url('/expertise/CardPhoto1.png')] bg-cover" > </div>
                                         <div className='w-full md:w-2/3 h-full flex flex-col mt-4 md:mt-0'>
+
                                             <div className='w-full h-[40px] pb-2'>
                                                 <button className='text-white w-max text-sm font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>{val.title}</button>
                                             </div>
-                                            <div className='w-full h-[100px] '>
-                                                <h1 className='font-montserrat font-semibold text-2xl mt-4'>Building Trust, Driving Growth with Influencers</h1>
+
+                                            <div className='w-full h-max mb-4'>
+                                                <h1 className='font-montserrat font-semibold text-2xl '>Building Trust, Driving Growth with Influencers</h1>
                                             </div>
-                                            <div className='w-full h-full flex flex-col justify-between mt-4'>
+                                            <div className='w-full h-max flex flex-col justify-between '>
                                                 <h1 className='font-montserrat font-medium text-base'>{val.description}</h1>
                                                 <div className='grid grid-flow-col grid-rows-5 mt-4'>
                                                     {val.services.map((value, index) => {
@@ -198,7 +200,7 @@ const OurExpertise = (Data) => {
                     </div>
                 </div>
 
-                <div className='w-full h-max px-4 md:px-16 mt-10'>
+                <div className='w-full max-w-[1200px] h-max px-4 md:px-0 mt-10'>
                     <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>SPECIAL FEATURES</button>
                     <div className='flex flex-col md:flex-row justify-between items-end mt-4'>
                         <div className='w-full md:w-1/2 h-max'>
@@ -223,9 +225,9 @@ const OurExpertise = (Data) => {
                                         <h1 className='font-montserrat font-semibold pb-4 text-lg text-center'> {val.heading}</h1>
                                         <h1 className='font-montserrat font-light text-center'>  {val.description}</h1>
                                     </div>
-                                    <div className='w-full h-8 flex items-center gap-x-2 mt-4'>
+                                    {/* <div className='w-full h-8 flex items-center gap-x-2 mt-4'>
                                         <h1 className='font-montserrat font-semibold'> Read More </h1> <FaArrowRight />
-                                    </div>
+                                    </div> */}
                                 </div>
                             )
                         })}
@@ -233,7 +235,10 @@ const OurExpertise = (Data) => {
                 </div>
 
                 {/* Footer */}
-                <ContactUs />
+                <div className='w-full flex justify-center overflow-x-hidden md:px-2 pt-8 '>
+
+                    <ContactUs />
+                </div>
                 <Footer />
             </div>
         </>
@@ -248,16 +253,16 @@ export default OurExpertise;
 
 
 const Left = () => {
-  return (
-    <div className='absolute bottom-2 left-14 text-4xl text-[#5956e8]'><FaCircleChevronLeft />
-</div>
-  )
+    return (
+        <div className='absolute bottom-2 left-14 text-4xl text-[#5956e8]'><FaCircleChevronLeft />
+        </div>
+    )
 }
 
 const Right = () => {
-  return (
-    <div className=' absolute bottom-2 right-14 text-4xl text-[#5956e8] '><FaCircleChevronRight /> </div>
-  )
+    return (
+        <div className=' absolute bottom-2 right-14 text-4xl text-[#5956e8] '><FaCircleChevronRight /> </div>
+    )
 }
 
 

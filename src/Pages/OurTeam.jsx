@@ -28,11 +28,11 @@ const OurTeam = (Data) => {
         Description: "The Consultors"
     }
 
-    const Data3 =[
+    const Data3 = [
         {
-            description:"At Mumbling Monkeys, our team of over 100 skilled professionals, including Google Marketing Certified experts, digital marketers, and graphic designers, leverages advanced tools to boost brand visibility through superior content and strategic digital channel management. We specialize in creating engaging content across various domains to maximize media reach and deliver unparalleled results."
+            description: "At Mumbling Monkeys, our team of over 100 skilled professionals, including Google Marketing Certified experts, digital marketers, and graphic designers, leverages advanced tools to boost brand visibility through superior content and strategic digital channel management. We specialize in creating engaging content across various domains to maximize media reach and deliver unparalleled results."
         },
-       
+
 
     ]
 
@@ -41,13 +41,13 @@ const OurTeam = (Data) => {
             <div className='w-full h-auto relative flex flex-col items-center overflow-auto'>
                 <NavScreen bg={ourteam} Data={NavData} />
 
-                <div className='w-full h-max px-4 lg:px-16 pt-8'>
-                    <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'> TEAM</button>
+                <div className='w-full max-w-[1200px] h-max px-4 lg:px-0 pt-16'>
+                    <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'> TEAM</button>
                     <h1 className='font-montserrat font-bold text-3xl pt-2 '>Meet Our Great Team</h1>
-              
+
                     {Data3.map((value, index) => (
                         <div key={index} className='flex w-full h-auto py-3 items-start gap-x-3'>
-                         
+
                             <p className='font-montserrat font'>{value.description}</p>
                         </div>
                     ))}
@@ -80,7 +80,10 @@ const OurTeam = (Data) => {
                     </div>
                 </div>
 
-                <ContactUs />
+                <div className='w-full flex justify-center overflow-x-hidden md:px-2  '>
+
+                    <ContactUs />
+                </div>
                 <Footer />
             </div>
         </>
