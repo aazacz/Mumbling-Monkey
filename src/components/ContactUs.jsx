@@ -8,7 +8,7 @@ const ContactUs = () => {
         <>
             <div className='w-full md:w-[90%] h-auto py-6  px-3 flex flex-col md:px-8'>
                 <div className='mb-6 text-center md:text-left '>
-                    <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1 '>CONTACT US</button>
+                    <button className='cursor-default text-white font-montserrat tracking-widest text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-2  '>CONTACT US</button>
                     <p className='text-slate-700 font-semibold md:w-2/3 py-4 ' >We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas</p>
                 </div>
 

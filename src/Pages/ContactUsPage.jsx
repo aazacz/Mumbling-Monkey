@@ -89,7 +89,7 @@ const ContactUsPage = (Data) => {
                                 </div>
                             </form>
                         </div>
-                        <div className='md:w-1/2 w-full flex flex-col items-center md:items-end px-6 pt-6 md:pt-0 rounded-xl bg-gray-200 justify-center'>
+                        <div className='md:w-1/2 w-full flex flex-col items-center md:items-end px-6 pt-6 md:py-6 rounded-xl bg-gray-200 justify-center'>
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.575715318924!2d77.6080443!3d12.9349689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14518a7ca777%3A0x8af1f552aff4a808!2sArivuPro%20Academy%20CA%20CS%20ACCA%20%2C%20CIMA%20(UK)%20CMA%20(US)%20CPA%20(US)%20PUC%20Coaching%20in%20Bangalore!5e0!3m2!1sen!2sin!4v1719053763648!5m2!1sen!2sin"
                             width="100%"

@@ -119,11 +119,11 @@ const InnerServices = () => {
     return (
         <>
 
-            <div className='w-full   h-max px-16 relative overflow-y-hidden  flex flex-col  items-center'>
+            <div className='w-full   h-max px-20 relative overflow-y-hidden  flex flex-col  items-center'>
 
                 <div className='relative w-full h-screen flex  items-center'>
 
-                    <div className='w-2/3 z-20'>
+                    <div className='w-2/3 z-20 md:pl-8'>
                         <h1 className='font-montserrat font-bold text-5xl'>Social Media Marketing</h1>
                         <h1 className='font-montserrat w-2/3  '>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h1>
@@ -157,7 +157,7 @@ const InnerServices = () => {
             {/* Section 2 */}
 
 
-            <div className='w-screen px-16 py-8 flex flex-col justify-center items-center'>
+            <div className='w-screen  px-24 py-8 flex flex-col justify-center items-center'>
 
                 <div className='w-full flex flex-col items-center justify-center '>
                     <div className='w-full'>
@@ -167,12 +167,12 @@ const InnerServices = () => {
                             Social Media Marketing</h1>
                     </div>
 
-                    <div className='w-screen justify-center   flex flex-wrap gap-8'>
+                    <div className='w-screen justify-center  px-24 flex flex-wrap gap-8'>
                         {cardData.map((val, index) => {
 
                             return (
 
-                                <div className='w-[400px] group group-hover:bg-red-300 transition-all duration-500 p-8 rounded-3xl flex flex-col justify-between items-center bg-[#33333b] h-[450px] gap-x-8 '  >
+                                <div className='w-[370px] group group-hover:bg-red-300 transition-all duration-500 p-8 rounded-3xl flex flex-col justify-between items-center bg-[#33333b] h-[450px] gap-x-8 '  >
 
                                     <div className='w-[150px] h-[150px]  rounded-full bg-[#292930] flex justify-center items-center'>
                                         <img src={val.icon} className='transition-all duration-500 group-hover:scale-125 w-[50%]' alt="" />
@@ -213,7 +213,7 @@ const InnerServices = () => {
                 {/* Right side */}
 
                 <div className='w-1/2 h-max  p-8'>
-                    <span className='bg-[#69767e] font-montserrat px-2 py-2 rounded-2xl text-white ' > ABOUT THIS SERVICE</span>
+                    <span className='bg-[#7c8d97] tracking-widest font-montserrat px-2 py-2 rounded-2xl text-white ' > ABOUT THIS SERVICE</span>
 
                     <h1 className='w-full h-[100px] border-b-2 font-montserrat font-semibold text-4xl mt-4'>We take your business reach from thousands to millions</h1>
                     <p className='text-base font-montserrat mt-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit sollicitudinbibendum senectus scelerisque non.
@@ -368,8 +368,10 @@ const InnerServices = () => {
                 </div>
 
             </div>
+<div className='w-screen flex justify-center'>
 
 <ContactUs/>
+</div>
 <Footer/>
 
         </>

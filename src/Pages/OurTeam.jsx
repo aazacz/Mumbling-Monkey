@@ -30,20 +30,9 @@ const OurTeam = (Data) => {
 
     const Data3 =[
         {
-            description:"Want to boost your brand visibility and reach potential customers? We can help.At Mumbling Monkeys, our team is composed of skilled and experienced professionals, including"
+            description:"At Mumbling Monkeys, our team of over 100 skilled professionals, including Google Marketing Certified experts, digital marketers, and graphic designers, leverages advanced tools to boost brand visibility through superior content and strategic digital channel management. We specialize in creating engaging content across various domains to maximize media reach and deliver unparalleled results."
         },
-        {
-            description:"Google Marketing Certified experts in digital marketing, social media analysis, and content development. We also have graphic designers who specialize in Adobe Photoshop and Autodesk Sketchbook. Our marketing professionals utilize various tools such as SEMrush, Google Analytics, Google Search Console, Webmaster Tools, Google Keyword Planner, Google AdSense, Google Voice Search, Google Trends, Small SEO Tools, and more to conduct audits and complete tasks."
-        },
-        {
-            description:"Our team of marketing professionals creates and builds consumer traffic through superior visual content and strategic digital channel management. Our team comprises 100+ professionals including creators, influencers, advertising writers, savvy digital marketers, programmers, and graphic designers who work closely to improve your brand visibility."
-        },
-        {
-            description:"We have a pool of professional screenwriters and storytellers who create engaging content with the use of words, video, sound & pictures to increase brand awareness. We work with a variety of brands in various domains ranging from lifestyle, food, health, travel, consumer products and high-tech goods."
-        },
-        {
-            description:"Our mission is to take complete accountability to bridge the gaps by customising social platforms for maximum media reach and unparalleled results for all business needs."
-        },
+       
 
     ]
 
@@ -58,18 +47,18 @@ const OurTeam = (Data) => {
               
                     {Data3.map((value, index) => (
                         <div key={index} className='flex w-full h-auto py-3 items-start gap-x-3'>
-                            <img src={tick} className='w-[20px]' alt="" />
-                            <p className='font-montserrat'>{value.description}</p>
+                         
+                            <p className='font-montserrat font'>{value.description}</p>
                         </div>
                     ))}
 
 
 
 
-                    <div className='w-full flex flex-wrap gap-x-8 gap-y-8 justify-center'>
+                    <div className='w-full flex pt-12 flex-wrap gap-x-8 gap-y-8 justify-center'>
                         {team.map((val, index) => {
                             return (
-                                <div key={index} className='w-full max-w-[350px] flex flex-col items-center'>
+                                <div key={index} className='w-full max-w-[350px] flex flex-col group items-center'>
                                     <div className='w-full rounded-2xl h-[400px] overflow-hidden relative'>
                                         <img src={val.photo} className='w-full rounded-2xl transition-transform group-hover:scale-110 duration-300 ease-in-out' alt={val.name} />
                                         <h1 className='px-3 py-1 rounded-2xl text-white bg-black font-montserrat font-normal absolute bottom-5 right-0'>{val.position}</h1>

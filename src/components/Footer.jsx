@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <>
       {/* Footer Section */}
-      <div className=' w-full  grid md:grid-flow-col grid-flow-row md:col-span-4 row-span-1 md:px-20 px-4 md:py-16 bg-gray-100'>
+      <div className=' w-full  grid md:grid-flow-col grid-flow-row md:col-span-4 row-span-1 md:px-20 px-4 md:py-16 bg-gray-50'>
         <div className='col-span-2 '>
           <div className='w-full flex items-center gap-6'>
             <img src={logo} className='w-[65px]' alt="Logo" />
