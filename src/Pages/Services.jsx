@@ -1,23 +1,39 @@
-import React from 'react';
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect } from 'react';
 import NavScreen from '../components/NavScreen';
 import Footer from '../components/Footer';
 import ContactUs from '../components/ContactUs';
 import servicespng from '/services.png';
 import ChatMarketing from "/ChatMarketing.png";
 import { FaChevronCircleRight } from "react-icons/fa";
-import pattern from "/Pattern.png";
-import GroupPhoto from "/Photo.png";
 import { useState } from 'react';
 import MeshLeftSide from "/MeshLeftSide.png";
 import { PiPulseBold } from 'react-icons/pi';
-import Swal from 'sweetalert2';
 import Modal from '../components/Modal';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
+import Frame_28H from "/Frame_28H.png"
+import { motion, AnimatePresence } from "framer-motion"
+
 
 const Services = (Data) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ title: "", description: "" });
+
+  const marqueeVariants = {
+    animate: {
+     x: [-2000, 0, -2000],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: [.39, -0.23, .4, 1.4],
+          duration: 20
+        },
+      },
+    },
+  };
+
+
 
   const openModal = (title, description) => {
     setModalContent({ title, description });
@@ -27,6 +43,16 @@ const Services = (Data) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+
+
 
   const services = [
     {
@@ -109,26 +135,44 @@ const Services = (Data) => {
       <div className='h-auto flex flex-col items-center overflow-auto'>
         <NavScreen bg={servicespng} Data={NavData} />
 
-        <div className='w-full py-16 flex justify-center'>
-          <div className='flex flex-wrap justify-center lg:max-w-[1300px] md:max-w-[1000px] gap-8 w-full h-max px-4'>
+        <div className='w-full py-16 md:px-[70px] flex justify-center'>
+          <div className='flex flex-wrap justify-center  md:max-w-[1300px] gap-16  w-full h-max '>
+            <div className=' w-screen'>
+
+              <button className='text-white text-sm  font-montserrat font-normal  rounded-2xl bg-[#7d8a91] px-3 py-1'>OUR VALUES</button>
+
+              <h1 className='font-montserrat w-[60%] font-bold text-4xl pt-4'>High-impact services to take your business
+                to the next level</h1>
+            </div>
+
+
             {displayedServices.map((val, index) => (
-              <div key={index} className='w-full sm:w-[300px] group h-[400px] rounded-2xl flex flex-col justify-between bg-[#424245] py-8 px-4'>
-                <div className='w-[100px] h-[100px] rounded-full bg-[#292930] flex justify-center items-center mx-auto'>
+             
+             <div key={index} className='w-full sm:w-[360px] group h-[440px] rounded-3xl flex flex-col justify-between bg-[#34343b] py-8 px-8'>
+                
+                <div className='w-[150px] h-[150px] rounded-full bg-[#292930] flex  justify-center items-center mx-3'>
                   <img src={ChatMarketing} className='w-[50%] group-hover:w-[65%] transition-all duration-700' alt="" />
                 </div>
-                <h1 className='font-montserrat text-white font-semibold text-xl w-full'>{val.title}</h1>
-                <h1 className='font-montserrat text-base font-light text-white line-clamp-3'>{val.description}</h1>
+              
+                <h1 className='px-4 font-montserrat  text-white font-semibold text-2xl w-full'>      {val.title}       </h1>
+                <h1 className='w-full px-4 font-montserrat text- text-base font-light text-white line-clamp-3'> {val.description} </h1>
+               
                 <Link to={'/b'}>
-                  <button 
-                    className='border-[1px] font-montserrat font-semibold group-hover:bg-[#FFDC60] group-hover:text-lg transition-all duration-700 w-full h-14 border-[#525255] text-[#525255] flex items-center gap-x-3 justify-center'
+                  <button
+                    className=' border-[1px] rounded-md font-montserrat font-semibold group-hover:bg-[#FFDC60] group-hover:text-lg transition-all duration-700 w-full h-14 border-[#525255] text-[#525255] flex items-center gap-x-3 justify-center'
                   >
                     Read More <FaChevronCircleRight className='group-hover:text-violet-600' />
                   </button>
                 </Link>
+
+
               </div>
+
             ))}
           </div>
+
         </div>
+
         {!showAll && (
           <div className='w-full flex justify-center mb-10 animate-bounce'>
             <button
@@ -184,15 +228,24 @@ const Services = (Data) => {
           </div>
         </div>
 
+        <div className='w-screen overflow-x-hidden'>
+
+        <motion.div className='  flex  opacity-40 md:left-0 left-0 ' variants={marqueeVariants} animate="animate"   >
+            <img className='w-1/2 md:w-full' src={Frame_28H} alt="" />
+            <img className='w-1/2 md:w-full' src={Frame_28H} alt="" />
+            <img className='w-1/2 md:w-full' src={Frame_28H} alt="" />
+          </motion.div>
+        </div>
+
         <ContactUs />
         <Footer />
       </div>
 
-      <Modal 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
-        title={modalContent.title} 
-        description={modalContent.description} 
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={modalContent.title}
+        description={modalContent.description}
       />
     </>
   );

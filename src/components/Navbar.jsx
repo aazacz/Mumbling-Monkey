@@ -101,8 +101,9 @@ const Navbar = () => {
                         exit={{ opacity: 0 }}
                         className={`absolute z-30 top-0 py-36 w-full h-screen md:px-64 bg-[#7d8a91] flex flex-col  items-center  transition-all duration-500 `} >
 
-
+<Link to={"/"}  onClick={() => setShow(false)} >
                         <img src={logo} width={90} alt="" />
+</Link>
 
 
                         <ul className=' mt-10 flex md:flex-row flex-col justify-around md:text-xl font-bold  gap-24 text-center md:text-left'>

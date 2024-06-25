@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import sideimg from "/Frame_28.png"
 import { motion } from "framer-motion"
 import innerServiceImage from "/innerServiceImage.svg"
@@ -15,6 +15,7 @@ import Megaphone from "/Megaphone.png"
 import bar from "/bar.png"
 import ContactUs from './ContactUs'
 import Footer from './Footer'
+import { useLocation } from 'react-router-dom'
 
 
 const InnerServices = () => {
@@ -109,6 +110,12 @@ const InnerServices = () => {
 
     ]
 
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [pathname])
+
     return (
         <>
 
@@ -127,10 +134,6 @@ const InnerServices = () => {
                     <img src={innerServiceImage} className='md:absolute -top-1/2 translate-y-1/2  right-0  w-[800px]' alt="" />
 
                 </div>
-
-
-
-
 
 
 

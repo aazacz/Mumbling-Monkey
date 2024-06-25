@@ -44,7 +44,7 @@ const Footer = () => {
           <a className='font-montserrat' href="tel:09686665253"> 9686665253 </a>
         </div>
 
-        <div className='col-span-1 bg-red-300  flex flex-col gap-y-4'>
+        <div className='col-span-1   flex flex-col gap-y-4'>
          <p className='font-semibold'>Address</p>
           <div className='max-w-[250px] '> 
             <p>1st Floor, SAI PREMA Christ Lane, No.39 Krishnanagar, Hosur Main Road, Industrial Area, Koramangala, Bengaluru, Karnataka 560029</p>

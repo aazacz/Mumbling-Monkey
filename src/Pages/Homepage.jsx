@@ -137,15 +137,15 @@ const Homepage = () => {
 
 
 
-          <img src={logo} className='w-[200px]' alt="" />
+          <img src={logo} className='w-[230px] py-8' alt="" />
           < motion.div
             initial={{ y: 100 }}
             animate={{ y: 0 }}
             transition={{ type: "spring", duration: 0.8, damping: 10, mass: 1, stiffness: 200 }}>
-            <h1 className='text-center font-Cabin font-extrabold text-[50px] leading-10'>MUMBLING <br />MONKEYS</h1>
-            <p className='text-center mt-4'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
+            <h1 className='text-center font-Cabin font-extrabold text-[80px] leading-[70px]'>MUMBLING <br />MONKEYS</h1>
+            <p className='text-center mt-4 font-semibold font-montserrat'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
           </motion.div>
-          <Link to={'/services'} className='cursor-pointer rounded-md bg-slate-600 font-light text-sm text-white px-3 py-2 mt-4'>Get Started Today</Link>
+          <Link to={'/services'} className='cursor-pointer rounded-md bg-[#3a3a3a] font-bold text- text-white px-5 py-2 mt-4'>Get Started Today</Link>
         </motion.div>
 
 
