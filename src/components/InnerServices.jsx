@@ -163,7 +163,7 @@ const InnerServices = () => {
                     <div className='w-full'>
 
                         <span className='w-max px-3 py-1 bg-[#7c8d97] font-montserrat font-light text-lg rounded-2xl text-white ' > SERVICES</span>
-                        <h1 className='md:w-1/2 font-montserrat font-semibold text-3xl pb-8'>We have extensive experience in
+                        <h1 className='md:w-1/2 font-montserrat font-semibold text-3xl  py-8'>We have extensive experience in
                             Social Media Marketing</h1>
                     </div>
 

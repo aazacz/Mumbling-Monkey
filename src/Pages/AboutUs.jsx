@@ -124,7 +124,7 @@ const AboutUs = (Data) => {
             <NavScreen bg={AboutUsimg} Data={NavData} />
 
             {/* Section 1 */}
-            <div className='md:w-full md:max-w-[1250px] w-[90%] h-max py-6 md:px-0 px-4 md:flex flex-col md:flex-row'>
+            <div className='md:w-full md:max-w-[1200px] w-[90%] h-max py-6 md:px-0 px-4 md:flex flex-col md:flex-row'>
                 <motion.div className='md:w-3/5 w-full h-full py-6 pr-6'
                     initial={{ x: -195, y: 0, opacity: 0 }}
                     whileInView={{ x: 0, y: 0, opacity: 100 }}

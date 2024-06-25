@@ -37,13 +37,13 @@ const ContactUsPage = (Data) => {
 
     return (
         <>
-            <div className='overflow-x-hidden h-auto mt-[15vh] flex flex-col items-center overflow-auto'>
-                <div className='md:w-full w-[90%] h-auto py-6 md:px-14 px-3 flex flex-col'>
-                    <div className='mb-6'>
+            <div className='overflow-x-hidden  h-auto mt-[15vh] flex flex-col items-center overflow-auto'>
+                <div className='md:w-full w-[90%] px-16 h-auto py-6 md:px-14  flex flex-col'>
+                    <div className='mb-6 px-8'>
                         <h1 className='text-[#487A97] text-5xl rounded-2xl font-montserrat font-medium py-2'> Contact Us </h1>
                         <p className='text-slate-700 font-semibold md:w-2/3'>We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas</p>
                     </div>
-                    <div className='w-full h-auto flex md:flex-row flex-col-reverse md:gap-9'>
+                    <div className='w-full px-8 h-auto flex md:flex-row flex-col-reverse md:gap-9'>
                         <div className='md:w-1/2'>
                             <form onSubmit={handleSubmit}>
                                 <div className='flex flex-col mt-4'>

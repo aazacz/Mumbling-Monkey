@@ -163,11 +163,11 @@ const OurExpertise = (Data) => {
 
 
                     {/* Carousel Slider */}
-                    <div className="h-[600px] bg-green-700 mt-8 w-full">
-                        <Carousel className='custom-carousel bg-red-500' leftControl={<Left/>}  rightControl={<Right/>}>
+                    <div className="h-[600px]  mt-8 w-full">
+                        <Carousel className='max-h-[100%]  custom-carousel' leftControl={<Left/>} indicators={true} rightControl={<Right/>}>
                             {servicesData.map((val, index) => {
                                 return (
-                                    <div key={index} className={`rounded-xl w-full max-w-[1200px] items-center h-[500px] p-10 relative flex flex-col md:flex-row ${val.bg} gap-x-8`}>
+                                    <div key={index} className={`rounded-xl w-full  max-w-[1200px] items-center h-[500px] p-10 relative flex flex-col md:flex-row ${val.bg} gap-x-8`}>
                                         <img src={MeshLeftSide} className='absolute top-2 left-2 h-[200px]' alt="" />
                                         <div className="w-full md:w-1/3 z-20 rounded-2xl h-[200px] md:h-full bg-[url('/expertise/CardPhoto1.png')] bg-cover" > </div>
                                         <div className='w-full md:w-2/3 h-full flex flex-col mt-4 md:mt-0'>
@@ -179,12 +179,12 @@ const OurExpertise = (Data) => {
                                             </div>
                                             <div className='w-full h-full flex flex-col justify-between mt-4'>
                                                 <h1 className='font-montserrat font-medium text-base'>{val.description}</h1>
-                                                <div className='grid grid-flow-col grid-rows-4 mt-4'>
+                                                <div className='grid grid-flow-col grid-rows-5 mt-4'>
                                                     {val.services.map((value, index) => {
                                                         return (
-                                                            <div key={index} className='flex items-center w-full gap-x-2 py-1 '>
-                                                                <MdCheckCircle className='text-[22px] text-[#292930]' />
-                                                                <h1 className='font-montserrat font-normal text-gray-600'>{value} </h1>
+                                                            <div key={index} className='flex items-center w-full gap-x-2 px- py-1 '>
+                                                                <MdCheckCircle className='text-xl  text-[#292930]' />
+                                                                <h1 className='font-montserrat  text-gray-600'>{value} </h1>
                                                             </div>
                                                         )
                                                     })}
@@ -259,4 +259,5 @@ const Right = () => {
     <div className=' absolute bottom-2 right-14 text-4xl text-[#5956e8] '><FaCircleChevronRight /> </div>
   )
 }
+
 
