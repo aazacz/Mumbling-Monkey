@@ -134,10 +134,11 @@ const OurExpertise = (Data) => {
 
     return (
         <>
-            <div className='w-full h-auto relative  flex flex-col items-center overflow-auto'>
+            <div className='w-full h-auto relative   flex flex-col items-center overflow-auto'>
                 <NavScreen bg={expertiseNavscreen} Data={NavData} />
+               
                 {/* Section 1 Starts */}
-                <div className='w-full  max-w-[1200px] h-auto py-16 px-4 md:px-0'>
+                <div className='w-full  md:px-20 h-auto py-16 px-4 '>
                     <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'>OUR VALUES</button>
                     <p className='text-slate-700 font-semibold font-montserrat mt-4'>Mumbling Monkeys specializes in Influencer marketing and Public Relations. With our expertise in these fields, we help you and your brand increase visibility and reputation in the market.</p>
                     <div className='w-full h-auto py-6 flex flex-wrap gap-5'>
@@ -200,7 +201,7 @@ const OurExpertise = (Data) => {
                     </div>
                 </div>
 
-                <div className='w-full max-w-[1200px] h-max px-4 md:px-0 mt-10'>
+                <div className='w-full md:px-20 h-max px-4  mt-10'>
                     <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>SPECIAL FEATURES</button>
                     <div className='flex flex-col md:flex-row justify-between items-end mt-4'>
                         <div className='w-full md:w-1/2 h-max'>
@@ -235,7 +236,7 @@ const OurExpertise = (Data) => {
                 </div>
 
                 {/* Footer */}
-                <div className='w-full flex justify-center overflow-x-hidden md:px-2 pt-8 '>
+                <div className='w-full flex justify-center overflow-x-hidden md:px-20 pt-8 '>
 
                     <ContactUs />
                 </div>

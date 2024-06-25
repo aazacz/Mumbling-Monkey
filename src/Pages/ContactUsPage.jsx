@@ -38,7 +38,7 @@ const ContactUsPage = (Data) => {
     return (
         <>
             <div className='overflow-x-hidden  h-auto mt-[15vh] flex flex-col items-center overflow-auto'>
-                <div className='md:w-full md:max-w-[1200px]  w-[100%] px-0 h-auto py-6 md:px-0  flex flex-col'>
+                <div className='md:w-full md:px-20  w-[100%] px-0 h-auto py-6   flex flex-col'>
                     <div className='mb-6 px-0'>
                         <h1 className='text-[#487A97] text-5xl rounded-2xl font-montserrat font-medium py-2'> Contact Us </h1>
                         <p className='text-slate-700 font-semibold md:w-2/3'>We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas</p>

@@ -78,108 +78,108 @@ const Homepage = () => {
 
   const data2 = [
     {
-        heading: "Influencer Marketing",
-        description: "Collaborate with trendsetting influencers to instantly enhance your brand's appeal and visibility.",
-        colour: "bg-cyan-300",
-        textcol: "text-cyan-300",
-        dur: 0
+      heading: "Influencer Marketing",
+      description: "Collaborate with trendsetting influencers to instantly enhance your brand's appeal and visibility.",
+      colour: "bg-cyan-300",
+      textcol: "text-cyan-300",
+      dur: 0
     },
     {
-        heading: "Public Relations",
-        description: "Develop a captivating brand narrative and oversee your reputation with finesse.",
-        colour: "bg-red-300",
-        textcol: "text-red-300",
-        dur: 0
+      heading: "Public Relations",
+      description: "Develop a captivating brand narrative and oversee your reputation with finesse.",
+      colour: "bg-red-300",
+      textcol: "text-red-300",
+      dur: 0
     },
     {
-        heading: "Search Engine Optimisation (SEO)",
-        description: "Elevate your website's online presence, attracting organic and trend aware traffic.",
-        colour: "bg-green-300",
-        textcol: "text-green-300",
-        dur: 1
+      heading: "Search Engine Optimisation (SEO)",
+      description: "Elevate your website's online presence, attracting organic and trend aware traffic.",
+      colour: "bg-green-300",
+      textcol: "text-green-300",
+      dur: 1
     },
     {
-        heading: "Pay-per-click Marketing (PPC)",
-        description: "Create hip ad campaigns that deliver immediate results and conversions.",
-        colour: "bg-yellow-300",
-        textcol: "text-yellow-300",
-        dur: 1
+      heading: "Pay-per-click Marketing (PPC)",
+      description: "Create hip ad campaigns that deliver immediate results and conversions.",
+      colour: "bg-yellow-300",
+      textcol: "text-yellow-300",
+      dur: 1
     },
     {
-        heading: "Google AdWords",
-        description: "Maximize your online presence with Google AdWords expertise.",
-        colour: "bg-blue-300",
-        textcol: "text-blue-300",
-        dur: 2
+      heading: "Google AdWords",
+      description: "Maximize your online presence with Google AdWords expertise.",
+      colour: "bg-blue-300",
+      textcol: "text-blue-300",
+      dur: 2
     },
     {
-        heading: "Keyword Research",
-        description: "Identify the most influential keywords for maximum online impact.",
-        colour: "bg-purple-300",
-        textcol: "text-purple-300",
-        dur: 2
+      heading: "Keyword Research",
+      description: "Identify the most influential keywords for maximum online impact.",
+      colour: "bg-purple-300",
+      textcol: "text-purple-300",
+      dur: 2
     },
     {
-        heading: "Online Reputation Management (ORM)",
-        description: "Safeguard and enhance your brand's digital presence.",
-        colour: "bg-orange-300",
-        textcol: "text-orange-300",
-        dur: 3
+      heading: "Online Reputation Management (ORM)",
+      description: "Safeguard and enhance your brand's digital presence.",
+      colour: "bg-orange-300",
+      textcol: "text-orange-300",
+      dur: 3
     },
     {
-        heading: "Social Media Marketing",
-        description: "Engage your audience with contemporary, informative, and creative content and build a loyal online tribe.",
-        colour: "bg-pink-300",
-        textcol: "text-pink-300",
-        dur: 3
+      heading: "Social Media Marketing",
+      description: "Engage your audience with contemporary, informative, and creative content and build a loyal online tribe.",
+      colour: "bg-pink-300",
+      textcol: "text-pink-300",
+      dur: 3
     },
     {
-        heading: "Graphic Designing",
-        description: "Create visually striking designs that turn heads and leave a lasting impression.",
-        colour: "bg-indigo-300",
-        textcol: "text-indigo-300",
-        dur: 4
+      heading: "Graphic Designing",
+      description: "Create visually striking designs that turn heads and leave a lasting impression.",
+      colour: "bg-indigo-300",
+      textcol: "text-indigo-300",
+      dur: 4
     },
     {
-        heading: "Video Production",
-        description: "Share your brand's story with cinematic flair.",
-        colour: "bg-teal-300",
-        textcol: "text-teal-300",
-        dur: 4
+      heading: "Video Production",
+      description: "Share your brand's story with cinematic flair.",
+      colour: "bg-teal-300",
+      textcol: "text-teal-300",
+      dur: 4
     },
     {
-        heading: "Info-Graphics",
-        description: "Present complex information in an engaging and visually appealing manner.",
-        colour: "bg-lime-300",
-        textcol: "text-lime-300",
-        dur: 5
+      heading: "Info-Graphics",
+      description: "Present complex information in an engaging and visually appealing manner.",
+      colour: "bg-lime-300",
+      textcol: "text-lime-300",
+      dur: 5
     },
     {
-        heading: "Content Marketing",
-        description: "Craft high-quality content that resonates with all audiences.",
-        colour: "bg-fuchsia-300",
-        textcol: "text-fuchsia-300",
-        dur: 5
+      heading: "Content Marketing",
+      description: "Craft high-quality content that resonates with all audiences.",
+      colour: "bg-fuchsia-300",
+      textcol: "text-fuchsia-300",
+      dur: 5
     },
     {
-        heading: "Email Marketing",
-        description: "Cultivate and maintain your email list for exceptionally effective marketing campaigns.",
-        colour: "bg-amber-300",
-        textcol: "text-amber-300",
-        dur: 6
+      heading: "Email Marketing",
+      description: "Cultivate and maintain your email list for exceptionally effective marketing campaigns.",
+      colour: "bg-amber-300",
+      textcol: "text-amber-300",
+      dur: 6
     },
     {
-        heading: "Voice Search Optimization",
-        description: "Lead the way in voice search excellence.",
-        colour: "bg-rose-300",
-        textcol: "text-rose-300",
-        dur: 6
+      heading: "Voice Search Optimization",
+      description: "Lead the way in voice search excellence.",
+      colour: "bg-rose-300",
+      textcol: "text-rose-300",
+      dur: 6
     }
-];
+  ];
 
 
-const [showAll, setShowAll] = useState(false);
-const displayedServices = showAll ? data2 : data2.slice(0, 6);
+  const [showAll, setShowAll] = useState(false);
+  const displayedServices = showAll ? data2 : data2.slice(0, 6);
 
 
 
@@ -199,7 +199,7 @@ const displayedServices = showAll ? data2 : data2.slice(0, 6);
 
   return (
     <>
-      <div className=' relative  md-full h-auto   flex flex-col items-center overflow-auto'>
+      <div className=' w-screen  relative  md-full h-auto   flex flex-col items-center overflow-auto'>
 
         <motion.div
           initial={{ y: 100 }}
@@ -236,7 +236,7 @@ const displayedServices = showAll ? data2 : data2.slice(0, 6);
 
 
         {/*#######################################  Section 1 Starts #######################################*/}
-        <div id='section1' ref={ref} className='md:w-full  md:max-w-[1200px] w-[90%]  h-auto py-6 md:px-0 px-4 md:flex'>
+        <div id='section1' ref={ref} className='md:w-full   w-[90%]  h-auto py-6 md:px-16 px-4 md:flex'>
 
           <motion.div className='md:w-3/5 w-full h-full py-6 pr-6'
             initial={{ x: -195, y: 0, opacity: 0 }}
@@ -251,45 +251,45 @@ const displayedServices = showAll ? data2 : data2.slice(0, 6);
 
             <div className='flex w-auto h-auto py-3 items'> {/* First Sentence */}
               <div className='w-[4%]  pr-3 pt-1'>
-              <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
+                <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
 
               </div>
-             <div className='w-[95%]'>
+              <div className='w-[95%]'>
 
-              <p className=''>Our marketing team at Mumbling Monkeys creates and grows consumer traffic through superior visual content and strategic digital channel management. Our team of 100+ professionals include creators, influencers, advertising writers, savvy digital marketers, programmers, and graphic designers who work collaboratively to increase the visibility of your brand.  </p>
-             </div>
+                <p className=''>Our marketing team at Mumbling Monkeys creates and grows consumer traffic through superior visual content and strategic digital channel management. Our team of 100+ professionals include creators, influencers, advertising writers, savvy digital marketers, programmers, and graphic designers who work collaboratively to increase the visibility of your brand.  </p>
+              </div>
             </div>
 
 
 
             <div className='flex w-auto h-auto py-3 items'> {/* Second Sentence */}
-            <div className='w-[4%]  pr-3 pt-1'>
-              <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
+              <div className='w-[4%]  pr-3 pt-1'>
+                <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
 
               </div>
               <div className='w-[95%]'>
-              <p className=''>To increase brand awareness, we have a pool of professional screenwriters and storytellers who create engaging content using words, video, sound, and pictures. We work with a wide range of brands in a variety of industries, including lifestyle, food, health, travel, consumer products, and high-tech goods. </p>
+                <p className=''>To increase brand awareness, we have a pool of professional screenwriters and storytellers who create engaging content using words, video, sound, and pictures. We work with a wide range of brands in a variety of industries, including lifestyle, food, health, travel, consumer products, and high-tech goods. </p>
+              </div>
             </div>
-            </div>
-      
+
             <div className='flex w-auto h-auto py-3 items'> {/* Second Sentence */}
-            <div className='w-[4%]  pr-3 pt-1'>
-              <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
+              <div className='w-[4%]  pr-3 pt-1'>
+                <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
 
               </div>
               <div className='w-[95%]'>
-              <p className=''>We use cutting-edge tools and techniques to create results-driven campaigns, whether you want to increase your social media following, improve your search engine rankings, or drive more sales through your website.</p>
+                <p className=''>We use cutting-edge tools and techniques to create results-driven campaigns, whether you want to increase your social media following, improve your search engine rankings, or drive more sales through your website.</p>
+              </div>
             </div>
-            </div>
-       
+
             <div className='flex w-auto h-auto py-3 items'> {/* Second Sentence */}
-            <div className='w-[4%]  pr-3 pt-1'>
-              <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
+              <div className='w-[4%]  pr-3 pt-1'>
+                <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
 
               </div>
               <div className='w-[95%]'>
-              <p className='w-[88%]'>Our mission is to take full responsibility for bridging the gaps by customising social platforms for maximum media reach and unparalleled results for any business needs.</p>
-            </div>
+                <p className='w-[88%]'>Our mission is to take full responsibility for bridging the gaps by customising social platforms for maximum media reach and unparalleled results for any business needs.</p>
+              </div>
             </div>
 
 
@@ -321,7 +321,7 @@ const displayedServices = showAll ? data2 : data2.slice(0, 6);
 
         {/*#######################################  Section 2 Starts #######################################*/}
 
-        <div className='md:w-full md:max-w-[1200px]  w-[90%] h-auto py-6   flex flex-col'>
+        <div className='md:w-full  w-[90%] h-auto py-6 md:px-20  flex flex-col'>
 
           <div className='mb-6'>
             <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1 cursor-default'> TEAM</button>
@@ -361,7 +361,7 @@ const displayedServices = showAll ? data2 : data2.slice(0, 6);
 
 
         {/*#######################################  Section 3 Starts #######################################*/}
-        <div className='md:w-full md:max-w-[1200px]   w-[90%]  h-auto py-6    flex flex-col'>
+        <div className='md:w-full md:px-20  w-[90%]  h-auto py-6    flex flex-col'>
 
           <div className='mb-6'>
             <button className='text-white text-sm font-normal rounded-2xl bg-[#7c8d97] px-3 italic py-1 cursor-default'>
@@ -442,9 +442,10 @@ const displayedServices = showAll ? data2 : data2.slice(0, 6);
 
 
 
+        <div className='w-full flex justify-center overflow-x-hidden md:px-20  '>
+          <ContactUs />
+        </div>
 
-
-        <ContactUs />
         <Footer />
       </div>
 

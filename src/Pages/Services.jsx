@@ -132,23 +132,24 @@ const Services = (Data) => {
 
   return (
     <>
-      <div className='h-auto flex flex-col items-center overflow-auto'>
+      <div className='h-auto  flex flex-col items-center overflow-auto'>
         <NavScreen bg={servicespng} Data={NavData} />
 
-        <div className='w-full py-16 md:px-[70px] flex justify-center'>
-          <div className='flex flex-wrap justify-center  md:max-w-[1300px] gap-16  w-full h-max '>
+        <div className='w-full py-16 md:px-20 flex justify-center'>
+          <div className='flex flex-wrap justify-between  gap-16  w-full h-max '>
+           
             <div className=' w-screen'>
+              <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97]  px-4 py-2'>
+                SERVICES
+               </button>
 
-              <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'>SERVICES</button>
-
-              <h1 className='font-montserrat w-[60%] font-bold text-4xl pt-4'>High-impact services to take your business
-                to the next level</h1>
+              <h1 className='font-montserrat w-[60%] font-bold text-4xl pt-4'>High-impact services to take your business to the next level</h1>
             </div>
 
 
             {displayedServices.map((val, index) => (
              
-             <div key={index} className='w-full sm:w-[360px] group h-[440px] rounded-3xl flex flex-col justify-between bg-[#34343b] py-8 px-8'>
+             <div key={index} className='w-full sm:w-[350px] group h-[440px] rounded-3xl flex flex-col justify-between bg-[#34343b] py-8 px-8'>
                 
                 <div className='w-[150px] h-[150px] rounded-full bg-[#292930] flex  justify-center items-center mx-3'>
                   <img src={ChatMarketing} className='w-[50%] group-hover:w-[65%] transition-all duration-700' alt="" />
@@ -184,10 +185,13 @@ const Services = (Data) => {
           </div>
         )}
 
-        <div className='w-full h-max relative flex flex-col lg:flex-row px-4 lg:pl-24'>
+
+
+        <div className='w-screen h-max relative flex flex-col md:flex-row px-4 md:px-20'>
           <img className='absolute -z-10 left-0 -top-8' width="250" src={MeshLeftSide} alt="" />
 
-          <div className='w-full lg:w-1/2 bg-green-100 flex flex-col rounded-lg'>
+          {/*  LEFT SIDE  */}
+          <div className='w-full lg:w-1/2  flex flex-col rounded-lg'>
             <div className="relative w-full h-[300px] lg:h-[540px] bg-cover bg-[url('/ServicesImage.png')]">
               <div className='absolute py-4 px-2 right-[1px] bottom-20 flex flex-col w-[200px] h-max bg-white rounded-xl'>
                 <div className='w-8 h-8 rounded-full bg-[#282628] text-white flex justify-center items-center text-lg'>
@@ -201,7 +205,8 @@ const Services = (Data) => {
             </div>
           </div>
 
-          <div className='w-full lg:w-1/2 mx-2 gap-2 p-8'>
+          {/*  RIGHT SIDE  */}
+          <div className='w-full lg:w-1/2  gap-2 p-8 '>
             <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>WHY CHOOSE US</button>
             <h1 className='font-semibold font-montserrat text-3xl lg:text-5xl leading-snug lg:leading-[80px]'>Choose Us to Grow Your Business</h1>
             <h1 className='font-montserrat'>
@@ -237,10 +242,10 @@ const Services = (Data) => {
           </motion.div>
         </div>
 
-        <div className='w-full flex justify-center overflow-x-hidden md:px-2  '>
+      <div className='w-full  flex justify-center overflow-x-hidden md:px-20  '>
+          <ContactUs />
+      </div>
 
-<ContactUs />
-</div>
         <Footer />
       </div>
 

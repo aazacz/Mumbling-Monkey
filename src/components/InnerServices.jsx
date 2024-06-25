@@ -113,18 +113,18 @@ const InnerServices = () => {
     const { pathname } = useLocation();
 
     useEffect(() => {
-      window.scrollTo(0, 0)
+        window.scrollTo(0, 0)
     }, [pathname])
 
     return (
         <>
 
-            <div className='w-full   h-max px-20 relative overflow-y-hidden  flex flex-col  items-center'>
+            <div className='w-full   h-max md:px-20 relative overflow-y-hidden  flex flex-col  items-center'>
 
                 <div className='relative w-full h-screen flex  items-center'>
 
                     <div className='w-2/3 z-20 md:pl-8'>
-                        <h1 className='font-montserrat font-bold text-[#292930] text-6xl pb-6 '>Social Media<br/> Marketing</h1>
+                        <h1 className='font-montserrat font-bold text-[#292930] text-6xl pb-6 '>Social Media<br /> Marketing</h1>
                         <h1 className='font-montserrat w-2/3  '>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h1>
 
@@ -157,7 +157,7 @@ const InnerServices = () => {
             {/* Section 2 */}
 
 
-            <div className='w-screen  px-24 py-8 flex flex-col justify-center items-center'>
+            <div className='w-screen  md:px-20 py-8 flex flex-col justify-center items-center'>
 
                 <div className='w-full flex flex-col items-center justify-center '>
                     <div className='w-full'>
@@ -167,7 +167,7 @@ const InnerServices = () => {
                             Social Media Marketing</h1>
                     </div>
 
-                    <div className='w-screen justify-center  px-24 flex flex-wrap gap-8'>
+                    <div className='w-screen justify-center  md:px-20 flex flex-wrap justify-between gap-8'>
                         {cardData.map((val, index) => {
 
                             return (
@@ -202,7 +202,7 @@ const InnerServices = () => {
             </div>
 
 
-            <div className='w-screen  flex gap-x-2 px-16'>
+            <div className='w-screen  flex gap-x-2 md:px-20'>
 
                 {/* Left side */}
                 <div className='w-1/2  h-max flex justify-end items-center'>
@@ -245,7 +245,7 @@ const InnerServices = () => {
 
             {/*Section 3  */}
 
-            <div className='w-full flex  md:px-24 justify-center'>
+            <div className='w-full flex  md:px-20 justify-center'>
                 <div className='rounded-xl w-full md:max-w-[1200px]  flex mt-8 p-10 bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF] gap-x-8'>
 
                     {/* Left Side */}
@@ -368,14 +368,14 @@ const InnerServices = () => {
                 </div>
 
             </div>
-<div className='w-screen flex justify-center'>
 
-<div className='w-full flex justify-center overflow-x-hidden md:px-8  '>
 
-            <ContactUs />
-</div>
-</div>
-<Footer/>
+            <div className='w-full flex justify-center overflow-x-hidden md:px-20  '>
+
+                <ContactUs />
+            </div>
+
+            <Footer />
 
         </>
     )
