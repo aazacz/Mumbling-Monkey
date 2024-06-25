@@ -163,8 +163,8 @@ const OurExpertise = (Data) => {
 
 
                     {/* Carousel Slider */}
-                    <div className="h-max w-full">
-                        <Carousel className='custom-carousel' leftControl={<Left/>}  rightControl={<Right/>}>
+                    <div className="h-[600px] bg-green-700 mt-8 w-full">
+                        <Carousel className='custom-carousel bg-red-500' leftControl={<Left/>}  rightControl={<Right/>}>
                             {servicesData.map((val, index) => {
                                 return (
                                     <div key={index} className={`rounded-xl w-full max-w-[1200px] items-center h-[500px] p-10 relative flex flex-col md:flex-row ${val.bg} gap-x-8`}>
@@ -249,14 +249,14 @@ export default OurExpertise;
 
 const Left = () => {
   return (
-    <div className='absolute -bottom-12 left-14 text-4xl text-[#5956e8]'><FaCircleChevronLeft />
+    <div className='absolute bottom-2 left-14 text-4xl text-[#5956e8]'><FaCircleChevronLeft />
 </div>
   )
 }
 
 const Right = () => {
   return (
-    <div className=' absolute -bottom-12 right-14 text-4xl text-[#5956e8] '><FaCircleChevronRight /> </div>
+    <div className=' absolute bottom-2 right-14 text-4xl text-[#5956e8] '><FaCircleChevronRight /> </div>
   )
 }
 
