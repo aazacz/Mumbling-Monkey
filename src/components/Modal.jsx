@@ -1,4 +1,4 @@
-// Modal.js
+
 import React from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -7,8 +7,8 @@ const Modal = ({ isOpen, onClose, title, description }) => {
 
   return (
     <AnimatePresence>
-      <motion.div 
-        className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+      <motion.div  onClick={onClose}
+        className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
         initial={{ y:"100px", opacity: 0 }}
         animate={{ y:"0",opacity: 1 }}
         exit={{ opacity: 0 }}

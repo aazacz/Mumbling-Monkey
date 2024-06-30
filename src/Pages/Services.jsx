@@ -158,12 +158,13 @@ const Services = (Data) => {
                 <h1 className='px-4 font-montserrat  text-white font-semibold text-2xl w-full'>      {val.title}       </h1>
                 <h1 className='w-full px-4 font-montserrat text- text-base font-light text-white line-clamp-3'> {val.description} </h1>
 
-                <Link to={'/b'}>
                   <button
+                   onClick={() => openModal(val.title, val.description)}
                     className=' border-[1px] rounded-md font-montserrat font-semibold group-hover:bg-[#FFDC60] group-hover:text-lg transition-all duration-700 w-full h-14 border-[#525255] text-[#525255] flex items-center gap-x-3 justify-center'
                   >
                     Read More <FaChevronCircleRight className='group-hover:text-violet-600' />
                   </button>
+                <Link to={'/b'}>
                 </Link>
 
 

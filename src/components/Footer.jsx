@@ -1,7 +1,4 @@
-import React from 'react'
 import logo from "/Logo.png"
-import social from "/social.png"
-import { IoIosCall } from 'react-icons/io'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
@@ -17,7 +14,7 @@ const Footer = () => {
            </Link>
             <h1 className='text-center font-Cabin font-extrabold text-[20px] leading-6'>MUMBLING <br />MONKEYS</h1>
           </div>
-          <p className='w-full pt-4'>Description content or information about can be added here</p>
+          {/* <p className='w-full pt-4'>Description content or information about can be added here</p> */}
           <div className='w-full mt-8  flex   gap-x-4'>
 
             <FaTwitter className=' cursor-pointer transition-all duration-500 text-black text-3xl ' />
@@ -43,7 +40,7 @@ const Footer = () => {
 
         <div className='col-span-1    flex flex-col gap-y-4'>
           <h1 className='md:block  font-semibold font-montserrat'>Contact Us</h1>
-          <a className='w-full  font-montserrat' href="tel:09686665253"> 9686665253 </a>
+          <a className='w-full  font-montserrat' href="tel:09686665253"> 09886767672 </a>
         </div>
 
         <div className='col-span-1     flex flex-col gap-y-4'>

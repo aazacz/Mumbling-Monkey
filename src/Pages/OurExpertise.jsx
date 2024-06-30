@@ -1,24 +1,25 @@
-import React, { useState, useRef, useEffect } from 'react';
-import NavScreen from '../components/NavScreen';
-import Footer from '../components/Footer';
-import ContactUs from '../components/ContactUs';
-import expertiseNavscreen from '/expertiseNavscreen.png';
-import gearIcon from '/expertise/Icon.png';
-import Accountability from '/expertise/Accountability.png';
-import Commitment from '/expertise/Commitment.png';
-import TeamWork from '/expertise/TeamWork.png';
-import { Carousel } from "flowbite-react";
-import MeshLeftSide from "/expertise/Mesh.png"
-import { MdCheckCircle } from 'react-icons/md';
-import CardImg1 from "/expertise/CardImg1.png"
-import CardImg2 from "/expertise/CardImg2.png"
-import CardImg3 from "/expertise/CardImg3.png"
-import CardImg4 from "/expertise/CardImg4.png"
-import { FaArrowRight } from 'react-icons/fa';
-import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
+import React, { useState }          from 'react';
+import NavScreen                    from '../components/NavScreen';
+import Footer                       from '../components/Footer';
+import ContactUs                    from '../components/ContactUs';
+import expertiseNavscreen           from '/expertiseNavscreen.png';
+import gearIcon                     from '/expertise/Icon.png';
+import Accountability               from '/expertise/Accountability.png';
+import Commitment                   from '/expertise/Commitment.png';
+import TeamWork                     from '/expertise/TeamWork.png';
+import { Carousel }                 from "flowbite-react";
+import MeshLeftSide                 from "/expertise/Mesh.png"
+import { MdCheckCircle }            from 'react-icons/md';
+import CardImg1                     from "/expertise/CardImg1.png"
+import CardImg2                     from "/expertise/CardImg2.png"
+import CardImg3                     from "/expertise/CardImg3.png"
+import CardImg4                     from "/expertise/CardImg4.png"
+import { FaCircleChevronLeft, 
+         FaCircleChevronRight }     from 'react-icons/fa6';
 import "./OurExpertise.css"
+import { Link } from 'react-router-dom';
 
-const OurExpertise = (Data) => {
+const OurExpertise = () => {
 
     const Divs = [
         {
@@ -45,8 +46,9 @@ const OurExpertise = (Data) => {
 
     const NavData = {
         heading: "EXPERTISE",
-        Description: "Our Expertise"
-    };
+        Description: "Our Expertise",
+        SubHead:"Mumbling Monkeys specializes in Influencer marketing and Public Relations. With our expertise in these fields, we help you and your brand increase visibility and reputation in the market."
+    }
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -61,6 +63,7 @@ const OurExpertise = (Data) => {
     const servicesData = [
         {
             title: "Influencer Marketing",
+            heading:"Building Trust, Driving Growth with Influencers",
             description: `We specialize in providing comprehensive influencer marketing services to companies. Our expertise pans every stage of the process, from influencer discovery and management to content creation and analyzing campaign success. Our agency is focused on developing and executing influencer strategies, activations, and ongoing management across various industries including fashion, interior design, lifestyle, travel, photography, tech niches, hospitality, and more.`,
             services: [
                 "Creative Strategy",
@@ -70,8 +73,10 @@ const OurExpertise = (Data) => {
             ],
             bg: "bg-gradient-to-tl from-[#FFF3CA]  via-[#FFDBD4] to-[#E9F7FF]"
         },
+
         {
             title: "Public Relations",
+            heading:"Building Trust, Driving Growth with Public",
             description: `Mumbling Monkeys is an invaluable tool for promoting products, events, services, and news features. Our Public Relations services aim to help organizations quickly and consistently gain visibility in search engines. Engaging our distribution services will ensure your company achieves ample online success and builds a strong reputation.`,
             services: [
                 "Advertisement",
@@ -88,8 +93,10 @@ const OurExpertise = (Data) => {
             ],
             bg: "bg-gradient-to-tl from-[#E9F7FF]  via-[#FFDBD4] to-[#FFF3CA]"
         },
+        
         {
             title: "Celebrity Management",
+            heading:"Building Trust, Driving Growth with Celebrity",
             description: `Effective celebrity management can significantly amplify brand visibility and resonate with target audiences. Our expertise lies in forging strategic alliances with influential personalities to drive impactful marketing campaigns.`,
             services: [
                 "Strategic Selection: Careful selection of celebrities aligned with your brand values and audience demographics.",
@@ -136,7 +143,7 @@ const OurExpertise = (Data) => {
         <>
             <div className='w-full h-auto relative   flex flex-col items-center overflow-auto'>
                 <NavScreen bg={expertiseNavscreen} Data={NavData} />
-               
+
                 {/* Section 1 Starts */}
                 <div className='w-full  md:px-20 h-auto py-16 px-4 '>
                     <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'>OUR VALUES</button>
@@ -172,8 +179,8 @@ const OurExpertise = (Data) => {
                                         <img src={MeshLeftSide} className='absolute top-2 left-2 h-[200px]' alt="" />
                                         {/*left side  */}
                                         <div className="w-[85%] md:w-1/3 z-20 rounded-2xl h-[200px] mt-10 md:mt-0  md:h-full bg-[url('/expertise/CardPhoto1.png')] bg-cover" > </div>
-                                      
-                                      {/* right side */}
+
+                                        {/* right side */}
                                         <div className='w-full p-6 md:p-0 md:w-2/3 md:h-full flex flex-col mt-4 md:mt-0'>
 
                                             <div className='w-full h-[40px] pb-2'>
@@ -181,7 +188,7 @@ const OurExpertise = (Data) => {
                                             </div>
 
                                             <div className='w-full h-max mb-4'>
-                                                <h1 className='font-montserrat font-semibold text-2xl '>Building Trust, Driving Growth with Influencers</h1>
+                                                <h1 className='font-montserrat font-semibold text-2xl '>{val.heading}</h1>
                                             </div>
                                             <div className='w-full h-max flex flex-col  justify-between '>
                                                 <h1 className='font-montserrat font-medium text-justify md:text-left text-[12px] md:text-base'>{val.description}</h1>
@@ -191,10 +198,10 @@ const OurExpertise = (Data) => {
                                                             <div key={index} className='flex items-start w-full  gap-x-2'>
                                                                 <div className='w-[20px]'>
 
-                                                                <MdCheckCircle className='md:text-[22px]  text-[#292930]' /> 
+                                                                    <MdCheckCircle className='md:text-[22px]  text-[#292930]' />
                                                                 </div>
-                                                                
-                                                                 <h1 className='font-montserrat text-xs md:text-base  text-gray-600'>{value} </h1>
+
+                                                                <h1 className='font-montserrat text-xs md:text-base  text-gray-600'>{value} </h1>
                                                             </div>
                                                         )
                                                     })}
@@ -211,11 +218,13 @@ const OurExpertise = (Data) => {
                 <div className='w-full md:px-20 h-max px-4  md:mt-10'>
                     <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>SPECIAL FEATURES</button>
                     <div className='flex flex-col md:flex-row justify-between items-end mt-4'>
-                        <div className='w-full md:w-1/2 h-max'>
+                        {/* <div className='w-full md:w-1/2 h-max'>
                             <h1 className='font-montserrat font-semibold text-gray-700 text-xl'>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</h1>
-                        </div>
+                        </div> */}
                         <div className='w-full md:w-1/2 h-max flex justify-end mt-4 md:mt-0'>
+                           <Link to={"/contactus"}>
                             <button className='px-4 py-2 bg-black rounded-3xl text-white font-montserrat font-semibold'>Get in touch</button>
+                           </Link>
                         </div>
                     </div>
 

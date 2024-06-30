@@ -18,7 +18,7 @@ const OurTeam = (Data) => {
         },
         {
             name: "Ramika Donti Paalyam  ",
-            position: "Founder & CEO",
+            position: "Founder & CFO",
             photo: ceo2
         }
     ]

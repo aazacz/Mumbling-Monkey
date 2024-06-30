@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Tick from "/Tick.png";
 import { IoLocationSharp } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
@@ -135,7 +135,7 @@ const ContactUs = () => {
                                 <IoLocationSharp />1st Floor, SAI PREMA Christ Lane, No.39 Krishnanagar, Hosur Main Road, Industrial Area,
                             </div>
                             <a href="tel:09686665253" className='bg-white w-max px-2 py-1 text-[7px] md:text-sm rounded-2xl flex items-center gap-x-2'>
-                                <IoIosCall />         09686665253
+                                <IoIosCall />         09886767672
                             </a>
                         </div>
                     </div>

@@ -33,8 +33,9 @@ const NavScreen = ({ bg, Data }) => {
                         <h1 className='font-bold md:text-4xl text-2xl w-full font-montserrat'>
                             {Data.Description}
                         </h1>
-                        <h1 className='font-montserrat md:text-sm py-2 text-base text-gray-700'>
-                            -- MUMBLING MONKEYS --
+                
+                        <h1 className='font-montserrat md:text-sm py-2 text-base font-medium text-gray-700'>
+                        {Data.SubHead !== "" ? Data.SubHead : "-- MUMBLING MONKEYS --"}
                         </h1>
                     </div>
                 </div>

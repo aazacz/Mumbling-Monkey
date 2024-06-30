@@ -1,15 +1,12 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Footer from '../components/Footer'
-import ContactUs from '../components/ContactUs'
-import AboutUs from "/AboutUs.webp"
 import Tick from "/Tick.png"
-import address from "/address.png"
 import { IoLocationSharp } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const ContactUsPage = (Data) => {
+const ContactUsPage = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -140,7 +137,7 @@ const ContactUsPage = (Data) => {
                                     </div>
                                     <a href="tel:09686665253" className='bg-white w-max px-2 py-1 text-[9px] md:text-base rounded-2xl flex items-center gap-x-2'>
                                         <IoIosCall />
-                                        09686665253
+                                        09886767672
                                     </a>
                                 </div>
 

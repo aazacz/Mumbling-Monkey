@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from "framer-motion";
 import tick from "/Icon.png";
 import pattern from "/Pattern.png";
@@ -19,10 +19,9 @@ import monkey from "/monkeyhead.png"
 import monkey2 from "/monkeyhead2.png"
 import monkey3 from "/monkeyhead3.png"
 
-const AboutUs = (Data) => {
+const AboutUs = () => {
     const targetRef = useRef(null);
     const [isInViewport, setIsInViewport] = useState(false);
-    const countUpRef = useRef(0);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -49,7 +48,7 @@ const AboutUs = (Data) => {
 
     const NavData = {
         heading: "About Us",
-        Description: "Creative Services For Boost Your Business Growth"
+        Description: "Creative Services To Boost Your Business Growth"
     };
 
     const rightData1 = [
@@ -202,7 +201,7 @@ const AboutUs = (Data) => {
             <div className='w-full md:px-20  px-4 justify-center overflow-x-hidden'>
                 <div>
 
-                    <h1 className='font-montserrat font-bold  text-[20px] py-2 mt-3'>            MISSION             </h1>
+                    <h1 className='font-montserrat font-bold  text-[20px] py-2 mt-3'>       MISSION        </h1>
 
                     <p className='text-justify md:text-left'>Our mission at Mumbling Monkeys is to help businesses of all sizes reach their full potential through innovative and effective digital marketing strategies. We are committed to developing customised solutions that assist our clients in increasing their online visibility, generating more leads and sales, and developing long-term relationships with their target audience.</p>
                     <p  className='text-justify  md:text-left pt-5 md:pt-0'>We believe that digital marketing is a powerful tool for creating meaningful, impactful
@@ -211,7 +210,7 @@ const AboutUs = (Data) => {
                     </p>
                 </div>
                 <div>
-                    <h1 className='font-montserrat font-bold  text-[20px] py-2 mt-3'>            VISION             </h1>
+                    <h1 className='font-montserrat font-bold  text-[20px] py-2 mt-3'>       VISION         </h1>
                     <p className='text-justify md:text-left'>Our mission at Mumbling Monkeys is to help businesses of all sizes reach their full potential through innovative and effective digital marketing strategies. We are committed to developing customised solutions that assist our clients in increasing their online visibility, generating more leads and sales, and developing long-term relationships with their target audience.</p>
                     <p className='text-justify md:text-left pt-5 md:pt-0'>We believe that digital marketing is a powerful tool for creating meaningful, impactful
                         experiences that drive business success, not just a means to an end. Our mission is to assist our clients in harnessing this power and achieving their most ambitious objectives.
@@ -252,12 +251,12 @@ const AboutUs = (Data) => {
                             </h1>
                         </div>
                         
-                        <div className='w-full hidden  pt-4 md:grid grid-flow-row grid-rows-3 gap-y-3'>
+                        {/* <div className='w-full hidden  pt-4 md:grid grid-flow-row grid-rows-3 gap-y-3'>
                             <div className='flex items-center w-full gap-x-2'>
                                 <MdCheckCircle className='text-[22px] text-[#292930]' />
                                 <h1 className='font-montserrat font-normal text-gray-600'>Dolor duis lorem enim eu nulla semper</h1>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
                     {/* Right Side */}
