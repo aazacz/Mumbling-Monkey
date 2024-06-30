@@ -22,8 +22,9 @@ const Footer = () => {
             <a href='https://www.instagram.com/mumblingmonkeysmedia/' target='blank'>
               <FaInstagram className='cursor-pointer transition-all duration-500 text-black text-3xl ' />
             </a>
-
+<a href="https://www.facebook.com/people/Mumbling-Monkeys-Media/61555052252595/?mibextid=LQQJ4d" target='blank'>
             <FaFacebook className=' cursor-pointer transition-all duration-500 text-black text-3xl ' />
+</a>
 
           </div>
 
