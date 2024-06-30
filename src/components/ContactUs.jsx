@@ -132,7 +132,7 @@ const ContactUs = () => {
                         ></iframe>
                         <div className='mt-5 w-full flex flex-col items-center gap-2'>
                             <div className='bg-white w-max px-2 py-1 text-[7px] md:text-xs rounded-2xl flex items-center gap-x-2'>
-                                <IoLocationSharp />1st Floor, SAI PREMA Christ Lane, No.39 Krishnanagar, Hosur Main Road, Industrial Area,
+                                <IoLocationSharp />2nd Floor, SAI PREMA Christ Lane, No.39 Krishnanagar, Hosur Main Road, Industrial Area,
                             </div>
                             <a href="tel:09686665253" className='bg-white w-max px-2 py-1 text-[7px] md:text-sm rounded-2xl flex items-center gap-x-2'>
                                 <IoIosCall />         09886767672
