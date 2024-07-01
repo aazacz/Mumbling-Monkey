@@ -1,16 +1,35 @@
 import { useState } from 'react'
 import Footer from '../components/Footer'
-import Tick from "/Tick.png"
 import { IoLocationSharp } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TermsOfUse from '../components/TermsOfUse';
+import { motion, AnimatePresence } from "framer-motion";
+import PrivacyPolicy from '../components/PrivacyPolicy';
+
+
 
 const ContactUsPage = () => {
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [errors, setErrors] = useState({});
+    const [isChecked, setIsChecked] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
+
+    const openModal = (content) => {
+        setModalContent(content);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+
 
     const validate = () => {
         const newErrors = {};
@@ -23,8 +42,12 @@ const ContactUsPage = () => {
         if (!email) {
             newErrors.email = "Email is required.";
         }
+        if (!isChecked) {
+            newErrors.isChecked = "You must agree to the terms and privacy policy.";
+        }
         return newErrors;
     };
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -64,7 +87,13 @@ const ContactUsPage = () => {
     };
     return (
         <>
-         <ToastContainer />
+            <ToastContainer />
+           
+
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
+                {modalContent}
+            </Modal>
+           
             <div className='overflow-x-hidden  h-auto mt-[15vh] flex flex-col items-center overflow-auto'>
                 <div className='md:w-full md:px-20  w-[100%] px-4 h-auto py-6   flex flex-col'>
                     <div className='mb-6 px-0'>
@@ -86,16 +115,16 @@ const ContactUsPage = () => {
                                     {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>}
                                 </div>
                                 <div className='flex flex-col mt-4'>
-                                <label className='text-gray-700' htmlFor="email">EMAIL</label>
-                                <input
-                                    className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
-                                    type="email"
-                                    id='email'
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                                {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
-                            </div>
+                                    <label className='text-gray-700' htmlFor="email">EMAIL</label>
+                                    <input
+                                        className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
+                                        type="email"
+                                        id='email'
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                    {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
+                                </div>
                                 <div className='flex flex-col mt-4'>
                                     <label className='text-gray-700' htmlFor="message">MESSAGE</label>
                                     <textarea
@@ -111,26 +140,34 @@ const ContactUsPage = () => {
                                 </div>
                                 <div className='flex flex-row mt-4 items-center justify-between'>
                                     <div className='flex py-3 items-center'>
-                                        <img src={Tick} alt="" className='w-[25px]' />
-                                        <p className='pl-4 text-xs md:text-base'>I agree with the <span className='underline'>Term Of Uses</span> and <span className='underline'> Privacy Policy </span></p>
+                                        <input
+                                            type="checkbox"
+                                            className='outline-none text-slate-900 w-7 h-7 rounded-full'
+                                            name=""
+                                            id=""
+                                            checked={isChecked}
+                                            onChange={(e) => setIsChecked(e.target.checked)}
+                                        />
+
+                                        <p className='pl-4 text-xs md:text-base'>I agree with the <span className='underline cursor-pointer' onClick={() => openModal(<TermsOfUse />)}>Term Of Uses</span> and <span className='underline cursor-pointer' onClick={() => openModal(<PrivacyPolicy />)}> Privacy Policy </span></p>
                                     </div>
                                     <button type='submit' className='md:px-11 px-6 text-sm text-white md:py-3 p-2 rounded-xl bg-black'>Send</button>
                                 </div>
                             </form>
                         </div>
                         <div className='md:w-1/2 w-full flex flex-col items-center  px-6 md:pt-6 py-4 rounded-xl bg-gray-200 justify-center'>
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.575715318924!2d77.6080443!3d12.9349689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14518a7ca777%3A0x8af1f552aff4a808!2sArivuPro%20Academy%20CA%20CS%20ACCA%20%2C%20CIMA%20(UK)%20CMA%20(US)%20CPA%20(US)%20PUC%20Coaching%20in%20Bangalore!5e0!3m2!1sen!2sin!4v1719053763648!5m2!1sen!2sin"
-                            width="100%"
-                            height="350"
-                            className='shadow-[0_3px_10px_rgb(0,0,0,0.2)]'
-                            style={{ borderRadius: "12px" }}
-                            allowFullScreen="" 
-                            loading="lazy" 
-                            referrerPolicy="no-referrer-when-downgrade"
-                        ></iframe>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.575715318924!2d77.6080443!3d12.9349689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14518a7ca777%3A0x8af1f552aff4a808!2sArivuPro%20Academy%20CA%20CS%20ACCA%20%2C%20CIMA%20(UK)%20CMA%20(US)%20CPA%20(US)%20PUC%20Coaching%20in%20Bangalore!5e0!3m2!1sen!2sin!4v1719053763648!5m2!1sen!2sin"
+                                width="100%"
+                                height="350"
+                                className='shadow-[0_3px_10px_rgb(0,0,0,0.2)]'
+                                style={{ borderRadius: "12px" }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
                             <div className='mt-5'>
-                              
+
                                 <div className='mt-5 w-full flex flex-col items-center gap-2'>
                                     <div className='bg-white w-max px-2 py-1 text-[7px] md:text-xs rounded-2xl flex items-center gap-x-2'>
                                         <IoLocationSharp />2nd Floor, SAI PREMA Christ Lane, No.39 Krishnanagar, Hosur Main Road, Industrial Area,
@@ -154,3 +191,35 @@ const ContactUsPage = () => {
 }
 
 export default ContactUsPage
+
+
+
+
+const Modal = ({ isOpen, onClose, children }) => {
+    if (!isOpen) return null;
+
+    return (
+        <AnimatePresence >
+            <motion.div onClick={onClose}
+                className=" absolute  w-full h-max py-16  bg-black bg-opacity-70 flex justify-center items-center z-50"
+                initial={{ y: "100px", opacity: 0, width: 0 }}
+                animate={{ y: "0", opacity: 1, width: "100%" }}
+                exit={{ opacity: 0 }}
+            >
+                <motion.div
+                    className="bg-gray-900 p-6 rounded-lg "
+                    initial={{ scale: 0.9 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0.9 }}
+                >
+
+                    {children}
+
+
+
+
+                </motion.div>
+            </motion.div>
+        </AnimatePresence>
+    );
+};

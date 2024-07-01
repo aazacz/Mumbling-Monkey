@@ -14,12 +14,22 @@ const OurTeam = (Data) => {
         {
             name: "Aashik Paalyam ",
             position: "Founder & CEO",
-            photo: ceo1
+            photo: ceo1,
+            description:"An entrepreneur, digital marketer, PRO, brand consultant, voice over artist, food blogger and photographer, Aashik Paalyam is a man of many talents. Starting off his career as an Assistant Company Secretary, in a well known F&B company, Aashik went on to complete his MBA in Marketing to follow his passion. He Worked as Consultant in various Media Agencies, giving his vast expertise to various F&B, Lifestyle, Products and Political clients.",
+            insta:"https://www.instagram.com/wannaknowwhereweeat/",
+            fb:"https://www.facebook.com/aashik.paalyam?mibextid=ZbWKwL",
+            x:"https://x.com/Aashikpaalyam"
+        
         },
         {
             name: "Ramika Donti Paalyam  ",
             position: "Founder & CFO",
-            photo: ceo2
+            photo: ceo2,
+            description:"A Finance Background with a flair for Marketing, as the co-founder of Mumbling Monkeys Media, she ensures that every event launch, influencer campaign and media deliverable is innovative and professionally-managed. From finding the best influencers for your launch event or marketing ",
+            insta:"https://www.instagram.com/mrs.superaagithu/",
+            fb:"",
+            x:""
+        
         }
     ]
 
@@ -65,16 +75,24 @@ const OurTeam = (Data) => {
                                     </div>
                                     <div className='w-full text-center'>
                                         <h1 className='font-montserrat py-4 text-xl md:text-2xl font-bold text-gray pt-6'>{val.name}</h1>
-                                        <h1 className='font-montserrat text-sm md:text-lg font-light text-gray-800'>Leverage agile frameworks to provide a robust synopsis for high level overviews.</h1>
+                                        <div className='w-full md:h-[90px] overflow-y-hidden transition-all duration-500 ease-in-out group-hover:h-[350px]'>
+
+                                        <h1 className='font-montserrat text-sm md:text-lg font-light   text-gray-800'>{val.description}</h1>
+                                        </div>
                                     </div>
                                     <div className='w-full flex justify-center pt-4 gap-x-4'>
+                                    
+                                    <a href={val.x} target='blank'>
                                         <FaTwitter className='cursor-pointer transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
-                                        <a href='https://www.instagram.com/mumblingmonkeysmedia/' target='blank'>
+                                    </a>
+                                    
+                                    <a href={val.insta} target='blank'>
                                             <FaInstagram className='cursor-pointer transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
-                                        </a>
-                                        <a href="https://www.facebook.com/people/Mumbling-Monkeys-Media/61555052252595/?mibextid=LQQJ4d" target='blank'>
+                                    </a>
+                                    
+                                    <a href={val.fb} target='blank'>
                                         <FaFacebook className='cursor-pointer transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
-                                        </a>
+                                    </a>
                                     </div>
                                 </div>
                             )

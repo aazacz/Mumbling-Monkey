@@ -4,6 +4,10 @@ import { IoLocationSharp } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TermsOfUse from './TermsOfUse';
+import { motion, AnimatePresence } from "framer-motion";
+import PrivacyPolicy from './PrivacyPolicy';
+
 
 const ContactUs = () => {
 
@@ -11,6 +15,22 @@ const ContactUs = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [errors, setErrors] = useState({});
+    const [isChecked, setIsChecked] = useState(false);
+    
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
+    
+    
+    const openModal = (content) => {
+        setModalContent(content);
+        setIsModalOpen(true);
+      };
+    
+      const closeModal = () => {
+        setIsModalOpen(false);
+      };
+    
+
 
     const validate = () => {
         const newErrors = {};
@@ -23,8 +43,12 @@ const ContactUs = () => {
         if (!email) {
             newErrors.email = "Email is required.";
         }
+        if (!isChecked) {
+            newErrors.isChecked = "You must agree to the terms and privacy policy.";
+        }
         return newErrors;
     };
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -66,6 +90,9 @@ const ContactUs = () => {
     return (
         <>
             <ToastContainer />
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
+        {modalContent}
+      </Modal>
             <div className='w-full md:w-[100%] h-auto py-6 px-4   flex flex-col md:px-0'>
                 <div className='mb-6 text-center md:text-left '>
                     <button className='cursor-default text-white font-montserrat tracking-widest text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-2  '>CONTACT US</button>
@@ -112,8 +139,15 @@ const ContactUs = () => {
                             </div>
                             <div className='flex flex-row mt-4 items-center justify-between'>
                                 <div className='flex py-3 items-center'>
-                                    <img src={Tick} alt="" className='w-[25px]' />
-                                    <p className='pl-4 text-xs md:text-base'>I agree with the <span className='underline'>Term Of Uses</span> and <span className='underline'> Privacy Policy </span></p>
+                                <input 
+                                    type="checkbox" 
+                                    className='outline-none text-slate-900 w-7 h-7 rounded-full' 
+                                    name="" 
+                                    id="" 
+                                    checked={isChecked}
+                                    onChange={(e) => setIsChecked(e.target.checked)}
+                                />
+                                    <p className='pl-4 text-xs md:text-base'>I agree with the <span className='underline cursor-pointer'  onClick={() => openModal(<TermsOfUse/>)}>Term Of Uses</span> and <span className='underline cursor-pointer' onClick={() => openModal(<PrivacyPolicy/>)}> Privacy Policy </span></p>
                                 </div>
                                 <button type='submit' className='md:px-11 px-6 text-sm text-white md:py-3 p-2 rounded-xl bg-black'>Send</button>
                             </div>
@@ -146,3 +180,36 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+
+
+
+
+const Modal = ({ isOpen, onClose, children }) => {
+    if (!isOpen) return null;
+  
+    return (
+      <AnimatePresence>
+        <motion.div  onClick={onClose}
+          className=" absolute  w-full h-max bg-black bg-opacity-70 flex justify-center items-center z-50"
+          initial={{ y:"100px", opacity: 0,width:0 }}
+          animate={{ y:"0",opacity: 1,width:"100%" }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div 
+            className="bg-gray-900 p-6 rounded-lg "
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.9 }}
+          >
+            
+{children}
+
+
+
+
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
+    );
+  };

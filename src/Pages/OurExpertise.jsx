@@ -145,7 +145,7 @@ const OurExpertise = () => {
                 <NavScreen bg={expertiseNavscreen} Data={NavData} />
 
                 {/* Section 1 Starts */}
-                <div className='w-full  md:px-20 h-auto py-16 px-4 '>
+                <div className='w-full  md:px-20 h-auto pt-16 px-4 '>
                     <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'>OUR VALUES</button>
                     <p className='text-slate-700 font-semibold font-montserrat mt-4'>Mumbling Monkeys specializes in Influencer marketing and Public Relations. With our expertise in these fields, we help you and your brand increase visibility and reputation in the market.</p>
                     <div className='w-full h-auto py-6 flex flex-wrap gap-5'>
@@ -171,7 +171,7 @@ const OurExpertise = () => {
 
 
                     {/* Carousel Slider */}
-                    <div className="md:h-[600px]  mt-8 w-full">
+                    <div className="md:h-[600px] mt-8 w-full">
                         <Carousel className='max-h-[100%]  custom-carousel' leftControl={<Left />} indicators={true} rightControl={<Right />}>
                             {servicesData.map((val, index) => {
                                 return (
@@ -215,13 +215,12 @@ const OurExpertise = () => {
                     </div>
                 </div>
 
-                <div className='w-full md:px-20 h-max px-4  md:mt-10'>
+
+                <div className='w-full md:px-20 h-max px-4 '>
                     <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>SPECIAL FEATURES</button>
                     <div className='flex flex-col md:flex-row justify-between items-end mt-4'>
-                        {/* <div className='w-full md:w-1/2 h-max'>
-                            <h1 className='font-montserrat font-semibold text-gray-700 text-xl'>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</h1>
-                        </div> */}
-                        <div className='w-full md:w-1/2 h-max flex justify-end mt-4 md:mt-0'>
+                     
+                        <div className='w-full  h-max flex justify-end mt-4 md:mt-0'>
                            <Link to={"/contactus"}>
                             <button className='px-4 py-2 bg-black rounded-3xl text-white font-montserrat font-semibold'>Get in touch</button>
                            </Link>
@@ -242,9 +241,7 @@ const OurExpertise = () => {
                                         <h1 className='font-montserrat font-semibold pb-4 text-lg text-center'> {val.heading}</h1>
                                         <h1 className='font-montserrat font-light text-center'>  {val.description}</h1>
                                     </div>
-                                    {/* <div className='w-full h-8 flex items-center gap-x-2 mt-4'>
-                                        <h1 className='font-montserrat font-semibold'> Read More </h1> <FaArrowRight />
-                                    </div> */}
+                                
                                 </div>
                             )
                         })}
