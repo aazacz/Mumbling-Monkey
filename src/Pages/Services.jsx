@@ -1,18 +1,19 @@
-import React, { useEffect } from 'react';
-import NavScreen from '../components/NavScreen';
-import Footer from '../components/Footer';
-import ContactUs from '../components/ContactUs';
-import servicespng from '/services.png';
-import ChatMarketing from "/ChatMarketing.png";
+import React, 
+       { useEffect }  from 'react';
+import NavScreen      from '../components/NavScreen';
+import Footer         from '../components/Footer';
+import ContactUs      from '../components/ContactUs';
+import servicespng    from '/services.png';
+import ChatMarketing  from "/ChatMarketing.png";
 import { FaChevronCircleRight } from "react-icons/fa";
-import { useState } from 'react';
-import MeshLeftSide from "/MeshLeftSide.png";
+import { useState }   from 'react';
+import MeshLeftSide   from "/MeshLeftSide.png";
 import { PiPulseBold } from 'react-icons/pi';
-import Modal from '../components/Modal';
-import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom'
-import Frame_28H from "/Frame_28H.png"
-import { motion, AnimatePresence } from "framer-motion"
+import Modal          from '../components/Modal';
+import { Link }       from 'react-router-dom';
+import { useLocation }from 'react-router-dom'
+import Frame_28H      from "/Frame_28H.png"
+import { motion }     from "framer-motion"
 
 
 const Services = (Data) => {
@@ -188,7 +189,7 @@ const Services = (Data) => {
 
 
 
-        <div className='w-screen h-max relative flex flex-col md:flex-row px-4 md:px-20'>
+        <div className='w-full h-max relative flex flex-col md:flex-row px-4 md:px-20'>
           <img className='absolute -z-10 md:left-0 -left-8 -top-8 md:w-[250px] w-[150px]  '   src={MeshLeftSide} alt="" />
 
           {/*  LEFT SIDE  */}
@@ -234,12 +235,12 @@ const Services = (Data) => {
           </div>
         </div>
 
-        <div className='w-screen overflow-x-hidden'>
+        <div className='w-full overflow-x-hidden'>
 
           <motion.div className='  flex  opacity-40 md:left-0  ' variants={marqueeVariants} animate="animate"   >
-            <img className='w-[100%]  md:w-full h-8 ' src={Frame_28H} alt="" />
-            <img className='w-[100%]  md:w-full h-8 ' src={Frame_28H} alt="" />
-            <img className='w-[100%]  md:w-full h-8 ' src={Frame_28H} alt="" />
+            <img className='w-[100%]  md:w-full h-20 ' src={Frame_28H} alt="" />
+            <img className='w-[100%]  md:w-full h-20 ' src={Frame_28H} alt="" />
+            <img className='w-[100%]  md:w-full h-20 ' src={Frame_28H} alt="" />
             <img className='w-[100%]  md:w-full h-8 block md:hidden' src={Frame_28H} alt="" />
             <img className='w-[100%]  md:w-full h-8 block md:hidden' src={Frame_28H} alt="" />
             <img className='w-[100%]  md:w-full h-8 block md:hidden' src={Frame_28H} alt="" />

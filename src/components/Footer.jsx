@@ -47,7 +47,7 @@ const Footer = () => {
         <div className='col-span-1     flex flex-col gap-y-4'>
          <p className='font-semibold font-montserrat'>Address</p>
           <div className='max-w-[250px] '> 
-            <p>1st Floor, SAI PREMA Christ Lane, No.39 Krishnanagar, Hosur Main Road, Industrial Area, Koramangala, Bengaluru, Karnataka 560029</p>
+            <p>2nd Floor, SAI PREMA Christ Lane, No.39 Krishnanagar, Hosur Main Road, Industrial Area, Koramangala, Bengaluru, Karnataka 560029</p>
           </div>
         </div>
 

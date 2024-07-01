@@ -72,7 +72,9 @@ const OurTeam = (Data) => {
                                         <a href='https://www.instagram.com/mumblingmonkeysmedia/' target='blank'>
                                             <FaInstagram className='cursor-pointer transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
                                         </a>
+                                        <a href="https://www.facebook.com/people/Mumbling-Monkeys-Media/61555052252595/?mibextid=LQQJ4d" target='blank'>
                                         <FaFacebook className='cursor-pointer transition-all duration-500 group-hover:text-black text-3xl text-gray-600' />
+                                        </a>
                                     </div>
                                 </div>
                             )

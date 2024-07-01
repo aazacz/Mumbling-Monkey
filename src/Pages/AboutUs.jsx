@@ -158,7 +158,7 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            <div className='w-screen md:px-20 px-4'>
+            <div className='w-full md:px-20 px-4'>
 
                 {Data4.map((value, index) => (
                     <div key={index} className='flex w-full h-auto py-3 items-start gap-x-3'>
@@ -198,7 +198,7 @@ const AboutUs = () => {
 
 
 
-            <div className='w-full md:px-20  px-4 justify-center overflow-x-hidden'>
+            <div className='w-full md:px-20  px-4 justify-center '>
                 <div>
 
                     <h1 className='font-montserrat font-bold  text-[20px] py-2 mt-3'>       MISSION        </h1>
@@ -209,6 +209,7 @@ const AboutUs = () => {
                         Our mission is simple yet profound: To empower brands to achieve their full potential in the digital realm. We strive to be at the forefront of innovation and creativity, delivering results-driven campaigns that exceed expectations.
                     </p>
                 </div>
+
                 <div>
                     <h1 className='font-montserrat font-bold  text-[20px] py-2 mt-3'>       VISION         </h1>
                     <p className='text-justify md:text-left'>Our mission at Mumbling Monkeys is to help businesses of all sizes reach their full potential through innovative and effective digital marketing strategies. We are committed to developing customised solutions that assist our clients in increasing their online visibility, generating more leads and sales, and developing long-term relationships with their target audience.</p>
