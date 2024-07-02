@@ -206,17 +206,12 @@ const Modal = ({ isOpen, onClose, children }) => {
                 animate={{ y: "0", opacity: 1, width: "100%" }}
                 exit={{ opacity: 0 }}
             >
-                <motion.div
-                    className="bg-gray-900 p-6 rounded-lg "
+                <motion.div className="bg-gray-900 p-6 rounded-lg "
                     initial={{ scale: 0.9 }}
                     animate={{ scale: 1 }}
-                    exit={{ scale: 0.9 }}
-                >
+                    exit={{ scale: 0.9 }}  >
 
                     {children}
-
-
-
 
                 </motion.div>
             </motion.div>
