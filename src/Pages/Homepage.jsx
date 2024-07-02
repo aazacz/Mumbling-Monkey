@@ -184,11 +184,11 @@ const Homepage = () => {
 
 
 
-  const ref = useRef(null);
+  // const ref = useRef(null);
 
-  const handleClick = () => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  // const handleClick = () => {
+  //   ref.current?.scrollIntoView({ behavior: 'smooth' });
+  // };
 
   const { pathname } = useLocation();
 
@@ -236,13 +236,13 @@ const Homepage = () => {
 
 
         {/*#######################################  Section 1 Starts #######################################*/}
-        <div id='section1' ref={ref} className='md:w-full   w-[100%]  h-auto py-6 md:px-16 px-4 md:flex  md:flex-row'>
+        <div   className='md:w-full   w-[100%]   h-auto py-6 md:px-16 px-4 md:flex flex-col  md:flex-row'>
 
           <motion.div className='md:w-3/5 w-full h-full  py-6 md:pr-6'
-            initial={{ x: -195, y: 0, opacity: 0 }}
-            whileInView={{ x: 0, y: 0, opacity: 100 }}
+            initial={{ x: -195, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 100 }}
             transition={{ duration: 1 }}
-            viewport={{ amount: 0.5, once: true }}
+            viewport={{ amount: 0.2, once: true }}
 
           >
             <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'> ABOUT COMPANY</button>

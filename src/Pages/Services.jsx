@@ -136,7 +136,7 @@ const Services = (Data) => {
 
   const NavData = {
     heading: "services",
-    Description: "Creative Services To Boost Your Business Growth"
+    Description: "Creative Services to Boost Growth of your Business"
   }
 
   const [showAll, setShowAll] = useState(false);

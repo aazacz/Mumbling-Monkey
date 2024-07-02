@@ -251,18 +251,14 @@ const AboutUs = () => {
                                 &emsp; &emsp;&emsp;In today's dynamic digital landscape, succeeding on social media requires more than just posting content. It demands a strategic, data-driven approach that ensures your brand not only reaches but resonates with your target audience. Our bulletproof process is designed to deliver consistent and exceptional results, transforming your social media presence into a powerful marketing tool.
                             </h1>
                         </div>
-                        
-                        {/* <div className='w-full hidden  pt-4 md:grid grid-flow-row grid-rows-3 gap-y-3'>
-                            <div className='flex items-center w-full gap-x-2'>
-                                <MdCheckCircle className='text-[22px] text-[#292930]' />
-                                <h1 className='font-montserrat font-normal text-gray-600'>Dolor duis lorem enim eu nulla semper</h1>
-                            </div>
-                        </div> */}
+                      
+                    
 
                     </div>
                     {/* Right Side */}
-                    <div className='w-full md:w-1/2 overflow-x-scroll flex snap-x snap-mandatory yScrollbar'>
-                        <div className='w-full flex-shrink-0  snap-center flex items-center'>
+                    <div className='w-full md:w-1/2  overflow-x-scroll flex snap-x snap-mandatory pb-6 yScrollbar'>
+                        
+                        <div className='w-full flex-shrink-0  p-2  snap-center flex  items-center'>
                            
                             <div className='relative w-[20%]  overflow-hidden h-full grid grid-flow-row  justify-between md:justify-center place-content-between  items-start md:items-center'>
                              <div className='absolute w-full h-[90%] left-1/2 border-l-2 border-dashed  border-[#E38676] '></div>
@@ -284,7 +280,8 @@ const AboutUs = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className='w-full flex-shrink-0 h-full snap-center flex items-center'>
+                        
+                        <div className='w-full flex-shrink-0  snap-center flex items-center'>
                         <div className='relative w-[20%]  overflow-hidden h-full grid grid-flow-row  justify-between md:justify-center place-content-between  items-start md:items-center'>
                              <div className='absolute w-full h-[90%] left-1/2 border-l-2 border-dashed  border-[#E38676] '></div>
                                     {rightData1.map((val, index) => (
