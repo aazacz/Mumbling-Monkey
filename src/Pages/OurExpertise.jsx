@@ -192,7 +192,7 @@ const OurExpertise = () => {
                                         <div className="w-[85%] md:w-1/3 z-20 rounded-2xl h-[200px] mt-10 md:mt-0  md:h-full bg-[url('/expertise/CardPhoto1.png')] bg-cover" > </div>
 
                                         {/* right side */}
-                                        <div className='w-full p-6 md:p-0 md:w-2/3 md:h-full flex flex-col mt-4 md:mt-0'>
+                                        <div className='w-full p-6 md:p-0 md:w-2/3 md:h-full  h-[500px]  flex flex-col mt-4 md:mt-0'>
 
                                             <div className='w-full h-[40px] pb-2'>
                                                 <button className='text-white w-max text-sm font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>{val.title}</button>
@@ -229,7 +229,7 @@ const OurExpertise = () => {
                 </div>
 
 
-                <div className='w-full md:px-20 h-max px-4 '>
+                <div className='w-full md:px-20 h-max px-4  pt-10'>
                     <button className='text-white text-lg font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>SPECIAL FEATURES</button>
                     <div className='flex flex-col md:flex-row justify-between items-end mt-4'>
                      
