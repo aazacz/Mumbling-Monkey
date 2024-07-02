@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Tick from "/Tick.png";
 import { IoLocationSharp } from 'react-icons/io5';
+
 import { IoIosCall } from 'react-icons/io';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
