@@ -1,4 +1,3 @@
-// src/PrivacyPolicy.js
 import React from 'react';
 import Footer from '../components/Footer';
 import PrivacyPolicy from '../components/PrivacyPolicy';

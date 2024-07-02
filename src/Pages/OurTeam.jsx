@@ -6,7 +6,6 @@ import ourteam from '/ourteam/navscreen.webp'
 import ceo1 from '/ceophoto1.jpg'
 import ceo2 from '/ceophoto2.jpg'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
-import tick from "/Icon.png";
 
 const OurTeam = (Data) => {
 
