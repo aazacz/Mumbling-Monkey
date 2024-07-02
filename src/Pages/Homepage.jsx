@@ -236,7 +236,7 @@ const Homepage = () => {
 
 
         {/*#######################################  Section 1 Starts #######################################*/}
-        <div   className='md:w-full   w-[100%]   h-auto py-6 md:px-16 px-4 md:flex flex-col  md:flex-row'>
+        <div className='md:w-full   w-[100%]   h-auto py-6 md:px-16 px-4 md:flex flex-col  md:flex-row'>
 
           <motion.div className='md:w-3/5 w-full h-full  py-6 md:pr-6'
             initial={{ x: -195, opacity: 0 }}

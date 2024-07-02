@@ -3,7 +3,7 @@ import NavScreen from '../components/NavScreen'
 import Footer from '../components/Footer'
 import ContactUs from '../components/ContactUs'
 import ourteam from '/ourteam/navscreen.webp'
-import ceo1 from '/ceophoto1.jpg'
+import ceo1 from '/ceophoto1.webp'
 import ceo2 from '/ceophoto2.jpg'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 
