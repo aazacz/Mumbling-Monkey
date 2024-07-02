@@ -90,13 +90,14 @@ const OurExpertise = () => {
             services: [
                 "Advertisement",
                 "Media Production",
-                "Banner Post",
+              
                 "Media Management",
                 "Reputation Management",
                 "Corporate Communication",
                 "Visibility Management",
                 "Media Relations",
-                "Crisis Management/ Public Affairs",
+                "Crisis Management",
+                "Public Affairs",
                 "Media Monitoring",
                 "Event Management"
             ],
@@ -202,20 +203,22 @@ const OurExpertise = () => {
                                             </div>
                                             <div className='w-full h-max flex flex-col  justify-between '>
                                                 <h1 className='font-montserrat font-medium text-justify md:text-left text-[12px] md:text-base'>{val.description}</h1>
-                                                <div className=' mt-2 grid grid-flow-col md:grid-rows-5 grid-rows-6 gap-2'>
+                                               
+                                                <div className=' mt-2 grid grid-flow-col md:grid-rows-4 grid-rows-5    gap-2'>
                                                     {val.services.map((value, index) => {
                                                         return (
-                                                            <div key={index} className='flex items-start w-full  gap-x-2'>
-                                                                <div className='w-[20px]'>
+                                                            <div key={index} className='flex items-start w-full h-max   gap-x-2'>
+                                                                <div className='w-[20px] '>
 
                                                                     <MdCheckCircle className='md:text-[22px]  text-[#292930]' />
                                                                 </div>
 
-                                                                <h1 className='font-montserrat text-xs md:text-base  text-gray-600'>{value} </h1>
+                                                                <h1 className='font-montserrat xs:text-[8px] text-xs md:text-base  text-gray-600'>{value} </h1>
                                                             </div>
                                                         )
                                                     })}
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
