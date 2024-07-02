@@ -59,6 +59,15 @@ const OurExpertise = () => {
     const handleMouseLeave = () => {
         setHoveredIndex(null);
     };
+    
+    const togglehover= (index)=>{
+        if (hoveredIndex === index) {
+            setHoveredIndex(null);
+            } else {
+                setHoveredIndex(index);
+                }
+                }
+    
 
     const servicesData = [
         {
@@ -155,6 +164,7 @@ const OurExpertise = () => {
                                 className={`flex px-4 justify-between flex-col items-center py-4 flex-1 h-[400px] ${hoveredIndex === index ? 'scale-110' : 'scale-100'} ${hoveredIndex !== null && hoveredIndex !== index ? 'scale-90' : ''} bg-[#35353d] rounded-lg transition-all duration-700`}
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={handleMouseLeave}
+                                onClick={()=>togglehover(index)}
                             >
                                 <div className='rounded-full flex justify-center items-center bg-[#292930] w-[150px] h-[150px]'>
                                     <img src={val.Icon} alt="" />
@@ -171,7 +181,7 @@ const OurExpertise = () => {
 
 
                     {/* Carousel Slider */}
-                    <div className="md:h-[600px] mt-8 w-full">
+                    <div className="md:h-[600px] mt-8 w-full   ">
                         <Carousel className='max-h-[100%]  custom-carousel' leftControl={<Left />} indicators={true} rightControl={<Right />}>
                             {servicesData.map((val, index) => {
                                 return (
@@ -268,14 +278,14 @@ export default OurExpertise;
 
 const Left = () => {
     return (
-        <div className='absolute top-1/2 left-0 -translate-x-1/2 text-4xl text-[#5956e8]'><FaCircleChevronLeft />
+        <div className='absolute top-1/2 left-1 -translate-x-1/2 text-4xl text-[#5956e8]'><FaCircleChevronLeft />
         </div>
     )
 }
 
 const Right = () => {
     return (
-        <div className=' absolute top-1/2 right-0 translate-x-1/2 text-4xl text-[#5956e8] '><FaCircleChevronRight /> </div>
+        <div className=' absolute top-1/2 right-1 translate-x-1/2 text-4xl text-[#5956e8] '><FaCircleChevronRight /> </div>
     )
 }
 

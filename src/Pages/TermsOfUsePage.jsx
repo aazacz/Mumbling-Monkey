@@ -6,7 +6,7 @@ import TermsOfUse from '../components/TermsOfUse';
 const TermsOfUsePage = () => {
   return (
     <>
-      <div className='pt-[110px] bg-gray-100 '>
+      <div className='md:pt-[110px] pt-[50px] bg-gray-100 '>
         <TermsOfUse />
       </div>
 

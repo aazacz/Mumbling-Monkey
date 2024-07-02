@@ -343,11 +343,11 @@ const Homepage = () => {
 
 
 
-                  <div className='w-[80%] h-[40%] md:group-hover:-translate-y-[-100px] group-hover:-translate-y-[-10px]   relative -bottom-full -translate-y-[60%] md:-translate-y-[45%] group-hover:bottom-0
+                  <div className='w-[80%] h-[40%] md:group-hover:-translate-y-[-100px] group-hover:-translate-y-[-10px]   relative -bottom-full -translate-y-[60%] xs:-translate-y-[50%] md:-translate-y-[45%] group-hover:bottom-0
                                    transition-all duration-500 m-auto
                                      group  z-20'>
-                    <h1 className='text-white font-bold text-2xl py-3'> {value.heading}</h1>
-                    <p className='text-white leading-5'>{value.description}</p>
+                    <h1 className='text-white font-bold text-2xl py-3 xs:text-xl'> {value.heading}</h1>
+                    <p className='text-white leading-5 xs:leading-4'>{value.description}</p>
                   </div>
                 </div>
 
