@@ -8,6 +8,7 @@ import TermsOfUse from '../components/TermsOfUse';
 import { motion, AnimatePresence } from "framer-motion";
 import PrivacyPolicy from '../components/PrivacyPolicy';
 import "./ContactUsPage.css"
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 
 const ContactUsPage = () => {
@@ -140,16 +141,15 @@ const ContactUsPage = () => {
                                 </div>
                                 <div className='flex flex-row mt-4 items-center justify-between'>
                                     <div className='flex py-3 items-center'>
-                                        <input
-                                            type="checkbox"
-                                            className='outline-none cursor-pointer text-slate-900 w-7 h-7 rounded-full'
-                                            name=""
-                                            id=""
-                                            checked={isChecked}
-                                            onChange={(e) => setIsChecked(e.target.checked)}
-                                        />
-
-                                        <p className='pl-4 text-xs md:text-base'>I agree with the <span className='underline cursor-pointer' onClick={() => openModal(<TermsOfUse />)}>Term Of Uses</span> and <span className='underline cursor-pointer' onClick={() => openModal(<PrivacyPolicy />)}> Privacy Policy </span></p>
+                                    <input 
+                                    type="checkbox" 
+                                    className='outline-none cursor-pointer text-slate-900 w-5 h-5 rounded-full' 
+                                    name="" 
+                                    id="" 
+                                    checked={isChecked}
+                                    onChange={(e) => setIsChecked(e.target.checked)}
+                                />
+                                    <p className='pl-2 text-xs md:text-sm'>I agree with the <span className='underline cursor-pointer'  onClick={() => openModal(<TermsOfUse/>)}>Term Of Uses</span> and <span className='underline cursor-pointer' onClick={() => openModal(<PrivacyPolicy/>)}> Privacy Policy </span></p>
                                     </div>
                                     <button type='submit' className='md:px-11 px-6 text-sm text-white md:py-3 p-2 rounded-xl bg-black'>Send</button>
                                 </div>
@@ -195,22 +195,24 @@ export default ContactUsPage
 
 
 
+
 const Modal = ({ isOpen, onClose, children }) => {
     if (!isOpen) return null;
 
     return (
         <AnimatePresence >
             <motion.div onClick={onClose}
-                className=" absolute scrollbar  w-full h-max py-16   bg-black bg-opacity-70 flex justify-center items-center z-50"
+                className=" fixed top-0  w-full  px-4 h-full  left-0  bg-black bg-opacity-70 flex justify-center items-center z-50"
                 initial={{ y: "100px", opacity: 0, width: 0 }}
                 animate={{ y: "0", opacity: 1, width: "100%" }}
                 exit={{ opacity: 0 }}
             >
-                <motion.div className=" w-2/4 h-screen relative rounded-3xl overflow-y-scroll    scrollbar "
+                <motion.div className=" md:w-2/4  h-full  relative bg-red-300 rounded-3xl  overflow-y-auto     "
                     initial={{ scale: 0.9 }}
                     animate={{ scale: 1 }}
                     exit={{ scale: 0.9 }}  >
-<IoCloseCircleOutline onClick={onClose} className='cursor-pointer text-2xl text-black absolute  right-3 top-3 scrollbar'  />
+                    
+                    <AiFillCloseCircle  onClick={onClose} className='cursor-pointer hover:text-gray-700 duration-100 text-2xl text-gray-500 absolute  right-3 top-3 '  />
 
                     {children}
 

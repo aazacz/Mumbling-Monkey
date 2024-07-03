@@ -38,7 +38,7 @@ const PrivacyPolicy = () => {
                     transition={{ duration: 0.5 }}
                     className="h-full max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md"
                 >
-                    <h1 className="text-3xl font-bold mb-8 text-center">Privacy Policy</h1>
+                    <h1 className="md:text-3xl xs:text-base font-bold mb-8 text-center">Privacy Policy</h1>
                     {privacyPolicies.map((policy, index) => (
                         <motion.div
                             key={index}
@@ -47,8 +47,8 @@ const PrivacyPolicy = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="mb-6"
                         >
-                            <h2 className="text-2xl font-semibold mb-2">{policy.title}</h2>
-                            <div className="text-gray-700">{policy.content}</div>
+                            <h2 className="text-2xl xs:text-base font-semibold mb-2">{policy.title}</h2>
+                            <div className="md:text-base text-gray-700 xs:text-sm">{policy.content}</div>
                         </motion.div>
                     ))}
                 </motion.div>

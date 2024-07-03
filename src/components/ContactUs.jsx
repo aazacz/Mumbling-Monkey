@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { IoCloseCircleOutline, IoLocationSharp } from 'react-icons/io5';
-
 import { IoIosCall } from 'react-icons/io';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,6 +7,7 @@ import TermsOfUse from './TermsOfUse';
 import { motion, AnimatePresence } from "framer-motion";
 import PrivacyPolicy from './PrivacyPolicy';
 import { AiFillCloseCircle } from 'react-icons/ai';
+// import "./ContactUsPage.css"
 
 
 const ContactUs = () => {
@@ -191,16 +191,17 @@ const Modal = ({ isOpen, onClose, children }) => {
     return (
         <AnimatePresence >
             <motion.div onClick={onClose}
-                className=" absolute   w-full h-max py-16   bg-black bg-opacity-70 flex justify-center items-center z-50"
+                className=" fixed top-0  w-full  px-4 h-full  left-0  bg-black bg-opacity-70 flex justify-center items-center z-50"
                 initial={{ y: "100px", opacity: 0, width: 0 }}
                 animate={{ y: "0", opacity: 1, width: "100%" }}
                 exit={{ opacity: 0 }}
             >
-                <motion.div className=" w-2/4 h-screen relative rounded-3xl overflow-y-auto     "
+                <motion.div className=" md:w-2/4  h-full  relative bg-red-300 rounded-3xl  overflow-y-auto     "
                     initial={{ scale: 0.9 }}
                     animate={{ scale: 1 }}
                     exit={{ scale: 0.9 }}  >
-<AiFillCloseCircle  onClick={onClose} className='cursor-pointer text-2xl text-gray-500 absolute  right-3 top-3 '  />
+                    
+                    <AiFillCloseCircle  onClick={onClose} className='cursor-pointer hover:text-gray-700 duration-100 text-2xl text-gray-500 absolute  right-3 top-3 '  />
 
                     {children}
 

@@ -42,14 +42,14 @@ const terms = [
 const TermsOfUse = () => {
     return (
         <>
-        <div className="min-h-screen   bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen   bg-gray-100 py-6 pt-10 px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md"
           >
-            <h1 className="text-3xl font-bold mb-8 text-center">Terms of Use</h1>
+            <h1 className="md:text-3xl font-bold mb-8 text-center">Terms of Use</h1>
             {terms.map((term, index) => (
               <motion.div
                 key={index}
@@ -58,8 +58,8 @@ const TermsOfUse = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="mb-6"
               >
-                <h2 className="text-2xl font-semibold mb-2">{term.title}</h2>
-                <p className="text-gray-700">{term.content}</p>
+                <h2 className="md:text-xl font-semibold mb-2">{term.title}</h2>
+                <p className="text-gray-700 md:text-base xs:text-xs">{term.content}</p>
               </motion.div>
             ))}
           </motion.div>
