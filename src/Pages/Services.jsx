@@ -3,8 +3,7 @@ import React,
 import NavScreen      from '../components/NavScreen';
 import Footer         from '../components/Footer';
 import ContactUs      from '../components/ContactUs';
-import servicespng    from '/services.png';
-import ChatMarketing  from "/ChatMarketing.png";
+import servicespng    from '/services.webp';
 import { FaChevronCircleRight } from "react-icons/fa";
 import { useState }   from 'react';
 import MeshLeftSide   from "/MeshLeftSide.png";
