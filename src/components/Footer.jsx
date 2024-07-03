@@ -25,7 +25,9 @@ const Footer = () => {
 
             <div className='   flex md:hidden  gap-x-4'>
 
-              <FaTwitter className=' cursor-pointer transition-all duration-500 text-black text-3xl ' />
+            <a href="https://x.com/Aashikpaalyam" target="_blank" rel="noopener noreferrer">
+            <FaTwitter className=' cursor-pointer transition-all duration-500 text-black text-3xl ' />
+</a>
 
               <a href='https://www.instagram.com/mumblingmonkeysmedia/' target='blank'>
                 <FaInstagram className='cursor-pointer transition-all duration-500 text-black text-3xl ' />
@@ -45,8 +47,9 @@ const Footer = () => {
 
 
           <div className='w-full mt-8 md:mt-0  md:flex  hidden  gap-x-4'>
-
+<a href="https://x.com/Aashikpaalyam" target="_blank" rel="noopener noreferrer">
             <FaTwitter className=' cursor-pointer transition-all duration-500 text-black text-3xl ' />
+</a>
 
             <a href='https://www.instagram.com/mumblingmonkeysmedia/' target='blank'>
               <FaInstagram className='cursor-pointer transition-all duration-500 text-black text-3xl ' />

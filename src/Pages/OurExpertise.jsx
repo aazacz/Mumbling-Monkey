@@ -206,15 +206,15 @@ const OurExpertise = () => {
                                                 <div className=' mt-2 grid grid-flow-col md:grid-rows-4 grid-rows-4    gap-2'>
                                                     {val.services.map((value, index) => {
                                                         return (
-                                                            <div key={index} className='flex  xs:items   w-full h-max xs:gap-x-1  gap-x-2'>
-                                                                <div className='w-[20px] xs:w-[13px] py-1 '>
+                                                            <div key={index} className='flex   w-full h-max xs:gap-x-1  gap-x-2'>
+                                                                <div className='w-[20px] xs:w-[13px] xs:py-1 md:py-1  '>
 
-                                                                    <MdCheckCircle className='md:text-[22px] xs:text-[10px]  text-[#292930]' />
+                                                                    <MdCheckCircle className='md:text-[19px] xs:text-[10px]  text-[#292930]' />
                                                                 </div>
-<div className='h-max  p-0'>
+                                                                <div className='h-max  md:pl-2 p-0'>
 
                                                                 <h1 className='font-montserrat xs:text-[8px]   text-xs md:text-base  text-gray-600'>{value} </h1>
-</div>
+                                                                </div>
                                                             </div>
                                                         )
                                                     })}

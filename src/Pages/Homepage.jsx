@@ -184,11 +184,6 @@ const Homepage = () => {
 
 
 
-  // const ref = useRef(null);
-
-  // const handleClick = () => {
-  //   ref.current?.scrollIntoView({ behavior: 'smooth' });
-  // };
 
   const { pathname } = useLocation();
 
