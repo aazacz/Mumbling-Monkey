@@ -31,12 +31,12 @@ const privacyPolicies = [
 const PrivacyPolicy = () => {
     return (
         <>
-            <div className=" bg-gray-100  py-12 px-4 sm:px-6 lg:px-8">
+            <div className=" h-full bg-gray-100  md:py-12  px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md"
+                    className="h-full max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md"
                 >
                     <h1 className="text-3xl font-bold mb-8 text-center">Privacy Policy</h1>
                     {privacyPolicies.map((policy, index) => (

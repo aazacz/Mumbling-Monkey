@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import Footer from '../components/Footer'
-import { IoLocationSharp } from 'react-icons/io5';
+import { IoCloseCircleOutline, IoLocationSharp } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TermsOfUse from '../components/TermsOfUse';
 import { motion, AnimatePresence } from "framer-motion";
 import PrivacyPolicy from '../components/PrivacyPolicy';
-
+import "./ContactUsPage.css"
 
 
 const ContactUsPage = () => {
@@ -142,7 +142,7 @@ const ContactUsPage = () => {
                                     <div className='flex py-3 items-center'>
                                         <input
                                             type="checkbox"
-                                            className='outline-none text-slate-900 w-7 h-7 rounded-full'
+                                            className='outline-none cursor-pointer text-slate-900 w-7 h-7 rounded-full'
                                             name=""
                                             id=""
                                             checked={isChecked}
@@ -201,15 +201,16 @@ const Modal = ({ isOpen, onClose, children }) => {
     return (
         <AnimatePresence >
             <motion.div onClick={onClose}
-                className=" absolute  w-full h-max py-16  bg-black bg-opacity-70 flex justify-center items-center z-50"
+                className=" absolute scrollbar  w-full h-max py-16   bg-black bg-opacity-70 flex justify-center items-center z-50"
                 initial={{ y: "100px", opacity: 0, width: 0 }}
                 animate={{ y: "0", opacity: 1, width: "100%" }}
                 exit={{ opacity: 0 }}
             >
-                <motion.div className="bg-gray-900 p-6 rounded-lg "
+                <motion.div className=" w-2/4 h-screen relative rounded-3xl overflow-y-scroll    scrollbar "
                     initial={{ scale: 0.9 }}
                     animate={{ scale: 1 }}
                     exit={{ scale: 0.9 }}  >
+<IoCloseCircleOutline onClick={onClose} className='cursor-pointer text-2xl text-black absolute  right-3 top-3 scrollbar'  />
 
                     {children}
 

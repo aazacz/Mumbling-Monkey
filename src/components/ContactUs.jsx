@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IoLocationSharp } from 'react-icons/io5';
+import { IoCloseCircleOutline, IoLocationSharp } from 'react-icons/io5';
 
 import { IoIosCall } from 'react-icons/io';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import TermsOfUse from './TermsOfUse';
 import { motion, AnimatePresence } from "framer-motion";
 import PrivacyPolicy from './PrivacyPolicy';
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 
 const ContactUs = () => {
@@ -73,7 +74,7 @@ const ContactUs = () => {
 
         } else {
             setErrors(validationErrors);
-            toast.warn(Object.values(validationErrors).join(' '), {
+            toast.warn('Please fill all required fields ', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -137,17 +138,17 @@ const ContactUs = () => {
                                 ></textarea>
                                 {errors.message && <p className='text-red-500 text-sm'>{errors.message}</p>}
                             </div>
-                            <div className='flex flex-row mt-4 items-center justify-between'>
+                            <div className='flex flex-row gap-x- mt-4 items-center justify-between'>
                                 <div className='flex py-3 items-center'>
                                 <input 
                                     type="checkbox" 
-                                    className='outline-none text-slate-900 w-7 h-7 rounded-full' 
+                                    className='outline-none cursor-pointer text-slate-900 w-5 h-5 rounded-full' 
                                     name="" 
                                     id="" 
                                     checked={isChecked}
                                     onChange={(e) => setIsChecked(e.target.checked)}
                                 />
-                                    <p className='pl-4 text-xs md:text-base'>I agree with the <span className='underline cursor-pointer'  onClick={() => openModal(<TermsOfUse/>)}>Term Of Uses</span> and <span className='underline cursor-pointer' onClick={() => openModal(<PrivacyPolicy/>)}> Privacy Policy </span></p>
+                                    <p className='pl-2 text-xs md:text-sm'>I agree with the <span className='underline cursor-pointer'  onClick={() => openModal(<TermsOfUse/>)}>Term Of Uses</span> and <span className='underline cursor-pointer' onClick={() => openModal(<PrivacyPolicy/>)}> Privacy Policy </span></p>
                                 </div>
                                 <button type='submit' className='md:px-11 px-6 text-sm text-white md:py-3 p-2 rounded-xl bg-black'>Send</button>
                             </div>
@@ -184,32 +185,27 @@ export default ContactUs;
 
 
 
-
 const Modal = ({ isOpen, onClose, children }) => {
     if (!isOpen) return null;
-  
+
     return (
-      <AnimatePresence>
-        <motion.div  onClick={onClose}
-          className=" absolute  w-full h-max bg-black bg-opacity-70 flex justify-center items-center z-50"
-          initial={{ y:"100px", opacity: 0,width:0 }}
-          animate={{ y:"0",opacity: 1,width:"100%" }}
-          exit={{ opacity: 0 }}
-        >
-          <motion.div 
-            className="bg-gray-900 p-6 rounded-lg "
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.9 }}
-          >
-            
-{children}
+        <AnimatePresence >
+            <motion.div onClick={onClose}
+                className=" absolute   w-full h-max py-16   bg-black bg-opacity-70 flex justify-center items-center z-50"
+                initial={{ y: "100px", opacity: 0, width: 0 }}
+                animate={{ y: "0", opacity: 1, width: "100%" }}
+                exit={{ opacity: 0 }}
+            >
+                <motion.div className=" w-2/4 h-screen relative rounded-3xl overflow-y-auto     "
+                    initial={{ scale: 0.9 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0.9 }}  >
+<AiFillCloseCircle  onClick={onClose} className='cursor-pointer text-2xl text-gray-500 absolute  right-3 top-3 '  />
 
+                    {children}
 
-
-
-          </motion.div>
-        </motion.div>
-      </AnimatePresence>
+                </motion.div>
+            </motion.div>
+        </AnimatePresence>
     );
-  };
+};
