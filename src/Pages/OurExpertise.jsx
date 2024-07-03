@@ -182,7 +182,7 @@ const OurExpertise = () => {
 
                     {/* Carousel Slider */}
                     <div className="md:h-[600px] mt-8 w-full   ">
-                        <Carousel className='max-h-[100%]  custom-carousel' leftControl={<Left />} indicators={true} rightControl={<Right />}>
+                        <Carousel className='max-h-[100%]  custom-carousel' pauseOnHover leftControl={<Left />} indicators={true} rightControl={<Right />}>
                             {servicesData.map((val, index) => {
                                 return (
                                     <div key={index} className={`rounded-xl w-full items-center md:h-[500px] md:p-10 relative flex flex-col md:flex-row ${val.bg} gap-x-8`}>
@@ -191,7 +191,7 @@ const OurExpertise = () => {
                                         <div className="w-[85%] md:w-1/3 z-20 rounded-2xl h-[200px] mt-10 md:mt-0  md:h-full bg-[url('/expertise/CardPhoto1.png')] bg-cover" > </div>
 
                                         {/* right side */}
-                                        <div className='w-full p-6 md:p-0 md:w-2/3 md:h-full  h-[500px]  flex flex-col mt-4 md:mt-0'>
+                                        <div className='w-full p-6 md:p-0 md:w-2/3 md:h-full  h-[500px] py-2 flex flex-col mt-4 md:mt-0'>
 
                                             <div className='w-full h-[40px] pb-2'>
                                                 <button className='text-white w-max text-sm font-montserrat font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'>{val.title}</button>
@@ -203,16 +203,18 @@ const OurExpertise = () => {
                                             <div className='w-full h-max flex flex-col  justify-between '>
                                                 <h1 className='font-montserrat font-medium text-justify md:text-left text-[12px] md:text-base'>{val.description}</h1>
                                                
-                                                <div className=' mt-2 grid grid-flow-col md:grid-rows-4 grid-rows-5    gap-2'>
+                                                <div className=' mt-2 grid grid-flow-col md:grid-rows-4 grid-rows-4    gap-2'>
                                                     {val.services.map((value, index) => {
                                                         return (
-                                                            <div key={index} className='flex items-start w-full h-max   gap-x-2'>
-                                                                <div className='w-[20px] '>
+                                                            <div key={index} className='flex  xs:items   w-full h-max xs:gap-x-1  gap-x-2'>
+                                                                <div className='w-[20px] xs:w-[13px] py-1 '>
 
-                                                                    <MdCheckCircle className='md:text-[22px]  text-[#292930]' />
+                                                                    <MdCheckCircle className='md:text-[22px] xs:text-[10px]  text-[#292930]' />
                                                                 </div>
+<div className='h-max  p-0'>
 
-                                                                <h1 className='font-montserrat xs:text-[8px] text-xs md:text-base  text-gray-600'>{value} </h1>
+                                                                <h1 className='font-montserrat xs:text-[8px]   text-xs md:text-base  text-gray-600'>{value} </h1>
+</div>
                                                             </div>
                                                         )
                                                     })}
