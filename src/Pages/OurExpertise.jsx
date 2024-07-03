@@ -2,7 +2,7 @@ import React, { useState }          from 'react';
 import NavScreen                    from '../components/NavScreen';
 import Footer                       from '../components/Footer';
 import ContactUs                    from '../components/ContactUs';
-import expertiseNavscreen           from '/expertiseNavscreen.png';
+import expertiseNavscreen           from '/expertiseNavscreen.webp';
 import gearIcon                     from '/expertise/Icon.png';
 import Accountability               from '/expertise/Accountability.png';
 import Commitment                   from '/expertise/Commitment.png';
@@ -157,7 +157,6 @@ const OurExpertise = () => {
                 {/* Section 1 Starts */}
                 <div className='w-full  md:px-20 h-auto pt-16 px-4 '>
                     <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'>OUR VALUES</button>
-                    <p className='text-slate-700 font-semibold font-montserrat mt-4'>Mumbling Monkeys specializes in Influencer marketing and Public Relations. With our expertise in these fields, we help you and your brand increase visibility and reputation in the market.</p>
                     <div className='w-full h-auto py-6 flex flex-wrap gap-5'>
                         {Divs.map((val, index) => (
                             <div
