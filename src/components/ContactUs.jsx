@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { IoCloseCircleOutline, IoLocationSharp } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
@@ -8,19 +8,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import PrivacyPolicy from './PrivacyPolicy';
 import { AiFillCloseCircle } from 'react-icons/ai';
 // import "./ContactUsPage.css"
+import emailjs from '@emailjs/browser'
+
 
 
 const ContactUs = () => {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
     const [errors, setErrors] = useState({});
     const [isChecked, setIsChecked] = useState(false);
-    
+    const [details, setdetails] = useState({name:"",email:"",message:""})
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
-    
+
+    const form = useRef();
     
     const openModal = (content) => {
         setModalContent(content);
@@ -33,15 +34,15 @@ const ContactUs = () => {
     
 
 
-    const validate = () => {
+      const validate = () => {
         const newErrors = {};
-        if (name.length < 3) {
+        if (details.name.length < 3) {
             newErrors.name = "Name should be at least 3 characters long.";
         }
-        if (message.length < 5) {
+        if (details.message.length < 5) {
             newErrors.message = "Message should be at least 5 characters long.";
         }
-        if (!email) {
+        if (!details.email) {
             newErrors.email = "Email is required.";
         }
         if (!isChecked) {
@@ -49,41 +50,67 @@ const ContactUs = () => {
         }
         return newErrors;
     };
-    
-
+   
     const handleSubmit = (e) => {
         e.preventDefault();
-        setErrors({})
+        setErrors({});
         const validationErrors = validate();
         if (Object.keys(validationErrors).length === 0) {
-            toast.success('Email Sent ✔', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
-            });
-            setName("")
-            setEmail("")
-            setMessage("")
-
+            const promise = emailjs
+                .sendForm(
+                    'service_fpydk4i',
+                    'template_hnudd78',
+                    form.current,
+                    'spLIdiG0j4H2WLyZR',
+                )
+                .then(
+                    (result) => {
+                        form.current.reset();
+                        setdetails({name:"", email:"", message:""});
+                        toast.success('Successfully Sent', {
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                            transition: Bounce,
+                        });
+                        return result.text;
+                    },
+                    (error) => {
+                        console.log(error.text);
+                        toast.error('Failed to send message.', {
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                            transition: Bounce,
+                        });
+                        throw error.text;
+                    }
+                );
 
         } else {
             setErrors(validationErrors);
-            toast.warn('Please fill all required fields ', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
+            Object.values(validationErrors).forEach(error => {
+                toast.warn(error, {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                });
             });
         }
     };
@@ -102,45 +129,50 @@ const ContactUs = () => {
 
                 <div className='w-full h-auto flex flex-col md:flex-row md:gap-9'>
                     <div className='md:w-1/2 w-full px-4 md:px-0'>
-                        <form onSubmit={handleSubmit}>
-                            <div className='flex flex-col mt-4'>
-                                <label className='text-gray-700' htmlFor="name">YOUR NAME</label>
-                                <input
-                                    className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
-                                    type="text"
-                                    id='name'
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                />
-                                {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>}
-                            </div>
-                            <div className='flex flex-col mt-4'>
-                                <label className='text-gray-700' htmlFor="email">EMAIL</label>
-                                <input
-                                    className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
-                                    type="email"
-                                    id='email'
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                                {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
-                            </div>
-                            <div className='flex flex-col mt-4'>
-                                <label className='text-gray-700' htmlFor="message">MESSAGE</label>
-                                <textarea
-                                    className='w-full placeholder:pl-3 placeholder:pt-3 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
-                                    placeholder='Your Message Goes Here'
-                                    id='message'
-                                    cols="30"
-                                    rows="5"
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                ></textarea>
-                                {errors.message && <p className='text-red-500 text-sm'>{errors.message}</p>}
-                            </div>
-                            <div className='flex flex-row gap-x- mt-4 items-center justify-between'>
-                                <div className='flex py-3 items-center'>
-                                <input 
+                    <form ref={form} onSubmit={handleSubmit}>
+                                <div className='flex flex-col mt-4'>
+                                    <label className='text-gray-700' htmlFor="name">YOUR NAME</label>
+                                    <input
+                                        className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
+                                        type="text"
+                                        id='name'
+                                        name="user_name"
+                                        value={details.name}
+                                        onChange={(e)=>setdetails({...details,name:e.target.value})}
+                                    />
+                                    {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>}
+                                </div>
+                                <div className='flex flex-col mt-4'>
+                                    <label className='text-gray-700' htmlFor="email">EMAIL</label>
+                                    <input
+                                        className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
+                                        type="email"
+                                        name="user_email"
+                                        id='email'
+                                        value={details.email}
+                                        onChange={(e)=>setdetails({...details,email:e.target.value})}
+                                    />
+                                    {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
+                                </div>
+                                <div className='flex flex-col mt-4'>
+                                    <label className='text-gray-700' htmlFor="message">MESSAGE</label>
+                                    <textarea
+                                        className='w-full placeholder:pl-3 placeholder:pt-3 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
+                                        placeholder='Your Message Goes Here'
+                                        id='message'
+                                        name="message"
+                                        cols="30"
+                                        rows="5"
+                                        value={details.message}
+                                        onChange={(e) =>{
+                                            setdetails({...details, message : e.target.value })
+                                          }}
+                                    ></textarea>
+                                    {errors.message && <p className='text-red-500 text-sm'>{errors.message}</p>}
+                                </div>
+                                <div className='flex flex-row mt-4 items-center justify-between'>
+                                    <div className='flex py-3 items-center'>
+                                    <input 
                                     type="checkbox" 
                                     className='outline-none cursor-pointer text-slate-900 w-5 h-5 rounded-full' 
                                     name="" 
@@ -149,10 +181,10 @@ const ContactUs = () => {
                                     onChange={(e) => setIsChecked(e.target.checked)}
                                 />
                                     <p className='pl-2 text-xs md:text-sm'>I agree with the <span className='underline cursor-pointer'  onClick={() => openModal(<TermsOfUse/>)}>Term Of Uses</span> and <span className='underline cursor-pointer' onClick={() => openModal(<PrivacyPolicy/>)}> Privacy Policy </span></p>
+                                    </div>
+                                    <button type='submit' className='md:px-11 px-6 text-sm text-white md:py-3 p-2 rounded-xl bg-black'>Send</button>
                                 </div>
-                                <button type='submit' className='md:px-11 px-6 text-sm text-white md:py-3 p-2 rounded-xl bg-black'>Send</button>
-                            </div>
-                        </form>
+                            </form>
                     </div>
                     <div className='md:w-1/2 w-full flex flex-col items-center md:items-end py-4 md:py-0 px-6 pt-6 md:pt-0 rounded-xl bg-gray-200 justify-center'>
                         <iframe

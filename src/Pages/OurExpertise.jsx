@@ -106,7 +106,7 @@ const OurExpertise = () => {
         
         {
             title: "Celebrity Management",
-            heading:"Building Trust, Driving Growth with Celebrity",
+            heading:"Building Trust, Driving Growth with Celebrities",
             description: `Effective celebrity management can significantly amplify brand visibility and resonate with target audiences. Our expertise lies in forging strategic alliances with influential personalities to drive impactful marketing campaigns.`,
             services: [
                 "Strategic Selection: Careful selection of celebrities aligned with your brand values and audience demographics.",

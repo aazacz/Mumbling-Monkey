@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logo from "/Logo.png"
+import logo1 from "/LogoWhited.png"
 import sideimg from "/Frame_29.png"
 import burger from "/burger.png"
 import { motion, AnimatePresence } from "framer-motion"
@@ -102,7 +103,8 @@ const Navbar = () => {
                         className={`absolute z-30 top-0 py-36 w-full h-screen md:px-64 bg-[#7d8a91] flex flex-col  items-center  transition-all duration-500 `} >
 
 <Link to={"/"}  onClick={() => setShow(false)} >
-                        <img src={logo} width={90} alt="" />
+
+                        <img src={logo1} width={90} alt="" />
 </Link>
 
 

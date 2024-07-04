@@ -134,7 +134,7 @@ const AboutUs = () => {
                     viewport={{ amount: 0.5, once: true }}
                 >
                     <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'> ABOUT COMPANY</button>
-                    <h1 className='font-Cabin text-4xl pt-4'>Mumbling monkey</h1>
+                    <h1 className='font-Cabin text-4xl pt-4'>Mumbling Monkeys Media</h1>
                     <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your one-stop destination for all your digital marketing needs!</p>
                     {Data3.map((value, index) => (
                         <div key={index} className='flex w-full h-auto py-3 items-start gap-x-3'>
@@ -226,8 +226,8 @@ const AboutUs = () => {
             {/* Section 3 */}
             <div className='md:w-full  w-[100%] h-auto pt-12 py-6 md:px-20 flex flex-col'>
                 <div className='mb-6 px-4'>
-                    <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'> TEAM</button>
-                    <h1 className='font-Cabin text-4xl pt-4'>Meet Our Great Team</h1>
+                    {/* <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'> TEAM</button> */}
+                    <h1 className='font-Cabin text-4xl pt-4'>Strength Of Our Great Team</h1>
                     <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your trusted digital marketing agency.</p>
                 </div>
                 <div className='w-full flex flex-wrap justify-center  md:justify-between  gap-y-6 md:gap-y-0'>
@@ -270,9 +270,9 @@ const AboutUs = () => {
                                     ))}
                             </div>
 
-                            <div className='flex-1 h-full grid grid-flow-row justify-center items-center'>
+                            <div className='flex-1 h-full grid  grid-flow-row justify-center items-center'>
                                 {rightData1.map((val, index) => (
-                                    <div key={index}>
+                                    <div key={index} className='pr-1' >
                                         <h1 className='font-montserrat text-lg font-semibold pb-2'>{val.title}</h1>
                                         <h1 className='font-montserrat'>{val.description}</h1>
                                     </div>
@@ -293,7 +293,7 @@ const AboutUs = () => {
                             </div>
                             <div className='flex-1 h-full grid grid-flow-row justify-center items-center'>
                                 {rightData2.map((val, index) => (
-                                    <div key={index}>
+                                    <div key={index} className='pr-2' >
                                         <h1 className='font-montserrat text-lg font-semibold pb-2'>{val.title}</h1>
                                         <h1 className='font-montserrat'>{val.description}</h1>
                                     </div>

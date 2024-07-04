@@ -11,6 +11,8 @@ import { PiPulseBold } from 'react-icons/pi';
 import Modal          from '../components/Modal';
 import { Link }       from 'react-router-dom';
 import { useLocation }from 'react-router-dom'
+import horizontal1      from "/horizontal1.png"
+import horizontal2      from "/horizontal2.png"
 import Frame_28H      from "/Frame_28H.png"
 import { motion }     from "framer-motion"
 import InfluencerMarketing from "/Services/Influencer Marketing.svg"
@@ -59,9 +61,9 @@ const Services = (Data) => {
 
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [pathname])
 
 
 
@@ -245,15 +247,15 @@ const Services = (Data) => {
           </div>
         </div>
 
-        <div className='w-full overflow-x-hidden'>
+        <div className='w-full mt-5 overflow-x-hidden'>
 
           <motion.div className='  flex  opacity-40 md:left-0  ' variants={marqueeVariants} animate="animate"   >
-            <img className='w-[100%]  md:w-full h-20 ' src={Frame_28H} alt="" />
-            <img className='w-[100%]  md:w-full h-20 ' src={Frame_28H} alt="" />
-            <img className='w-[100%]  md:w-full h-20 ' src={Frame_28H} alt="" />
-            <img className='w-[100%]  md:w-full h-8 block md:hidden' src={Frame_28H} alt="" />
-            <img className='w-[100%]  md:w-full h-8 block md:hidden' src={Frame_28H} alt="" />
-            <img className='w-[100%]  md:w-full h-8 block md:hidden' src={Frame_28H} alt="" />
+            <img className='w-[100%]  md:w-full h-11 xs:hidden md:block' src={horizontal1} alt="" />
+            <img className='w-[100%]  md:w-full h-11 xs:hidden md:block' src={horizontal2} alt="" />
+            <img className='w-[100%]  md:w-full h-11 xs:hidden md:block' src={horizontal1} alt="" />
+            <img className='w-[100%]  md:w-full h-4 block md:hidden' src={horizontal1} alt="" />
+            <img className='w-[100%]  md:w-full h-4 block md:hidden' src={horizontal1} alt="" />
+            <img className='w-[100%]  md:w-full h-4 block md:hidden' src={horizontal1} alt="" />
           </motion.div>
         </div>
 

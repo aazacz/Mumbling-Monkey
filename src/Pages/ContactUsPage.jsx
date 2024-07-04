@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState,useRef } from 'react'
 import Footer from '../components/Footer'
-import { IoCloseCircleOutline, IoLocationSharp } from 'react-icons/io5';
+import {  IoLocationSharp } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,22 +9,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import PrivacyPolicy from '../components/PrivacyPolicy';
 import "./ContactUsPage.css"
 import { AiFillCloseCircle } from 'react-icons/ai';
-
+import emailjs from '@emailjs/browser'
 
 const ContactUsPage = () => {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+   
     const [errors, setErrors] = useState({});
     const [isChecked, setIsChecked] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
+    const [details, setdetails] = useState({name:"",email:"",message:""})
 
     const openModal = (content) => {
         setModalContent(content);
         setIsModalOpen(true);
     };
+
+    const form = useRef();
 
     const closeModal = () => {
         setIsModalOpen(false);
@@ -34,13 +35,13 @@ const ContactUsPage = () => {
 
     const validate = () => {
         const newErrors = {};
-        if (name.length < 3) {
+        if (details.name.length < 3) {
             newErrors.name = "Name should be at least 3 characters long.";
         }
-        if (message.length < 5) {
+        if (details.message.length < 5) {
             newErrors.message = "Message should be at least 5 characters long.";
         }
-        if (!email) {
+        if (!details.email) {
             newErrors.email = "Email is required.";
         }
         if (!isChecked) {
@@ -52,37 +53,64 @@ const ContactUsPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setErrors({})
+        setErrors({});
         const validationErrors = validate();
         if (Object.keys(validationErrors).length === 0) {
-            toast.success('Email Sent ✔', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
-            });
-            setName("")
-            setEmail("")
-            setMessage("")
-
+            const promise = emailjs
+                .sendForm(
+                    'service_fpydk4i',
+                    'template_hnudd78',
+                    form.current,
+                    'spLIdiG0j4H2WLyZR',
+                )
+                .then(
+                    (result) => {
+                        form.current.reset();
+                        setdetails({name:"", email:"", message:""});
+                        toast.success('Successfully Sent', {
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                            transition: Bounce,
+                        });
+                        return result.text;
+                    },
+                    (error) => {
+                        console.log(error.text);
+                        toast.error('Failed to send message.', {
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                            transition: Bounce,
+                        });
+                        throw error.text;
+                    }
+                );
 
         } else {
             setErrors(validationErrors);
-            toast.warn('Please fill all required fields ', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                transition: Bounce,
+            Object.values(validationErrors).forEach(error => {
+                toast.warn(error, {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                });
             });
         }
     };
@@ -103,15 +131,17 @@ const ContactUsPage = () => {
                     </div>
                     <div className='w-full px-0 h-auto flex md:flex-row flex-col-reverse md:gap-9'>
                         <div className='md:w-1/2'>
-                            <form onSubmit={handleSubmit}>
+                        
+                            <form ref={form} onSubmit={handleSubmit}>
                                 <div className='flex flex-col mt-4'>
                                     <label className='text-gray-700' htmlFor="name">YOUR NAME</label>
                                     <input
                                         className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
                                         type="text"
                                         id='name'
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
+                                        name="user_name"
+                                        value={details.name}
+                                        onChange={(e)=>setdetails({...details,name:e.target.value})}
                                     />
                                     {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>}
                                 </div>
@@ -120,9 +150,10 @@ const ContactUsPage = () => {
                                     <input
                                         className='w-full h-11 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
                                         type="email"
+                                        name="user_email"
                                         id='email'
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
+                                        value={details.email}
+                                        onChange={(e)=>setdetails({...details,email:e.target.value})}
                                     />
                                     {errors.email && <p className='text-red-500 text-sm'>{errors.email}</p>}
                                 </div>
@@ -132,10 +163,13 @@ const ContactUsPage = () => {
                                         className='w-full placeholder:pl-3 placeholder:pt-3 rounded-xl mt-3 border-[1px] outline-2 border-gray-500'
                                         placeholder='Your Message Goes Here'
                                         id='message'
+                                        name="message"
                                         cols="30"
                                         rows="5"
-                                        value={message}
-                                        onChange={(e) => setMessage(e.target.value)}
+                                        value={details.message}
+                                        onChange={(e) =>{
+                                            setdetails({...details, message : e.target.value })
+                                          }}
                                     ></textarea>
                                     {errors.message && <p className='text-red-500 text-sm'>{errors.message}</p>}
                                 </div>

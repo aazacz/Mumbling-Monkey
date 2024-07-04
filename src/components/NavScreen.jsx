@@ -1,5 +1,7 @@
 import React from 'react';
-import sideimg from "/Frame_29.png";
+import sideimg from "/Frame_29.png"; 
+import vertical1 from "/verticlewhite.png";
+import vertical2 from "/verticlewhite2.png";
 import { motion } from "framer-motion";
 
 const NavScreen = ({ bg, Data }) => {
@@ -40,16 +42,26 @@ const NavScreen = ({ bg, Data }) => {
                     </div>
                 </div>
 
-                <motion.div className='absolute opacity-40 md:left-0 left-0' variants={marqueeVariants} animate="animate">
-                    <img className='w-1/2 md:w-full' src={sideimg} alt="" />
-                    <img className='w-1/2 md:w-full' src={sideimg} alt="" />
-                    <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+
+                <motion.div className='absolute flex flex-col md:left-0 left-0' variants={marqueeVariants} animate="animate">
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
                 </motion.div>
 
-                <motion.div className='absolute flex flex-col items-end md:items-start opacity-40 md:right-0 right-0' variants={marqueeVariants} animate="animate">
-                    <img className='w-1/2 md:w-full' src={sideimg} alt="" />
-                    <img className='w-1/2 md:w-full' src={sideimg} alt="" />
-                    <img className='w-1/2 md:w-full' src={sideimg} alt="" />
+                <motion.div className='absolute flex flex-col   md:right-0  right-0' variants={marqueeVariants} animate="animate">
+                    <img className=' w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className=' w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className=' w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className=' w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className=' w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className=' w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className=' w-[35px] md:w-[50px]' src={vertical2} alt="" />
                 </motion.div>
             </div>
         </>

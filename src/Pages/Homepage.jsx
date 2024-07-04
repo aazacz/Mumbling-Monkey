@@ -13,18 +13,36 @@ import { Link, useLocation } from 'react-router-dom'
 import sideimg from "/Frame_28.png"
 import { IoCheckmarkCircleOutline } from 'react-icons/io5'
 
+import Acustomizeddigitalmarketingstrategy2 from "/Homepage/A customized digital marketing strategy 2.jpg";
+import Acustomizeddigitalmarketingstrategy from "/Homepage/A customized digital marketing strategy.jpeg.jpg";
+import ClientFirstApproach1 from "/Homepage/Client-First Approach 2.jpg";
+import ClientFirstApproach from "/Homepage/Client-First Approach.jpg";
+import customerservice from "/Homepage/customer-service-handsome-guy-with-headset-laptop-suit-talking-videocall-computer.jpg";
+import CuttingEdgeStrategies from "/Homepage/Cutting-Edge Strategies.jpg";
+import Expertexecution from "/Homepage/Expert execution.jpg";
+import FullServicePortfolio from "/Homepage/Full-Service Portfolio.jpg";
+import MeasurableCoolness1 from "/Homepage/Measurable Coolness 2.png";
+import MeasurableCoolness from "/Homepage/Measurable Coolness.jpg";
+import Regularreporting1 from "/Homepage/Regular reporting.jpg";
+import Regularreporting from "/Homepage/Regular reporting1.jpg";
+import YouthfulTeam1 from "/Homepage/Youthful Team 2.jpg";
+import YouthfulTeam from "/Homepage/Youthful Team.jpg";
+
+
+import vertical1 from "/vertical1.png";
+import vertical2 from "/vertical2.png";
 
 const Homepage = () => {
 
   const marqueeVariants = {
     animate: {
-      y: [-2000, 0, -2000],
+      y: [-1000, 0, -1000],
       transition: {
         y: {
           repeat: Infinity,
           repeatType: "loop",
           ease: [.39, -0.23, .4, 1.4],
-          duration: 20
+          duration: 10
         },
       },
     },
@@ -34,41 +52,45 @@ const Homepage = () => {
     heading: "About Us",
     Description: "Creative Services For Boost Your Business Growth"
   }
+
+
+
+
   const data = [
     {
-      heading: "Cutting-Edge Strategies", image1: "Rectangle", image2: "Rectangle2",
+      heading: "Cutting-Edge Strategies", img1: customerservice, img2:CuttingEdgeStrategies,
       description: `We thrive on staying ahead of the curve and crafting strategies that ride the wave of the latest trends and technologies, ensuring your brand is always in vogue.`
     },
     {
-      heading: "Full-Service Portfolio", image1: "Rectangle", image2: "Rectangle2",
+      heading: "Full-Service Portfolio", img2:Expertexecution, img1:FullServicePortfolio,
       description: `From Influencer Marketing, Public Relations, and SEO to Video Production, Content Marketing, and Voice Search Optimization, our services are as trendy and diverse as the digital landscape itself.`
     },
     {
-      heading: "Youthful Team", image1: "Rectangle", image2: "Rectangle2",
+      heading: "Youthful Team",img1: YouthfulTeam, img2: YouthfulTeam1 ,
       description: `Our team is made up of young, creative minds who bring fresh perspectives to every project. We're on the same wavelength as the trends and tastes of today's audience.`
     },
     {
-      heading: "Client-First Approach", image1: "Rectangle", image2: "Rectangle2",
+      heading: "Client-First Approach", img1: ClientFirstApproach, img2: ClientFirstApproach1,
       description: `Fuelled by extensive market research and creative expertise, we partner with companies to optimize their position and
                       elevate them above the noise. Whether it’s their brand,their products or their people, the journey to category leadership starts with Tomorrow People.`},
     {
-      heading: "Measurable Coolness", image1: "Rectangle", image2: "Rectangle2",
+      heading: "Measurable Coolness", img1: Rectangle, img2: MeasurableCoolness1,
       description: `Our campaigns don't just look cool; they deliver measurable results. We're all about the ROI.`
     },
     {
-      heading: "A customized digital marketing strategy", image1: "Rectangle", image2: "Rectangle2",
+      heading: "A customized digital marketing strategy", img1: Acustomizeddigitalmarketingstrategy, img2: Acustomizeddigitalmarketingstrategy2 ,
       description: `We take the time to get to know your
             business and your goals, and create a customized plan that's tailored to your needs and budget.`},
     {
-      heading: "Expert execution", image1: "Rectangle", image2: "Rectangle2",
+      heading: "Expert execution", img1: Expertexecution, img2: Rectangle2,
       description: `Our team of experienced marketers, designers, and developers will work together to execute your digital marketing plan flawlessly, using the latest tools and techniques to get the best results`
     },
     {
-      heading: "Regular reporting", image1: "Rectangle", image2: "Rectangle2",
+      heading: "Regular reporting",img1: Regularreporting, img2: Regularreporting1,
       description: `We provide regular reports on the progress of your digital marketing campaigns, so you can see the results for yourself and make informed decisions about future strategies.`
     },
     {
-      heading: "Exceptional customer service", image1: "Rectangle", image2: "Rectangle2",
+      heading: "Exceptional customer service", img1: customerservice, img2: Rectangle2,
       description: `We pride ourselves on providing exceptional customer service to all of our clients. We're always here to answer your questions and provide support whenever you need it.`
     },
   ]
@@ -81,6 +103,7 @@ const Homepage = () => {
       colour: "bg-cyan-300",
       textcol: "text-cyan-300",
       dur: 0
+      
     },
     {
       heading: "Public Relations",
@@ -185,9 +208,9 @@ const Homepage = () => {
 
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [pathname])
 
 
   return (
@@ -201,18 +224,27 @@ const Homepage = () => {
           className="md:w-[100%]  overflow-y-hidden relative h-screen  flex flex-col justify-center items-center  ">
 
 
-          <motion.div className='absolute    opacity-40 md:left-0 left-0 ' variants={marqueeVariants} animate="animate"   >
-            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
-            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
-            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
-          </motion.div>
+         
+          <motion.div className='absolute opacity-40 md:left-2 left-0 flex flex-col' variants={marqueeVariants} animate="animate">
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                </motion.div>
 
-          <motion.div className='absolute flex flex-col items-end md:flex-none  opacity-40 md:right-0 right-0' variants={marqueeVariants} animate="animate"   >
-            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
-            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
-            <img className='w-1/2 md:w-full' src={sideimg} alt="" />
-          </motion.div>
-
+                <motion.div className='absolute flex flex-col items-end md:items-start opacity-50 md:right-0 right-0' variants={marqueeVariants} animate="animate">
+                    <img className='w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                    <img className='w-[35px] md:w-[50px]' src={vertical2} alt="" />
+                </motion.div>
 
 
           <img src={logo} className='w-[150px] md:w-[230px] py-8' alt="" />
@@ -221,7 +253,7 @@ const Homepage = () => {
             animate={{ y: 0 }}
             transition={{ type: "spring", duration: 0.8, damping: 10, mass: 1, stiffness: 200 }}>
             <h1 className='text-center font-Cabin font-extrabold md:text-[80px] text-[40px] leading-[40px] md:leading-[70px]'>MUMBLING <br />MONKEYS</h1>
-            <p className=' text-center px-8 md:text-base mt-4 font-semibold font-montserrat'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Needs!</p>
+            <p className=' text-center px-8 md:text-base mt-4 font-semibold font-montserrat'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Marketing Needs!</p>
           </motion.div>
           <Link to={'/services'} className='cursor-pointer rounded-md bg-[#3a3a3a] font-bold text- text-white px-5 py-2 mt-4'>Get Started Today</Link>
         </motion.div>
@@ -229,9 +261,9 @@ const Homepage = () => {
 
 
         {/*#######################################  Section 1 Starts #######################################*/}
-        <div className='md:w-full   w-[100%]   h-auto py-6 md:px-16 px-4 md:flex flex-col  md:flex-row'>
+        <div className='md:w-full   w-[100%]   h-auto pt-6 md:px-16 px-4 md:flex flex-col  md:flex-row'>
 
-          <motion.div className='md:w-3/5 w-full h-full  py-6 md:pr-6'
+          <motion.div className='md:w-3/5 w-full h-full bg-yellow-30  pt-6 md:pr-6'
             initial={{ x: -195, opacity: 0 }}
             whileInView={{ x: 0, opacity: 100 }}
             transition={{ duration: 1 }}
@@ -239,15 +271,59 @@ const Homepage = () => {
 
           >
             <button className='cursor-default text-white text-sm  tracking-widest font-montserrat font-normal  rounded-full bg-[#7c8d97] px-4 py-2'> ABOUT COMPANY</button>
-            <h1 className='font-Cabin text-4xl pt-4'>Mumbling monkey</h1>
+            <h1 className='font-Cabin xs:text-3xl md:text-4xl pt-4'>Mumbling Monkeys Media</h1>
             <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your one-stop destination for all your digital marketing needs!</p>
 
             <div className='flex w-auto h-auto py-3 items'> {/* First Sentence */}
+         
+              <div className='w-[95%]'>
+
+                <p className=''>At Mumbling Monkeys, we're not your run-of-the-mill marketing and media agency; we're a fresh and dynamic force in the digital world, ready to give your brand that cool and contemporary edge. Our services cover a wide spectrum of digital marketing and media solutions, all designed to make your brand shine in the digital limelight. We're not just marketers; we're trendsetters. </p>
+              </div>
+            </div>
+
+
+            <h1 className='font-Cabin xs:text-2xl md:text-2xl font-semibold pt-4'>YOUR DIGITAL MARKETING AGENCY</h1>
+
+           
+
+          </motion.div>
+
+
+          <div className='md:w-2/5 relative h-full flex justify-end pt-6 '>
+
+            <img className=' absolute z-10 top-1 right-0 ' width="180" src={pattern} alt="" />
+
+            <motion.div className='w-[350px] z-20 mt-8 me-16 rounded-lg object-contain bg-slate-50 overflow-hidden '
+              initial={{ x: 0, y: 100, opacity: 0 }}
+              whileInView={{ x: 0, y: 0, opacity: 100 }}
+              transition={{ duration: 1.5 }}
+              viewport={{ amount: 0.5, once: true }}
+            >
+              <motion.img    src={GroupPhoto} className='rounded-lg w-full h-full' alt="" />
+
+            </motion.div>
+
+          </div>
+
+        </div>
+
+
+
+
+  <motion.div 
+   initial={{ x: -195, opacity: 0 }}
+   whileInView={{ x: 0, opacity: 100 }}
+   transition={{ duration: 1 }}
+   viewport={{ amount: 0.2, once: true }}
+  className='md:w-full  w-[100%]  h-max  md:px-16 px-4   bg-green-00 '>
+   <div className='flex w-auto h-auto py-3 items'> {/* First Sentence */}
               <div className='w-[4%]  pr-6 md:pr-3 pt-1'>
                 <IoCheckmarkCircleOutline className='text-green-500 text-lg' />
 
               </div>
-              <div className='w-[95%]'>
+
+                <div className='w-[95%]'>
 
                 <p className=''>Our marketing team at Mumbling Monkeys creates and grows consumer traffic through superior visual content and strategic digital channel management. Our team of 100+ professionals include creators, influencers, advertising writers, savvy digital marketers, programmers, and graphic designers who work collaboratively to increase the visibility of your brand.  </p>
               </div>
@@ -285,31 +361,7 @@ const Homepage = () => {
               </div>
             </div>
 
-
-          </motion.div>
-
-
-          <div className='md:w-2/5 relative h-full flex justify-end py-6 '>
-
-            <img className=' absolute z-10 top-1 right-0 ' width="180" src={pattern} alt="" />
-
-            <motion.div className='w-[350px] z-20 mt-8 me-16 rounded-lg object-contain bg-slate-50 overflow-hidden '
-              initial={{ x: 0, y: 100, opacity: 0 }}
-              whileInView={{ x: 0, y: 0, opacity: 100 }}
-              transition={{ duration: 1.5 }}
-              viewport={{ amount: 0.5, once: true }}
-
-            >
-              <motion.img
-
-                src={GroupPhoto} className='rounded-lg w-full h-full' alt="" />
-
-            </motion.div>
-
-          </div>
-
-        </div>
-
+</motion.div>
 
 
         {/*#######################################  Section 2 Starts #######################################*/}
@@ -317,9 +369,8 @@ const Homepage = () => {
         <div className='md:w-full  w-[90%] h-auto py-6 md:px-20  flex flex-col'>
 
           <div className='mb-6'>
-            <button className='text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1 cursor-default'> TEAM</button>
-            <h1 className='font-Cabin text-4xl pt-4'>Meet Our Great Team</h1>
-            <p className='text-slate-700 font-semibold'>Welcome to Mumbling Monkeys, your trusted digital marketing agency.</p>
+            {/* <h1 className='font-Cabin xs:text-2xl md:text-4xl pt-4'>YOUR DIGITAL MARKETING AGENCY</h1> */}
+            <p className='text-slate-700 md:text-[20px] font-semibold'>When you choose Mumbling Monkeys, you can expect</p>
           </div>
 
 
@@ -328,19 +379,21 @@ const Homepage = () => {
 
             {data.map((value, key) => {
               return (
-                <div key={key} className=' md:h-[300px] h-[250px] hover overflow-hidden  relative group'>
+                <div key={key} className='  md:h-[300px] h-[250px] hover overflow-hidden  relative group'>
+
+<div className='bg-black w-full h-full absolute top-0 z-30 bg-opacity-55 '>
+
+</div>
+                  <img src={value.img1} className='z-20 w-full h-full after:content-[""] after:w-full after:h-full after:bg-red-700 after:absolute after:top-0   absolute top-0  left-0 object-cover group-hover:scale-110 transition-all duration-700 group-hover:opacity-0 group-hover:duration-300 ' alt="" />
+                  <img src={value.img2} className='z-10 w-full h-full  absolute top-0 left-0 object-cover group-hover:scale-110 transition-all duration-700  ' alt="" />
 
 
-                  <img src={Rectangle} className='z-20 w-full h-full absolute top-0  left-0 object-cover group-hover:scale-110 transition-all duration-700 group-hover:opacity-0 group-hover:duration-300 ' alt="" />
-                  <img src={Rectangle2} className='z-10 w-full h-full absolute top-0 left-0 object-cover group-hover:scale-110 transition-all duration-700  ' alt="" />
 
-
-
-                  <div className='w-[80%] h-[40%] md:group-hover:-translate-y-[-100px] group-hover:-translate-y-[-10px]   relative -bottom-full -translate-y-[60%] xs:-translate-y-[50%] md:-translate-y-[45%] group-hover:bottom-0
+                  <div className='w-[80%] h-[40%] z-50 md:group-hover:-translate-y-[-100px] group-hover:-translate-y-[-10px]   relative -bottom-full -translate-y-[60%] xs:-translate-y-[50%] md:-translate-y-[45%] group-hover:bottom-0
                                    transition-all duration-500 m-auto
                                      group  z-20'>
-                    <h1 className='text-white font-bold text-2xl py-3 xs:text-xl'> {value.heading}</h1>
-                    <p className='text-white leading-5 xs:leading-4'>{value.description}</p>
+                    <h1 className='text-white  font-bold text-2xl py-3 xs:text-xl'> {value.heading}</h1>
+                    <p className='text-white leading-5  xs:leading-4'>{value.description}</p>
                   </div>
                 </div>
 
