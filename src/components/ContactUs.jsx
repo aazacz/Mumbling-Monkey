@@ -99,8 +99,8 @@ const ContactUs = () => {
 
         } else {
             setErrors(validationErrors);
-            Object.values(validationErrors).forEach(error => {
-                toast.warn(error, {
+            if(validationErrors.isChecked){
+                toast.warn("You must agree to the terms and privacy policy.", {
                     position: "top-center",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -111,7 +111,22 @@ const ContactUs = () => {
                     theme: "light",
                     transition: Bounce,
                 });
-            });
+            }
+            else{
+                toast.warn("Please fill all the required fields", {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                });
+                
+            }
+          
         }
     };
 
@@ -122,7 +137,7 @@ const ContactUs = () => {
         {modalContent}
       </Modal>
             <div className='w-full md:w-[100%] h-auto py-6 px-4   flex flex-col md:px-0'>
-                <div className='mb-6 text-center md:text-left '>
+                <div className='mb-6  md:text-left '>
                     <button className='cursor-default text-white font-montserrat tracking-widest text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-2  '>CONTACT US</button>
                     <p className='text-slate-700 font-semibold md:w-2/3 py-4 '>We, At Mumbling Monkeys, Are Committed To Working On Your Business As Our Own. We Aspire To Achieve Goals With Innovative Ideas</p>
                 </div>
@@ -228,7 +243,7 @@ const Modal = ({ isOpen, onClose, children }) => {
                 animate={{ y: "0", opacity: 1, width: "100%" }}
                 exit={{ opacity: 0 }}
             >
-                <motion.div className=" md:w-2/4  h-full  relative bg-red-300 rounded-3xl  overflow-y-auto     "
+                <motion.div className=" md:w-2/4  h-full  relative rounded-3xl  overflow-y-auto     "
                     initial={{ scale: 0.9 }}
                     animate={{ scale: 1 }}
                     exit={{ scale: 0.9 }}  >

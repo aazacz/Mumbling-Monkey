@@ -99,8 +99,8 @@ const ContactUsPage = () => {
 
         } else {
             setErrors(validationErrors);
-            Object.values(validationErrors).forEach(error => {
-                toast.warn(error, {
+            if(validationErrors.isChecked){
+                toast.warn("You must agree to the terms and privacy policy.", {
                     position: "top-center",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -111,9 +111,25 @@ const ContactUsPage = () => {
                     theme: "light",
                     transition: Bounce,
                 });
-            });
+            }
+            else{
+                toast.warn("Please fill all the required fields", {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                });
+                
+            }
+          
         }
     };
+
     return (
         <>
             <ToastContainer />
@@ -241,7 +257,7 @@ const Modal = ({ isOpen, onClose, children }) => {
                 animate={{ y: "0", opacity: 1, width: "100%" }}
                 exit={{ opacity: 0 }}
             >
-                <motion.div className=" md:w-2/4  h-full  relative bg-red-300 rounded-3xl  overflow-y-auto     "
+                <motion.div className=" md:w-2/4  h-full  relative  rounded-3xl  overflow-y-auto     "
                     initial={{ scale: 0.9 }}
                     animate={{ scale: 1 }}
                     exit={{ scale: 0.9 }}  >
