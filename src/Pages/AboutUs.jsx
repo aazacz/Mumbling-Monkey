@@ -131,7 +131,7 @@ const AboutUs = () => {
                     initial={{ x: -195, y: 0, opacity: 0 }}
                     whileInView={{ x: 0, y: 0, opacity: 100 }}
                     transition={{ duration: 1 }}
-                    viewport={{ amount: 0.5, once: true }}
+                    viewport={{ amount: 0.2, once: true }}
                 >
                     <button className='cursor-default text-white text-sm font-normal rounded-2xl bg-[#7d8a91] px-3 py-1'> ABOUT COMPANY</button>
                     <h1 className='font-Cabin text-4xl pt-4'>Mumbling Monkeys Media</h1>
