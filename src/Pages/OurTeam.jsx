@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import ContactUs from '../components/ContactUs'
 import ourteam from '/ourteam/navscreen.webp'
 import ceo1 from '/ceophoto1.webp'
-import ceo2 from '/ceophoto2.jpg'
+import ceo2 from '/ceophoto2.png'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 
 const OurTeam = (Data) => {
@@ -104,7 +104,7 @@ const OurTeam = (Data) => {
                 <div key={index} className='w-full max-w-[350px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:shadow-none rounded-3xl p-4 flex flex-col group items-center'>
                
                   <div className='w-full rounded-2xl h-[400px] bg-red-300 overflow-hidden relative'>
-                    <img src={val.photo} className='md:w-full h-full - rounded-2xl transition-transform group-hover:scale-110 duration-300 ease-in-out' alt={val.name} />
+                    <img src={val.photo} className='md:w-full  h-full -rounded-2xl transition-transform group-hover:scale-110 duration-300 ease-in-out' alt={val.name} />
                     <h1 className='px-3 py-1 rounded-2xl text-white bg-black font-montserrat font-normal absolute bottom-5 right-0'>{val.position}</h1>
                   </div>
 
