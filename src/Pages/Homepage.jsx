@@ -215,7 +215,7 @@ const Homepage = () => {
 
   return (
     <>
-      <div className=' w-screen  relative  md-full h-auto   flex flex-col items-center overflow-auto'>
+      <div className=' scroll w-screen  relative  md-full h-auto   flex flex-col items-center overflow-auto'>
 
         <motion.div
           initial={{ y: 100 }}
@@ -226,14 +226,14 @@ const Homepage = () => {
 
          
           <motion.div className='absolute opacity-40 md:left-2 left-0 flex flex-col' variants={marqueeVariants} animate="animate">
-                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
-                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
-                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
-                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
-                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
-                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
-                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
-                    <img className='w-[35px] md:w-[50px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[40px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[40px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[40px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[40px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[40px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[40px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[40px]' src={vertical1} alt="" />
+                    <img className='w-[35px] md:w-[40px]' src={vertical1} alt="" />
                 </motion.div>
 
                 <motion.div className='absolute flex flex-col items-end md:items-start opacity-50 md:right-0 right-0' variants={marqueeVariants} animate="animate">
