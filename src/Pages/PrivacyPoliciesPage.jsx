@@ -6,7 +6,7 @@ import PrivacyPolicy from '../components/PrivacyPolicy';
 const PrivacyPoliciesPage = () => {
   return (
     <>
-    <div className=" bg-gray-100 md:pt-[110px] pt-[50px]">
+    <div className=" bg-gray-100 md:pt-[110px] pt-[100px]">
     <PrivacyPolicy/>
     </div>
 
