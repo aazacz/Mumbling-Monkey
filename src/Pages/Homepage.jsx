@@ -1,13 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { motion, AnimatePresence } from "framer-motion"
+import React, { useEffect, useState } from 'react'
+import { motion } from "framer-motion"
 
-import tick from "/Icon.png"
 import pattern from "/Pattern.png"
 import GroupPhoto from "/Photo.png"
 import Rectangle from "/Rectangle.png"
 import Rectangle2 from "/Rectangle2.png"
 import { HiOutlineSpeakerphone, HiOutlineMailOpen } from "react-icons/hi";
-import NavScreen from '../components/NavScreen'
 import Footer from '../components/Footer'
 import ContactUs from '../components/ContactUs'
 import logo from "/Logo.png"
