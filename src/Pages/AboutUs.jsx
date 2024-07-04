@@ -7,7 +7,6 @@ import NavScreen from '../components/NavScreen';
 import Footer from '../components/Footer';
 import ContactUs from '../components/ContactUs';
 import CountUp from 'react-countup';
-import { MdCheckCircle } from 'react-icons/md';
 import goals from "/Goals.png";
 import Megaphone from "/Megaphone.png";
 import bar from "/bar.png";
