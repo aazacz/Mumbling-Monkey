@@ -20,7 +20,7 @@ const ContactUs = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
-
+    const [clicked,setClicked] = useState(false)
     const form = useRef();
     
     const openModal = (content) => {
@@ -54,6 +54,7 @@ const ContactUs = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors({});
+        setClicked(true)
         const validationErrors = validate();
         if (Object.keys(validationErrors).length === 0) {
             const promise = emailjs
@@ -67,6 +68,7 @@ const ContactUs = () => {
                     (result) => {
                         form.current.reset();
                         setdetails({name:"", email:"", message:""});
+                        setClicked(false)
                         toast.success('Successfully Sent', {
                             position: "top-center",
                             autoClose: 5000,
@@ -81,6 +83,7 @@ const ContactUs = () => {
                         return result.text;
                     },
                     (error) => {
+                        setClicked(false)
                         console.log(error.text);
                         toast.error('Failed to send message.', {
                             position: "top-center",
@@ -98,6 +101,7 @@ const ContactUs = () => {
                 );
 
         } else {
+
             setErrors(validationErrors);
             if(validationErrors.isChecked){
                 toast.warn("You must agree to the terms and privacy policy.", {
@@ -111,6 +115,8 @@ const ContactUs = () => {
                     theme: "light",
                     transition: Bounce,
                 });
+                setClicked(false)
+
             }
             else{
                 toast.warn("Please fill all the required fields", {
@@ -124,7 +130,8 @@ const ContactUs = () => {
                     theme: "light",
                     transition: Bounce,
                 });
-                
+                setClicked(false)
+ 
             }
           
         }
@@ -197,7 +204,14 @@ const ContactUs = () => {
                                 />
                                     <p className='pl-2 text-xs md:text-sm'>I agree with the <span className='underline cursor-pointer'  onClick={() => openModal(<TermsOfUse/>)}>Term Of Uses</span> and <span className='underline cursor-pointer' onClick={() => openModal(<PrivacyPolicy/>)}> Privacy Policy </span></p>
                                     </div>
-                                    <button type='submit' className='md:px-11 px-6 text-sm text-white md:py-3 p-2 rounded-xl bg-black'>Send</button>
+                                    <button 
+    disabled={clicked}
+    type='submit' 
+    className={`md:px-11 px-6 text-sm text-white md:py-3 p-2 rounded-xl ${clicked ? 'bg-gray-400 cursor-not-allowed' : 'bg-black'}`}
+>
+    Send
+</button>
+
                                 </div>
                             </form>
                     </div>
