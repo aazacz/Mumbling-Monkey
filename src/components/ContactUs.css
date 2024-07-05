@@ -1,0 +1,15 @@
+.inputele:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important; /* For Safari and Chrome */
+    -moz-box-shadow: none !important; /* For Firefox */
+}
+
+.inputele {
+    -webkit-appearance: none; /* Removes default styling for webkit browsers */
+    -moz-appearance: none; /* Removes default styling for Mozilla browsers */
+}
+.textarea1{
+    resize: none;
+}

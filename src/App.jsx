@@ -30,7 +30,7 @@ function App() {
           <Route path='/aboutus'       element={<AboutUs  />}      />
           <Route path='/services'      element={<Services  />}     />
           <Route path='/ourexpertise'  element={<OurExpertise />}  />
-          <Route path='/ourteam'       element={<OurTeam  />}      />
+          <Route path='/team'       element={<OurTeam  />}      />
           <Route path='/contactus'     element={<ContactUsPage />} />
           <Route path='/TermsOfUse'    element={<TermsOfUsePage />} />
           <Route path='/privacypolicy' element={<PrivacyPoliciesPage />} />
