@@ -253,7 +253,7 @@ const Homepage = () => {
             animate={{ y: 0 }}
             transition={{ type: "spring", duration: 0.8, damping: 10, mass: 1, stiffness: 200 }}>
             <h1 className='text-center font-Cabin font-extrabold md:text-[80px] text-[40px] leading-[40px] md:leading-[70px]'>MUMBLING <br />MONKEYS</h1>
-            <p className=' text-center px-8 md:text-base mt-4 font-semibold font-montserrat'>Welcome to Mumbling Monkeys, Your One-Stop<br />Destination For All Your Digital Marketing Needs!</p>
+            <p className=' text-center text-sm px-8 md:text-base mt-4 font-semibold font-montserrat'>Welcome to Mumbling Monkeys Media,<br /> Your One-Stop Destination For All Your Marketing Needs!</p>
           </motion.div>
           <Link to={'/services'} className='cursor-pointer rounded-md bg-[#3a3a3a] font-bold text- text-white px-5 py-2 mt-4'>Get Started Today</Link>
         </motion.div>
